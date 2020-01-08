@@ -22,6 +22,7 @@
         <module>poker-after-dark-infrastructure</module>
         <module>poker-after-dark-spring</module>
         <module>poker-after-dark-specification</module>
+        <module>poker-after-dark-web</module>
     </modules>
 
     <properties>
