@@ -58,6 +58,11 @@
                 <artifactId>poker-after-dark-spring</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.slusarz.pokerafterdark</groupId>
+                <artifactId>poker-after-dark-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
