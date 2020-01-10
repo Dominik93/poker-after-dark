@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>poker-after-dark-web</artifactId>
+    <name>Poker After Dark Web</name>
+    <description>Angular application for Poker After Dark</description>
 
     <build>
         <plugins>
