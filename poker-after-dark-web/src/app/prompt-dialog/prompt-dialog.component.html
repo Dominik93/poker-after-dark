@@ -1,0 +1,27 @@
+<div mat-dialog-content>
+  <p>{{question}}</p>
+  <mat-form-field *ngIf="isEmptyOptions()">
+    <input matInput [(ngModel)]="data.answer">
+  </mat-form-field>
+<!--  <mat-form-field class="example-full-width" *ngIf="!isEmptyOptions()">
+    <input type="text" [(ngModel)]="data.answer" placeholder="Pick player" aria-label="Number"
+     matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+-->
+  <mat-form-field class="example-full-width" *ngIf="!isEmptyOptions()">
+    <mat-label>Pick players</mat-label>
+    <mat-select [formControl]="myControl" [(ngModel)]="data.answer" multiple>
+      <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.answer" cdkFocusInitial>Ok</button>
+</div>

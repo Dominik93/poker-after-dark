@@ -5,7 +5,7 @@
     <parent>
         <artifactId>poker-after-dark</artifactId>
         <groupId>com.slusarz.pokerafterdark</groupId>
-        <version>1.0.6</version>
+        <version>1.0.7-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -30,6 +30,10 @@
         <dependency>
             <groupId>com.slusarz.pokerafterdark</groupId>
             <artifactId>poker-after-dark-specification</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.slusarz.pokerafterdark</groupId>
+            <artifactId>poker-after-dark-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

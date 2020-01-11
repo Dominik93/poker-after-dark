@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.slusarz.pokerafterdark</groupId>
     <artifactId>poker-after-dark</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.7-SNAPSHOT</version>
 
     <name>Poker After Dark</name>
     <description>Project poker after dark</description>
@@ -22,6 +22,7 @@
         <module>poker-after-dark-infrastructure</module>
         <module>poker-after-dark-spring</module>
         <module>poker-after-dark-specification</module>
+        <module>poker-after-dark-web</module>
     </modules>
 
     <properties>
@@ -55,6 +56,11 @@
             <dependency>
                 <groupId>com.slusarz.pokerafterdark</groupId>
                 <artifactId>poker-after-dark-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.slusarz.pokerafterdark</groupId>
+                <artifactId>poker-after-dark-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
