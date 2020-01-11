@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.slusarz.pokerafterdark</groupId>
     <artifactId>poker-after-dark</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.7</version>
 
     <name>Poker After Dark</name>
     <description>Project poker after dark</description>
