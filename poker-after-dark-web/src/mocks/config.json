@@ -1,0 +1,8 @@
+{
+    "config": {
+      "entryFeeInChips": 1000,
+      "entryFeeInMoney": 10,
+      "from": "2000-01-11",
+      "to": "2020-01-11"
+    }
+  }

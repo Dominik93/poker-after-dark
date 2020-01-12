@@ -55,7 +55,7 @@ public class GamesController {
     @DeleteMapping("/{id}")
     public RemoveGameResponse removeGame(@PathVariable("id") String gameId) {
         return new CommandRequestHandler<RemoveGameResponse, String, RemoveGameCommandResult>
-                (serviceExecutor, addGameMapper, addGameMapper).handle(gameId);
+                (serviceExecutor, removeGameMapper, removeGameMapper).handle(gameId);
     }
 
 }
