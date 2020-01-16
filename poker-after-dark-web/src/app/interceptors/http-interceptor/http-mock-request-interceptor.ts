@@ -69,9 +69,14 @@ const urls = [
         method: 'DELETE',
         jsonProvider: (request) => {
             var splittedUrl = request.url.split('/');
-            const index = gamesPages.games.findIndex(game => game.id === splittedUrl[splittedUrl.length - 1]);
+            var gameId = splittedUrl[splittedUrl.length - 1];
+            const index = gamesPages.games.findIndex(game => game.id === gameId);
             if (index > -1) {
                 gamesPages.games.splice(index, 1);
+                profit.profits.forEach(profit => {
+                    profit.dataPoints.splice(profit.dataPoints.length - index - 1, 1)
+                }
+                );
             }
             return {
                 default: {
