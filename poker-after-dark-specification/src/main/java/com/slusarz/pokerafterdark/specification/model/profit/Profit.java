@@ -17,6 +17,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Profit {
 
+    private String playerId;
+
     private String playerName;
 
     private List<Double> dataPoints;

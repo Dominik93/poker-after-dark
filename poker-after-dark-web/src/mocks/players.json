@@ -1,0 +1,420 @@
+{
+    "players": [
+      {
+        "id": "10",
+        "name": "Daniel",
+        "gamesPlayed": 91,
+        "liveEarnings": 248.39,
+        "biggestWin": 80,
+        "biggestLose": -69.9
+      },
+      {
+        "id": "11",
+        "name": "Dominik",
+        "gamesPlayed": 79,
+        "liveEarnings": 161.79,
+        "biggestWin": 37.6,
+        "biggestLose": -20
+      },
+      {
+        "id": "12",
+        "name": "Filip",
+        "gamesPlayed": 63,
+        "liveEarnings": -134.39,
+        "biggestWin": 21,
+        "biggestLose": -20
+      },
+      {
+        "id": "13",
+        "name": "Aleksander",
+        "gamesPlayed": 55,
+        "liveEarnings": 126.7,
+        "biggestWin": 38.1,
+        "biggestLose": -20
+      },
+      {
+        "id": "14",
+        "name": "Grzegorz",
+        "gamesPlayed": 36,
+        "liveEarnings": -101.76,
+        "biggestWin": 18.5,
+        "biggestLose": -17
+      },
+      {
+        "id": "15",
+        "name": "Bartek",
+        "gamesPlayed": 35,
+        "liveEarnings": -17.45,
+        "biggestWin": 31.7,
+        "biggestLose": -20
+      },
+      {
+        "id": "16",
+        "name": "Mariusz",
+        "gamesPlayed": 18,
+        "liveEarnings": -79.74,
+        "biggestWin": 10,
+        "biggestLose": -23.6
+      },
+      {
+        "id": "17",
+        "name": "Krzysiek",
+        "gamesPlayed": 17,
+        "liveEarnings": 45.5,
+        "biggestWin": 43.3,
+        "biggestLose": -20
+      },
+      {
+        "id": "18",
+        "name": "Rafał",
+        "gamesPlayed": 12,
+        "liveEarnings": 63.05,
+        "biggestWin": 50,
+        "biggestLose": -10.85
+      },
+      {
+        "id": "19",
+        "name": "Mateusz",
+        "gamesPlayed": 11,
+        "liveEarnings": -4.55,
+        "biggestWin": 12.9,
+        "biggestLose": -10
+      },
+      {
+        "id": "20",
+        "name": "Radek",
+        "gamesPlayed": 9,
+        "liveEarnings": 57.2,
+        "biggestWin": 40,
+        "biggestLose": -25
+      },
+      {
+        "id": "21",
+        "name": "Jarosław",
+        "gamesPlayed": 8,
+        "liveEarnings": 5.2,
+        "biggestWin": 11.25,
+        "biggestLose": -5
+      },
+      {
+        "id": "22",
+        "name": "Michał",
+        "gamesPlayed": 7,
+        "liveEarnings": -19.05,
+        "biggestWin": 2,
+        "biggestLose": -6.05
+      },
+      {
+        "id": "23",
+        "name": "Marcin",
+        "gamesPlayed": 5,
+        "liveEarnings": 42.35,
+        "biggestWin": 20,
+        "biggestLose": -10
+      },
+      {
+        "id": "24",
+        "name": "Angelika",
+        "gamesPlayed": 3,
+        "liveEarnings": -4,
+        "biggestWin": 1,
+        "biggestLose": -5
+      },
+      {
+        "id": "25",
+        "name": "Wojtek",
+        "gamesPlayed": 3,
+        "liveEarnings": -3,
+        "biggestWin": 7,
+        "biggestLose": -10
+      },
+      {
+        "id": "26",
+        "name": "Anna",
+        "gamesPlayed": 3,
+        "liveEarnings": -7,
+        "biggestWin": -1.5,
+        "biggestLose": -3
+      },
+      {
+        "id": "27",
+        "name": "Łukasz",
+        "gamesPlayed": 3,
+        "liveEarnings": -11.45,
+        "biggestWin": 0.75,
+        "biggestLose": -6.2
+      },
+      {
+        "id": "28",
+        "name": "Tomasz",
+        "gamesPlayed": 3,
+        "liveEarnings": -1.5,
+        "biggestWin": 8,
+        "biggestLose": -10
+      },
+      {
+        "id": "29",
+        "name": "Piotr",
+        "gamesPlayed": 2,
+        "liveEarnings": -7,
+        "biggestWin": -2,
+        "biggestLose": -5
+      },
+      {
+        "id": "30",
+        "name": "Mikołaj",
+        "gamesPlayed": 2,
+        "liveEarnings": -10,
+        "biggestWin": -5,
+        "biggestLose": -5
+      },
+      {
+        "id": "4",
+        "name": "Dawid",
+        "gamesPlayed": 2,
+        "liveEarnings": -26.5,
+        "biggestWin": -10,
+        "biggestLose": -16.5
+      },
+      {
+        "id": "31",
+        "name": "John",
+        "gamesPlayed": 2,
+        "liveEarnings": -1.5,
+        "biggestWin": 3.5,
+        "biggestLose": -5
+      },
+      {
+        "id": "32",
+        "name": "Jakub",
+        "gamesPlayed": 2,
+        "liveEarnings": -50,
+        "biggestWin": -20,
+        "biggestLose": -30
+      },
+      {
+        "id": "33",
+        "name": "Kasia",
+        "gamesPlayed": 2,
+        "liveEarnings": -13.45,
+        "biggestWin": -5,
+        "biggestLose": -8.45
+      },
+      {
+        "id": "34",
+        "name": "Paweł",
+        "gamesPlayed": 2,
+        "liveEarnings": -9.5,
+        "biggestWin": -4.5,
+        "biggestLose": -5
+      },
+      {
+        "id": "35",
+        "name": "Natalia",
+        "gamesPlayed": 1,
+        "liveEarnings": -5,
+        "biggestWin": -5,
+        "biggestLose": -5
+      },
+      {
+        "id": "2",
+        "name": "Witkor",
+        "gamesPlayed": 1,
+        "liveEarnings": -30,
+        "biggestWin": -30,
+        "biggestLose": -30
+      },
+      {
+        "id": "36",
+        "name": "Konrad",
+        "gamesPlayed": 1,
+        "liveEarnings": -5,
+        "biggestWin": -5,
+        "biggestLose": -5
+      },
+      {
+        "id": "37",
+        "name": "Oleg",
+        "gamesPlayed": 1,
+        "liveEarnings": -3.57,
+        "biggestWin": -3.57,
+        "biggestLose": -3.57
+      },
+      {
+        "id": "38",
+        "name": "Ola",
+        "gamesPlayed": 1,
+        "liveEarnings": -2,
+        "biggestWin": -2,
+        "biggestLose": -2
+      },
+      {
+        "id": "39",
+        "name": "Oliwia",
+        "gamesPlayed": 1,
+        "liveEarnings": -4,
+        "biggestWin": -4,
+        "biggestLose": -4
+      },
+      {
+        "id": "40",
+        "name": "Jaromir",
+        "gamesPlayed": 1,
+        "liveEarnings": -0.37,
+        "biggestWin": -0.37,
+        "biggestLose": -0.37
+      },
+      {
+        "id": "41",
+        "name": "Tymoteusz",
+        "gamesPlayed": 1,
+        "liveEarnings": -15,
+        "biggestWin": -15,
+        "biggestLose": -15
+      },
+      {
+        "id": "42",
+        "name": "Waldemar",
+        "gamesPlayed": 1,
+        "liveEarnings": -17,
+        "biggestWin": -17,
+        "biggestLose": -17
+      },
+      {
+        "id": "43",
+        "name": "Kamil",
+        "gamesPlayed": 1,
+        "liveEarnings": 0,
+        "biggestWin": 0,
+        "biggestLose": 0
+      },
+      {
+        "id": "44",
+        "name": "Paulina",
+        "gamesPlayed": 1,
+        "liveEarnings": -2.7,
+        "biggestWin": -2.7,
+        "biggestLose": -2.7
+      },
+      {
+        "id": "45",
+        "name": "Sylwia",
+        "gamesPlayed": 1,
+        "liveEarnings": 0.15,
+        "biggestWin": 0.15,
+        "biggestLose": 0.15
+      },
+      {
+        "id": "46",
+        "name": "Roman",
+        "gamesPlayed": 1,
+        "liveEarnings": -5,
+        "biggestWin": -5,
+        "biggestLose": -5
+      },
+      {
+        "id": "3",
+        "name": "Adam",
+        "gamesPlayed": 1,
+        "liveEarnings": -5.4,
+        "biggestWin": -5.4,
+        "biggestLose": -5.4
+      },
+      {
+        "id": "1",
+        "name": "Bogdan",
+        "gamesPlayed": 1,
+        "liveEarnings": -20,
+        "biggestWin": -20,
+        "biggestLose": -20
+      },
+      {
+        "id": "47",
+        "name": "Karol",
+        "gamesPlayed": 1,
+        "liveEarnings": 2,
+        "biggestWin": 2,
+        "biggestLose": 2
+      },
+      {
+        "id": "48",
+        "name": "Zenon",
+        "gamesPlayed": 1,
+        "liveEarnings": -4,
+        "biggestWin": -4,
+        "biggestLose": -4
+      },
+      {
+        "id": "49",
+        "name": "Wiktoria",
+        "gamesPlayed": 1,
+        "liveEarnings": -1.45,
+        "biggestWin": -1.45,
+        "biggestLose": -1.45
+      },
+      {
+        "id": "50",
+        "name": "Iza",
+        "gamesPlayed": 1,
+        "liveEarnings": -50,
+        "biggestWin": -50,
+        "biggestLose": -50
+      },
+      {
+        "id": "51",
+        "name": "Patryk",
+        "gamesPlayed": 1,
+        "liveEarnings": -50,
+        "biggestWin": -50,
+        "biggestLose": -50
+      },
+      {
+        "id": "52",
+        "name": "Ewelina",
+        "gamesPlayed": 1,
+        "liveEarnings": -20,
+        "biggestWin": -20,
+        "biggestLose": -20
+      },
+      {
+        "id": "53",
+        "name": "Arek",
+        "gamesPlayed": 1,
+        "liveEarnings": -15,
+        "biggestWin": -15,
+        "biggestLose": -15
+      },
+      {
+        "id": "54",
+        "name": "Szymon",
+        "gamesPlayed": 1,
+        "liveEarnings": 4,
+        "biggestWin": 4,
+        "biggestLose": 4
+      },
+      {
+        "id": "55",
+        "name": "Arystian",
+        "gamesPlayed": 0,
+        "liveEarnings": 0,
+        "biggestWin": 0,
+        "biggestLose": 0
+      },
+      {
+        "id": "56",
+        "name": "Marzena",
+        "gamesPlayed": 0,
+        "liveEarnings": 0,
+        "biggestWin": 0,
+        "biggestLose": 0
+      },
+      {
+        "id": "57",
+        "name": "Alicja",
+        "gamesPlayed": 0,
+        "liveEarnings": 0,
+        "biggestWin": 0,
+        "biggestLose": 0
+      }
+    ]
+  }

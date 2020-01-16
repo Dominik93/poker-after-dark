@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { PromptDialogComponent } from './prompt-dialog/prompt-dialog.component';
 import { PlayersComponent } from './players/players.component';
@@ -20,7 +20,10 @@ import { MatNativeDateModule } from '@angular/material';
 import { CdkDetailRowDirective } from './cdk-detail-row-directive';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { AdministrationGamesComponent } from './administration-games/administration-games.component';
-import { AdministrationPlayersComponent } from './administation-players/administration-players.component';
+import { AdministrationPlayersComponent } from './administration-players/administration-players.component';
+import { environment } from 'src/environments/environment';
+import { HttpMockRequestInterceptor } from './interceptors/http-interceptor/http-mock-request-interceptor';
+import { HttpRequestInterceptor } from './interceptors/http-interceptor/http-request-interceptor';
   
 
 @NgModule({
@@ -54,8 +57,13 @@ import { AdministrationPlayersComponent } from './administation-players/administ
     HttpModule,
     HttpClientModule
   ],
-  
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: environment.mock ? HttpMockRequestInterceptor : HttpRequestInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

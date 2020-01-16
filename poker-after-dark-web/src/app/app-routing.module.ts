@@ -7,7 +7,7 @@ import { AddGameComponent } from './add-game/add-game.component';
 import { PlayersComponent } from './players/players.component';
 import { AddPlayerComponent } from './add-player/add-player.component';
 import { AdministrationGamesComponent } from './administration-games/administration-games.component';
-import { AdministrationPlayersComponent } from './administation-players/administration-players.component';
+import { AdministrationPlayersComponent } from './administration-players/administration-players.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },

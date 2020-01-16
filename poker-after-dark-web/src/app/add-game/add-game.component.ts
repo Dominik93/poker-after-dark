@@ -79,6 +79,7 @@ export class AddGameComponent implements OnInit {
     request.game.host = new Host();
     request.game.pot = this.getPot();
     request.game.host.id = this.host.id;
+    request.game.host.name = this.host.name;
     request.game.participants = this.playersInGame.map(player => new Participant(player));
 
     if (this.isGameCorrect()) {
