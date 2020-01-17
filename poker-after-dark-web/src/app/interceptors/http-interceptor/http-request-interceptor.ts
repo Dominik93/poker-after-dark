@@ -1,7 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { MatSnackBar } from '@angular/material';
 import { tap, catchError } from 'rxjs/operators';
 import { ResponseHandler } from './reponse-handler';
 

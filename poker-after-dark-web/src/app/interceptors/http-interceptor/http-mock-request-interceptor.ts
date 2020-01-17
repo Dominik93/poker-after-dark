@@ -1,6 +1,6 @@
 
 import { Injectable, Injector } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment.js';
 import { tap, catchError } from 'rxjs/operators';
@@ -9,7 +9,6 @@ import * as players from '../../../mocks/players.json'
 import * as config from '../../../mocks/config.json'
 import * as gamesPages from '../../../mocks/games.pages.json'
 import * as profit from '../../../mocks/profit.json'
-import { MatSnackBar } from '@angular/material';
 import { ResponseHandler } from './reponse-handler.js';
 
 const urls = [
@@ -120,8 +119,7 @@ const urls = [
             })
             return {
                 default: {
-                    success: true,
-                    code: 0
+                    success: true
                 }
             }
         }
