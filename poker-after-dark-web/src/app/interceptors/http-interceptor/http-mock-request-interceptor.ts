@@ -3,11 +3,13 @@ import { Injectable, Injector } from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment.js';
+import { tap, catchError } from 'rxjs/operators';
 
 import * as players from '../../../mocks/players.json'
 import * as config from '../../../mocks/config.json'
 import * as gamesPages from '../../../mocks/games.pages.json'
 import * as profit from '../../../mocks/profit.json'
+import { ResponseHandler } from './reponse-handler.js';
 
 const urls = [
     {
@@ -86,7 +88,7 @@ const urls = [
         }
     },
     {
-        urlRegex: environment.baseUrl + 'games&',
+        urlRegex: environment.baseUrl + 'games$',
         method: 'POST',
         jsonProvider: (request) => {
             var game = {
@@ -115,7 +117,11 @@ const urls = [
                 var pr = profit.profits.find(profit => profit.playerId === participian.playerId);
                 pr.dataPoints[pr.dataPoints.length - 1] = (pr.dataPoints[pr.dataPoints.length - 1] + participian.earnings)
             })
-            return gamesPages;
+            return {
+                default: {
+                    success: true
+                }
+            }
         }
     },
     {
@@ -129,14 +135,21 @@ const urls = [
 
 @Injectable()
 export class HttpMockRequestInterceptor implements HttpInterceptor {
-    constructor(private injector: Injector) { }
+    constructor(private injector: Injector,
+        private responseHandler: ResponseHandler) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         for (const element of urls) {
             var regexp = new RegExp(element.urlRegex);
             if (request.method === element.method && regexp.test(request.url)) {
                 console.log('Loaded from json: ' + request.url);
-                return of(new HttpResponse({ status: 200, body: ((element.jsonProvider(request)) as any).default }));
+                return of(new HttpResponse({ status: 200, body: ((element.jsonProvider(request)) as any).default })).pipe(
+                    tap(evt => {
+                        this.responseHandler.handle(evt);
+                    }),
+                    catchError((err: any) => {
+                        return this.responseHandler.handlerError(err);
+                    }));
             }
         }
         console.log('Loaded from http call:' + request.url);
