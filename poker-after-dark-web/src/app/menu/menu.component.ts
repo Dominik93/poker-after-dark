@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
+import { LoginService } from '../login.service';
+import { LoginRequest } from '../model/login-request';
+import { AdministrationService } from '../administration.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +12,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  administrationMode = false;
+
+  constructor(public dialog: MatDialog,
+    private administrationService: AdministrationService,
+    private loginService: LoginService) { }
 
   ngOnInit() {
+  }
+
+  onAdministration() {
+    const dialogRef = this.dialog.open(LoginDialogComponent, {
+      width: '250px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false) {
+        var request = new LoginRequest();
+        request.password = result;
+        this.loginService.login(request).subscribe(data => {
+          if (data.success) {
+            this.administrationMode = true;
+            this.administrationService.setAdministrationMode(true);
+          }
+        });
+      }
+    });
   }
 
   redirect(url) {

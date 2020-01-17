@@ -19,11 +19,10 @@ import { AddPlayerComponent } from './add-player/add-player.component';
 import { MatNativeDateModule } from '@angular/material';
 import { CdkDetailRowDirective } from './cdk-detail-row-directive';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
-import { AdministrationGamesComponent } from './administration-games/administration-games.component';
-import { AdministrationPlayersComponent } from './administration-players/administration-players.component';
 import { environment } from 'src/environments/environment';
 import { HttpMockRequestInterceptor } from './interceptors/http-interceptor/http-mock-request-interceptor';
 import { HttpRequestInterceptor } from './interceptors/http-interceptor/http-request-interceptor';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
   
 
 @NgModule({
@@ -32,18 +31,18 @@ import { HttpRequestInterceptor } from './interceptors/http-interceptor/http-req
     AppComponent,
     WinningsChartComponent,
     GamesComponent,
-    AdministrationGamesComponent,
-    AdministrationPlayersComponent,
     AddGameComponent,
     MenuComponent,
     HomeComponent,
     PromptDialogComponent,
     PlayersComponent,
     AddPlayerComponent,
+    LoginDialogComponent,
     ConfirmationDialogComponent
   ],
   entryComponents: [
     PromptDialogComponent,
+    LoginDialogComponent,
     ConfirmationDialogComponent
   ],
   imports: [

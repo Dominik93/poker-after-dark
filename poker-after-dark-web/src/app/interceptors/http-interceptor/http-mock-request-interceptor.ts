@@ -12,6 +12,26 @@ import * as profit from '../../../mocks/profit.json'
 import { ResponseHandler } from './reponse-handler.js';
 
 const urls = [
+    
+    {
+        urlRegex: environment.baseUrl + 'login',
+        method: 'POST',
+        jsonProvider: (request) => {
+            if (request.body.password === 'correct') {
+                return {
+                    default: {
+                        success: true
+                    }
+                }
+            } else {
+                return {
+                    default: {
+                        success: false
+                    }
+                }
+            }
+        },
+    },
     {
         urlRegex: environment.baseUrl + 'players',
         method: 'OPTIONS',

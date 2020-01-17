@@ -12,6 +12,7 @@ import { Player } from '../model/player';
 import { PlayersService } from '../players.service';
 import { Host } from '../model/host';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
+import { AdministrationService } from '../administration.service';
 
 @Component({
   selector: 'app-add-game',
@@ -27,10 +28,15 @@ export class AddGameComponent implements OnInit {
 
   constructor(public dialog: MatDialog,
     private gamesService: GamesService,
+    private administrationService: AdministrationService,
     private playersService: PlayersService,
     private configService: ConfigService) { }
 
   ngOnInit() {
+    if(!this.administrationService.currentAdministrationMode) {
+      window.location.href = '#';
+    }
+
     this.playersService.getPlayers().subscribe(data => {
       this.players = data.players;
     })
