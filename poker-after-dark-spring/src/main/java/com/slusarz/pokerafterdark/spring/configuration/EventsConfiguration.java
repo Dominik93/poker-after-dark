@@ -1,9 +1,9 @@
 package com.slusarz.pokerafterdark.spring.configuration;
 
-import com.slusarz.pokerafterdark.aplication.events.EventBus;
-import com.slusarz.pokerafterdark.aplication.events.EventHandler;
-import com.slusarz.pokerafterdark.aplication.events.EventHandlerExecutor;
-import com.slusarz.pokerafterdark.aplication.events.EventHandlerProvider;
+import com.slusarz.pokerafterdark.application.events.EventBus;
+import com.slusarz.pokerafterdark.application.events.EventHandler;
+import com.slusarz.pokerafterdark.application.events.EventHandlerExecutor;
+import com.slusarz.pokerafterdark.application.events.EventHandlerProvider;
 import com.slusarz.pokerafterdark.spring.eventbus.AfterCommitEventBus;
 import com.slusarz.pokerafterdark.spring.eventbus.AsyncEventBus;
 import com.slusarz.pokerafterdark.spring.eventhandler.TransactionalEventHandlerExecutor;

@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.spring.cqrs;
 
-import com.slusarz.pokerafterdark.aplication.cqrs.command.CommandHandler;
-import com.slusarz.pokerafterdark.aplication.cqrs.handler.HandlerProvider;
+import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
+import com.slusarz.pokerafterdark.application.cqrs.handler.HandlerProvider;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;

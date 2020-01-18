@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
-import com.slusarz.pokerafterdark.aplication.profit.ProfitQuery;
-import com.slusarz.pokerafterdark.aplication.profit.ProfitQueryResult;
+import com.slusarz.pokerafterdark.application.profit.ProfitQuery;
+import com.slusarz.pokerafterdark.application.profit.ProfitQueryResult;
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.specification.model.profit.GetProfitRequest;

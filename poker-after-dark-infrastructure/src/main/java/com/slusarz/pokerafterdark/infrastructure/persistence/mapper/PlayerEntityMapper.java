@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.mapper;
 
-import com.slusarz.pokerafterdark.aplication.player.PlayerProjection;
+import com.slusarz.pokerafterdark.application.player.PlayerProjection;
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
 import com.slusarz.pokerafterdark.domain.player.NumberOfPlays;
 import com.slusarz.pokerafterdark.domain.player.Player;

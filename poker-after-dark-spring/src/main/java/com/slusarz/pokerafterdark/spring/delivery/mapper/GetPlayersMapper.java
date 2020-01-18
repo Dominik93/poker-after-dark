@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
-import com.slusarz.pokerafterdark.aplication.player.PlayerProjection;
-import com.slusarz.pokerafterdark.aplication.player.PlayersQueryResult;
+import com.slusarz.pokerafterdark.application.player.PlayerProjection;
+import com.slusarz.pokerafterdark.application.player.PlayersQueryResult;
 import com.slusarz.pokerafterdark.specification.model.player.GetPlayersResponse;
 import com.slusarz.pokerafterdark.specification.model.player.Player;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.query.ResultMapper;

@@ -1,12 +1,12 @@
 package com.slusarz.pokerafterdark.spring.moduleexecutor;
 
-import com.slusarz.pokerafterdark.aplication.cqrs.ServiceExecutor;
-import com.slusarz.pokerafterdark.aplication.cqrs.command.Command;
-import com.slusarz.pokerafterdark.aplication.cqrs.command.CommandExecutor;
-import com.slusarz.pokerafterdark.aplication.cqrs.command.CommandResult;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.Query;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.QueryExecutor;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.QueryResult;
+import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.cqrs.command.Command;
+import com.slusarz.pokerafterdark.application.cqrs.command.CommandExecutor;
+import com.slusarz.pokerafterdark.application.cqrs.command.CommandResult;
+import com.slusarz.pokerafterdark.application.cqrs.query.Query;
+import com.slusarz.pokerafterdark.application.cqrs.query.QueryExecutor;
+import com.slusarz.pokerafterdark.application.cqrs.query.QueryResult;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;

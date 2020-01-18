@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
-import com.slusarz.pokerafterdark.aplication.usecase.addgame.AddGameCommand;
-import com.slusarz.pokerafterdark.aplication.usecase.addgame.AddGameCommandResult;
+import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameCommand;
+import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameCommandResult;
 import com.slusarz.pokerafterdark.domain.game.Pot;
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
 import com.slusarz.pokerafterdark.domain.participant.Participant;
