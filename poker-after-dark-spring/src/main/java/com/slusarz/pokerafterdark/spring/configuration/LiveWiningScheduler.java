@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.spring.configuration;
 
-import com.slusarz.pokerafterdark.aplication.livewinnings.LiveWinningsRepository;
+import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;

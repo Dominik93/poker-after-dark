@@ -1,8 +1,8 @@
 package com.slusarz.pokerafterdark.spring.delivery.request;
 
-import com.slusarz.pokerafterdark.aplication.cqrs.ServiceExecutor;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.Query;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.QueryResult;
+import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.cqrs.query.Query;
+import com.slusarz.pokerafterdark.application.cqrs.query.QueryResult;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.query.QueryMapper;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.query.RequestMapper;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.query.ResultMapper;

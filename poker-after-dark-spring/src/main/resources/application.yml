@@ -2,7 +2,11 @@ server:
   servlet:
     context-path: /pokerafterdark
   port: ${PORT:8080}
-
+security:
+  administration:
+    token:
+      timeout: 30
+    password: $2a$10$USo5c35DK.myZW58z2GC0OUMhe0vcSaSq9tIPolXzYPHY3TwTQym6
 spring:
   datasource:
     url: ${JDBC_DATABASE_URL}

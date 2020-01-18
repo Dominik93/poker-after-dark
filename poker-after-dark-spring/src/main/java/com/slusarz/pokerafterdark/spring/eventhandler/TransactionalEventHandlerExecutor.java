@@ -1,8 +1,8 @@
 package com.slusarz.pokerafterdark.spring.eventhandler;
 
-import com.slusarz.pokerafterdark.aplication.events.Event;
-import com.slusarz.pokerafterdark.aplication.events.EventHandler;
-import com.slusarz.pokerafterdark.aplication.events.EventHandlerExecutor;
+import com.slusarz.pokerafterdark.application.events.Event;
+import com.slusarz.pokerafterdark.application.events.EventHandler;
+import com.slusarz.pokerafterdark.application.events.EventHandlerExecutor;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;

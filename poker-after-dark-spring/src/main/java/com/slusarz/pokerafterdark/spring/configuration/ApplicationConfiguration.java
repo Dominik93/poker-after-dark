@@ -1,9 +1,9 @@
 package com.slusarz.pokerafterdark.spring.configuration;
 
-import com.slusarz.pokerafterdark.aplication.livewinnings.LiveWinningsSynchronizer;
-import com.slusarz.pokerafterdark.aplication.profit.ProfitRepository;
-import com.slusarz.pokerafterdark.aplication.profit.ProfitsSynchronizer;
-import com.slusarz.pokerafterdark.aplication.usecase.createplayer.PlayerRepository;
+import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsSynchronizer;
+import com.slusarz.pokerafterdark.application.profit.ProfitRepository;
+import com.slusarz.pokerafterdark.application.profit.ProfitsSynchronizer;
+import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

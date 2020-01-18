@@ -9,13 +9,16 @@ export class AdministrationService {
 
   private administrationMode = new Subject<boolean>();
 
+  token: string = "";
+
   currentAdministrationMode;
 
   constructor() { }
 
   
-  setAdministrationMode(administrationMode: boolean) {
+  setAdministrationMode(administrationMode: boolean, token: string) {
     this.currentAdministrationMode = administrationMode;
+    this.token = token;
     this.administrationMode.next(administrationMode);
   }
 

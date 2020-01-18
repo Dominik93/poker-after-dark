@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.mapper;
 
-import com.slusarz.pokerafterdark.aplication.game.GameProjection;
+import com.slusarz.pokerafterdark.application.game.GameProjection;
 import com.slusarz.pokerafterdark.domain.game.Game;
 import com.slusarz.pokerafterdark.domain.game.GameId;
 import com.slusarz.pokerafterdark.domain.game.Host;

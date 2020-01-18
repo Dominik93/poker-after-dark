@@ -33,7 +33,7 @@ export class MenuComponent implements OnInit {
         this.loginService.login(request).subscribe(data => {
           if (data.success) {
             this.administrationMode = true;
-            this.administrationService.setAdministrationMode(true);
+            this.administrationService.setAdministrationMode(true, data.token);
           }
         });
       }

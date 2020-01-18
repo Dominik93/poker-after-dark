@@ -10,9 +10,10 @@ import * as config from '../../../mocks/config.json'
 import * as gamesPages from '../../../mocks/games.pages.json'
 import * as profit from '../../../mocks/profit.json'
 import { ResponseHandler } from './reponse-handler.js';
+import { AdministrationService } from 'src/app/administration.service.js';
 
 const urls = [
-    
+
     {
         urlRegex: environment.baseUrl + 'login',
         method: 'POST',
@@ -20,7 +21,8 @@ const urls = [
             if (request.body.password === 'correct') {
                 return {
                     default: {
-                        success: true
+                        success: true,
+                        token: 'random_token'
                     }
                 }
             } else {
@@ -156,14 +158,19 @@ const urls = [
 @Injectable()
 export class HttpMockRequestInterceptor implements HttpInterceptor {
     constructor(private injector: Injector,
+        private administrationService: AdministrationService,
         private responseHandler: ResponseHandler) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        const authRequest = request.clone({
+            headers: request.headers.set('Authentication', this.administrationService.token)
+        });
+
         for (const element of urls) {
             var regexp = new RegExp(element.urlRegex);
-            if (request.method === element.method && regexp.test(request.url)) {
-                console.log('Loaded from json: ' + request.url);
-                return of(new HttpResponse({ status: 200, body: ((element.jsonProvider(request)) as any).default })).pipe(
+            if (authRequest.method === element.method && regexp.test(authRequest.url)) {
+                console.log('Loaded from json: ' + authRequest.url);
+                return of(new HttpResponse({ status: 200, body: ((element.jsonProvider(authRequest)) as any).default })).pipe(
                     tap(evt => {
                         this.responseHandler.handle(evt);
                     }),

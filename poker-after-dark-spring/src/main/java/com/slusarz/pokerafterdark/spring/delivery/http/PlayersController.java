@@ -1,9 +1,9 @@
 package com.slusarz.pokerafterdark.spring.delivery.http;
 
-import com.slusarz.pokerafterdark.aplication.cqrs.ServiceExecutor;
-import com.slusarz.pokerafterdark.aplication.player.PlayersQuery;
-import com.slusarz.pokerafterdark.aplication.player.PlayersQueryResult;
-import com.slusarz.pokerafterdark.aplication.usecase.createplayer.CreatePlayerCommandResult;
+import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.player.PlayersQuery;
+import com.slusarz.pokerafterdark.application.player.PlayersQueryResult;
+import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerCommandResult;
 import com.slusarz.pokerafterdark.specification.model.player.AddPlayerRequest;
 import com.slusarz.pokerafterdark.specification.model.player.AddPlayerResponse;
 import com.slusarz.pokerafterdark.specification.model.player.GetPlayersResponse;

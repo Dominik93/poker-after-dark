@@ -1,9 +1,9 @@
 package com.slusarz.pokerafterdark.spring.cqrs;
 
-import com.slusarz.pokerafterdark.aplication.cqrs.handler.HandlerProvider;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.Query;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.QueryExecutor;
-import com.slusarz.pokerafterdark.aplication.cqrs.query.QueryResult;
+import com.slusarz.pokerafterdark.application.cqrs.handler.HandlerProvider;
+import com.slusarz.pokerafterdark.application.cqrs.query.Query;
+import com.slusarz.pokerafterdark.application.cqrs.query.QueryExecutor;
+import com.slusarz.pokerafterdark.application.cqrs.query.QueryResult;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

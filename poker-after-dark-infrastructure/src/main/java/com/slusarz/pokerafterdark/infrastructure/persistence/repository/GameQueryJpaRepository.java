@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
 
-import com.slusarz.pokerafterdark.aplication.game.GameProjection;
-import com.slusarz.pokerafterdark.aplication.game.GameQueryRepository;
+import com.slusarz.pokerafterdark.application.game.GameProjection;
+import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
 import com.slusarz.pokerafterdark.domain.game.GameId;
 import com.slusarz.pokerafterdark.domain.participant.Participant;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;

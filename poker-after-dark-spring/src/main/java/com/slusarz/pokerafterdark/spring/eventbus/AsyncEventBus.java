@@ -1,10 +1,10 @@
 package com.slusarz.pokerafterdark.spring.eventbus;
 
-import com.slusarz.pokerafterdark.aplication.events.Event;
-import com.slusarz.pokerafterdark.aplication.events.EventBus;
-import com.slusarz.pokerafterdark.aplication.events.EventHandler;
-import com.slusarz.pokerafterdark.aplication.events.EventHandlerExecutor;
-import com.slusarz.pokerafterdark.aplication.events.EventHandlerProvider;
+import com.slusarz.pokerafterdark.application.events.Event;
+import com.slusarz.pokerafterdark.application.events.EventBus;
+import com.slusarz.pokerafterdark.application.events.EventHandler;
+import com.slusarz.pokerafterdark.application.events.EventHandlerExecutor;
+import com.slusarz.pokerafterdark.application.events.EventHandlerProvider;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;

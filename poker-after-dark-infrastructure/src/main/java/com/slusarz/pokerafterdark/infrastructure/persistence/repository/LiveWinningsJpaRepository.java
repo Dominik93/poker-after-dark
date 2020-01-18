@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
 
-import com.slusarz.pokerafterdark.aplication.livewinnings.LiveWinningsRepository;
+import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.EntityManager;
