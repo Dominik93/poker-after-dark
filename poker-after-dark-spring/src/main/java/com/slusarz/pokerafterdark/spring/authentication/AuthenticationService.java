@@ -52,14 +52,18 @@ public class AuthenticationService {
             return false;
         }
         Token token = foundToken.get();
-        if (token.getExpirationDate().isBefore(LocalDateTime.now())) {
+        if (token.isExpired()) {
             log.info("Remove token [" + enteredToken + "] due to expiration.");
             tokens.removeIf(storedToken -> storedToken.getValue().equals(enteredToken));
             return false;
         }
         log.info("Prolongate token [" + token + "].");
-        token.prolongate(LocalDateTime.now().plusMinutes(tokenTimeoutProvider.getTimeout()));
+        token.prolongate(tokenTimeoutProvider.getTimeout());
         return true;
+    }
+
+    public void removeExpiredTokens() {
+        tokens.removeIf(Token::isExpired);
     }
 
 }

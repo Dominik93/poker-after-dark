@@ -20,8 +20,12 @@ public class Token {
 
     private LocalDateTime expirationDate;
 
-    public void prolongate(LocalDateTime localDateTime) {
-        expirationDate = localDateTime;
+    public void prolongate(int timeInMinutes) {
+        expirationDate = LocalDateTime.now().plusMinutes(timeInMinutes);
+    }
+
+    public boolean isExpired() {
+        return expirationDate.isBefore(LocalDateTime.now());
     }
 
 }

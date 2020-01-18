@@ -55,7 +55,6 @@ public class JpaRepositoryConfiguration {
         return new ProfitQueryJpaRepository(profitEntityMapper);
     }
 
-
     @Bean
     public PlayerQueryRepository playerQueryRepository(PlayerEntityMapper playerEntityMapper) {
         return new PlayerQueryJpaRepository(playerEntityMapper);
@@ -80,7 +79,6 @@ public class JpaRepositoryConfiguration {
     public GameEntityMapper gameEntityMapper(ParticipationEntityMapper participationEntityMapper) {
         return new GameEntityMapper(participationEntityMapper);
     }
-
 
     @Bean
     public GameQueryCaller gameQueryCaller() {
