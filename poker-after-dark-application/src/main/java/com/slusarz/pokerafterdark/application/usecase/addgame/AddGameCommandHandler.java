@@ -2,6 +2,7 @@ package com.slusarz.pokerafterdark.application.usecase.addgame;
 
 import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
 import com.slusarz.pokerafterdark.application.events.EventBus;
+import com.slusarz.pokerafterdark.application.permission.RequiredAdministrationPermission;
 import com.slusarz.pokerafterdark.application.usecase.addgame.event.AddGameEvent;
 import com.slusarz.pokerafterdark.application.usecase.addgame.exception.AddGameRuntimeException;
 import com.slusarz.pokerafterdark.domain.game.Game;
@@ -20,6 +21,7 @@ public class AddGameCommandHandler implements CommandHandler<AddGameCommandResul
     private GameRepository gameJpaRepository;
 
     @Override
+    @RequiredAdministrationPermission
     public AddGameCommandResult handle(AddGameCommand addGameCommand) {
         validate(addGameCommand);
         GameId gameId = gameJpaRepository.generateId();

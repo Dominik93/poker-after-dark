@@ -2,6 +2,7 @@
   <div class="card card-default">
     <!-- Default card contents -->
     <div class="card-header"><span class="lead">Games</span>
+      <button mat-raised-button color="primary" class="floatRight" *ngIf="administrationMode" (click)="onAddGame()">Add game</button>
     </div>
     <div class="card-body">
       <mat-form-field class="filter">
