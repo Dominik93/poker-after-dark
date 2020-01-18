@@ -7,8 +7,20 @@ import lombok.NoArgsConstructor;
 public class HandlerNameUtil {
 
     public static String getHandlerClassName(Class handler) {
-        String genericString = handler.toGenericString();
-        return genericString.split(" ")[2].replace("Handler", "");
+        String genericClass = handler.toGenericString();
+        return reduceHandler(reduceEnhancer(reduceClass(genericClass)));
+    }
+
+    private static String reduceEnhancer(String genericClass) {
+        return genericClass.split("\\$\\$")[0];
+    }
+
+    private static String reduceClass(String genericClass) {
+        return genericClass.split(" ")[2];
+    }
+
+    private static String reduceHandler(String genericClass) {
+        return genericClass.replace("Handler", "");
     }
 
 }

@@ -1,0 +1,10 @@
+<div mat-dialog-content>
+  <p>Want enter administration mode? Please enter password</p>
+  <mat-form-field class="col-md-12">
+    <input type="password" matInput [(ngModel)]="password">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="password">Login</button>
+  <button mat-button [mat-dialog-close]="false">Cancel</button>
+</div>

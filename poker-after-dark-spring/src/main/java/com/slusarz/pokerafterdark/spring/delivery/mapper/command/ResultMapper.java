@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.spring.delivery.mapper.command;
 
-import com.slusarz.pokerafterdark.aplication.cqrs.command.CommandResult;
+import com.slusarz.pokerafterdark.application.cqrs.command.CommandResult;
 
 public interface ResultMapper<COMMAND_RESULT extends CommandResult, RESPONSE> {
 

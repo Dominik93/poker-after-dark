@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
-import com.slusarz.pokerafterdark.aplication.config.ConfigQueryResult;
+import com.slusarz.pokerafterdark.application.config.ConfigQueryResult;
 import com.slusarz.pokerafterdark.domain.config.EntryFee;
 import com.slusarz.pokerafterdark.domain.config.ListFilter;
 import com.slusarz.pokerafterdark.specification.model.config.Config;

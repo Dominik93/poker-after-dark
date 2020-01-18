@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
 
-import com.slusarz.pokerafterdark.aplication.usecase.createplayer.PlayerRepository;
+import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
 import com.slusarz.pokerafterdark.domain.player.Player;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;

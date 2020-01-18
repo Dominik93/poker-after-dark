@@ -4,6 +4,9 @@
     <button mat-raised-button color="primary" routerLink="/players">Players</button>
     <button mat-raised-button color="primary" routerLink="/games">Games</button>
     <button mat-raised-button color="primary" routerLink="/chart">Chart</button>
+    <span class="fill-remaining-space"></span>
+    <button mat-raised-button color="primary" *ngIf="!administrationMode" (click)="onAdministration()">
+      Administration</button>
   </mat-toolbar-row>
 
 </mat-toolbar>

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  mock: false,
   baseUrl: "http://localhost:8080/pokerafterdark/"
 };
 

@@ -1,0 +1,3671 @@
+{
+    "games": [
+      {
+        "id": "97",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2019-11-20",
+        "pot": 110,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -8.1
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 26.200000000000003
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 10.100000000000001
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 7.199999999999999
+          },
+          {
+            "playerId": "4",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "32",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "3",
+            "playerName": null,
+            "earnings": -5.4
+          }
+        ]
+      },
+      {
+        "id": "96",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2019-11-05",
+        "pot": 60,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -6
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 19.5
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 3
+          },
+          {
+            "playerId": "4",
+            "playerName": null,
+            "earnings": -16.5
+          }
+        ]
+      },
+      {
+        "id": "95",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2019-09-03",
+        "pot": 120,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 80
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "1",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "2",
+            "playerName": null,
+            "earnings": -30
+          }
+        ]
+      },
+      {
+        "id": "94",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2019-08-19",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 26
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 7
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -3
+          },
+          {
+            "playerId": "52",
+            "playerName": null,
+            "earnings": -20
+          }
+        ]
+      },
+      {
+        "id": "93",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2019-08-09",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 73
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -7
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "51",
+            "playerName": null,
+            "earnings": -50
+          }
+        ]
+      },
+      {
+        "id": "92",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2019-06-12",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 42.4
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 38.1
+          },
+          {
+            "playerId": "54",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "50",
+            "playerName": null,
+            "earnings": -50
+          },
+          {
+            "playerId": "32",
+            "playerName": null,
+            "earnings": -30
+          }
+        ]
+      },
+      {
+        "id": "91",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2019-05-29",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 43.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -11.2
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 20.3
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": 7.4
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -20
+          }
+        ]
+      },
+      {
+        "id": "90",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2018-12-20",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 32
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -6.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 2
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -7.5
+          }
+        ]
+      },
+      {
+        "id": "89",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2018-12-20",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -3.8
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -2.7
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 2.4
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 11.3
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": 16.4
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -23.6
+          }
+        ]
+      },
+      {
+        "id": "88",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2018-11-07",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 14.3
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 5.7
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "88",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2018-10-09",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -14.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 11.8
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 32.7
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "87",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2018-09-03",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -69.9
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 37.6
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 31.5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -0.4
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 11.8
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": 9.4
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -20
+          }
+        ]
+      },
+      {
+        "id": "86",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2016-11-07",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -10.25
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 23
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 2.25
+          },
+          {
+            "playerId": "53",
+            "playerName": null,
+            "earnings": -15
+          }
+        ]
+      },
+      {
+        "id": "85",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2016-01-12",
+        "pot": 0,
+        "participantsCount": 0,
+        "participants": [
+          
+        ]
+      },
+      {
+        "id": "84",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2015-12-09",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 7.8
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -1
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 11.5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -13.3
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "83",
+        "host": {
+          "id": "15",
+          "name": "Bartek"
+        },
+        "date": "2015-11-26",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 3
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -9.5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 1
+          },
+          {
+            "playerId": "34",
+            "playerName": null,
+            "earnings": -4.5
+          }
+        ]
+      },
+      {
+        "id": "82",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2015-11-10",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 9
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 9.5
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 1.5
+          }
+        ]
+      },
+      {
+        "id": "81",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2015-07-29",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -6.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -0.5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -8.2
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 15.2
+          }
+        ]
+      },
+      {
+        "id": "80",
+        "host": {
+          "id": "15",
+          "name": "Bartek"
+        },
+        "date": "2015-06-22",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 6.2
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -2.45
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 8.9
+          },
+          {
+            "playerId": "27",
+            "playerName": null,
+            "earnings": -6.2
+          },
+          {
+            "playerId": "34",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "49",
+            "playerName": null,
+            "earnings": -1.45
+          }
+        ]
+      },
+      {
+        "id": "79",
+        "host": {
+          "id": "29",
+          "name": "Piotr"
+        },
+        "date": "2015-06-22",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 3.75
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -13.75
+          }
+        ]
+      },
+      {
+        "id": "78",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2015-04-23",
+        "pot": 0,
+        "participantsCount": 8,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "23",
+            "playerName": null,
+            "earnings": 20
+          },
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "31",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "24",
+            "playerName": null,
+            "earnings": 0
+          }
+        ]
+      },
+      {
+        "id": "77",
+        "host": {
+          "id": "15",
+          "name": "Bartek"
+        },
+        "date": "2015-03-05",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 30.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 10.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -7
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -17.5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 13.5
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": -25
+          }
+        ]
+      },
+      {
+        "id": "76",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2015-02-06",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 9.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 10.5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 0
+          }
+        ]
+      },
+      {
+        "id": "75",
+        "host": {
+          "id": "17",
+          "name": "Krzysiek"
+        },
+        "date": "2015-02-05",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -12
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 12
+          }
+        ]
+      },
+      {
+        "id": "74",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2015-02-01",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -11.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 27.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -20
+          }
+        ]
+      },
+      {
+        "id": "73",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2015-01-23",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "33",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "72",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2015-01-11",
+        "pot": 0,
+        "participantsCount": 2,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 5
+          }
+        ]
+      },
+      {
+        "id": "71",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2015-01-08",
+        "pot": 0,
+        "participantsCount": 8,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -6
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 7.7
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -20
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 43.3
+          }
+        ]
+      },
+      {
+        "id": "70",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2015-01-01",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 2
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "47",
+            "playerName": null,
+            "earnings": 2
+          },
+          {
+            "playerId": "48",
+            "playerName": null,
+            "earnings": -4
+          }
+        ]
+      },
+      {
+        "id": "69",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2014-12-16",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -2.25
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 1
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 13.5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -7.25
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "68",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2014-12-11",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 10.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 2.5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -9
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "35",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "67",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-12-07",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 2.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 7.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "66",
+        "host": {
+          "id": "13",
+          "name": "Aleksander"
+        },
+        "date": "2014-12-05",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -1.45
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -7
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 5.3
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": -0.35
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 13.5
+          }
+        ]
+      },
+      {
+        "id": "65",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2014-11-26",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -10.7
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 1.2
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 11.25
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 0.75
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 2.1
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": -5.35
+          },
+          {
+            "playerId": "27",
+            "playerName": null,
+            "earnings": 0.75
+          }
+        ]
+      },
+      {
+        "id": "64",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2014-11-23",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 11.7
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 10.4
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -12.1
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "63",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-11-20",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -1.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 11
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": -5.5
+          }
+        ]
+      },
+      {
+        "id": "62",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2014-11-14",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 3.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 2.5
+          },
+          {
+            "playerId": "27",
+            "playerName": null,
+            "earnings": -6
+          }
+        ]
+      },
+      {
+        "id": "61",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-11-04",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": 2
+          },
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 3.6
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 4.7
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 4.7
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "60",
+        "host": {
+          "id": "13",
+          "name": "Aleksander"
+        },
+        "date": "2014-10-27",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -30
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 32.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 8.35
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": -10.85
+          }
+        ]
+      },
+      {
+        "id": "59",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2014-10-21",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 7.4
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 12.6
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "36",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "58",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-10-16",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 11.25
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 15.85
+          },
+          {
+            "playerId": "23",
+            "playerName": null,
+            "earnings": 6.35
+          },
+          {
+            "playerId": "33",
+            "playerName": null,
+            "earnings": -8.45
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "25",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "57",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-10-09",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -4.25
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -10.35
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 1.2
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 0.9
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 3.75
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": 8.75
+          }
+        ]
+      },
+      {
+        "id": "56",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-10-02",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 9.6
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 4.3
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -1.8
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "19",
+            "playerName": null,
+            "earnings": 12.9
+          }
+        ]
+      },
+      {
+        "id": "55",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-09-06",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 3
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 7
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "54",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-06-26",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -7
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 14
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 3
+          }
+        ]
+      },
+      {
+        "id": "53",
+        "host": {
+          "id": "13",
+          "name": "Aleksander"
+        },
+        "date": "2014-06-12",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -6.7
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -3.3
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 3.3
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 13
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -2.3
+          },
+          {
+            "playerId": "38",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "29",
+            "playerName": null,
+            "earnings": -2
+          }
+        ]
+      },
+      {
+        "id": "52",
+        "host": {
+          "id": "15",
+          "name": "Bartek"
+        },
+        "date": "2014-06-05",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 17.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -11.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "51",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-05-29",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 10
+          }
+        ]
+      },
+      {
+        "id": "50",
+        "host": {
+          "id": "14",
+          "name": "Grzegorz"
+        },
+        "date": "2014-05-28",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 6.3
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -4.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 13.2
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -7
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -8
+          }
+        ]
+      },
+      {
+        "id": "49",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-05-22",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 9.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 0.5
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "48",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-05-20",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "47",
+        "host": {
+          "id": "15",
+          "name": "Bartek"
+        },
+        "date": "2014-05-15",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -8.7
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -3
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 31.7
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "46",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2014-05-07",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 7.9
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": 4.4
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": 13.7
+          }
+        ]
+      },
+      {
+        "id": "45",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-05-06",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "23",
+            "playerName": null,
+            "earnings": 20
+          },
+          {
+            "playerId": "25",
+            "playerName": null,
+            "earnings": 0
+          }
+        ]
+      },
+      {
+        "id": "44",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2014-04-24",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "43",
+        "host": {
+          "id": "13",
+          "name": "Aleksander"
+        },
+        "date": "2014-04-14",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 12.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 2.5
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "42",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-04-09",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 15
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 6.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 13.5
+          },
+          {
+            "playerId": "28",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "41",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2014-04-03",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": 15
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "40",
+        "host": {
+          "id": "44",
+          "name": "Paulina"
+        },
+        "date": "2014-03-30",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "23",
+            "playerName": null,
+            "earnings": 6
+          },
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "24",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "39",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-03-26",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 3.2
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 1.8
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "38",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-03-25",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 6
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -2
+          }
+        ]
+      },
+      {
+        "id": "37",
+        "host": {
+          "id": "14",
+          "name": "Grzegorz"
+        },
+        "date": "2014-03-19",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 5.67
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 1.19
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -2.86
+          }
+        ]
+      },
+      {
+        "id": "36",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-03-18",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "17",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "host": {
+          "id": "12",
+          "name": "Filip"
+        },
+        "date": "2014-03-13",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 21
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": -2
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-03-09",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -3.2
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 0.6
+          },
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": 8.15
+          },
+          {
+            "playerId": "44",
+            "playerName": null,
+            "earnings": -2.7
+          },
+          {
+            "playerId": "45",
+            "playerName": null,
+            "earnings": 0.15
+          },
+          {
+            "playerId": "26",
+            "playerName": null,
+            "earnings": -3
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2014-03-06",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 14.25
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -11.75
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 7.5
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -10
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "host": {
+          "id": "16",
+          "name": "Mariusz"
+        },
+        "date": "2014-02-26",
+        "pot": 0,
+        "participantsCount": 10,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 8
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": 14
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "28",
+            "playerName": null,
+            "earnings": 8
+          },
+          {
+            "playerId": "29",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2014-02-01",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -25
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 12
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": 13
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "host": {
+          "id": "15",
+          "name": "Bartek"
+        },
+        "date": "2013-11-22",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": 0.7
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -0.7
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 0
+          }
+        ]
+      },
+      {
+        "id": "29",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2013-11-08",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 8
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": 12
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "host": {
+          "id": "14",
+          "name": "Grzegorz"
+        },
+        "date": "2013-11-06",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 3.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 3
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 18.5
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "host": {
+          "id": "13",
+          "name": "Aleksander"
+        },
+        "date": "2013-11-04",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 7
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "42",
+            "playerName": null,
+            "earnings": -17
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-10-23",
+        "pot": 0,
+        "participantsCount": 8,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 23
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 7
+          },
+          {
+            "playerId": "15",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "43",
+            "playerName": null,
+            "earnings": 0
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-06-06",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -18
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -17
+          },
+          {
+            "playerId": "18",
+            "playerName": null,
+            "earnings": 50
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": 10
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-04-07",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 3
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -1.45
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 1
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -2.55
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-04-06",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": 10
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-04-05",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 6
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 2
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 3
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -1
+          },
+          {
+            "playerId": "30",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "host": {
+          "id": "10",
+          "name": "Daniel"
+        },
+        "date": "2013-04-04",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 10.5
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -2.4
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -3
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 2.9
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -8
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-04-02",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -3.4
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 2.5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -2.8
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": 3.7
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-04-01",
+        "pot": 0,
+        "participantsCount": 2,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 1.5
+          },
+          {
+            "playerId": "26",
+            "playerName": null,
+            "earnings": -1.5
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-03-21",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 8.9
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 2
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -2.2
+          },
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": -2.5
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -1.2
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-03-17",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 8
+          },
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": -2.5
+          },
+          {
+            "playerId": "24",
+            "playerName": null,
+            "earnings": 1
+          },
+          {
+            "playerId": "39",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "26",
+            "playerName": null,
+            "earnings": -2.5
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-03-13",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 15
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -5
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -15
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": 40
+          },
+          {
+            "playerId": "41",
+            "playerName": null,
+            "earnings": -15
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-03-01",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 1
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -1
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-02-09",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -3
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "46",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2013-02-06",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -3
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -2.5
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 2.5
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "30",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "host": {
+          "id": "11",
+          "name": "Dominik"
+        },
+        "date": "2012-12-31",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -0.15
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 7.15
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": -5
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-12-17",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -11.75
+          },
+          {
+            "playerId": "23",
+            "playerName": null,
+            "earnings": -10
+          },
+          {
+            "playerId": "25",
+            "playerName": null,
+            "earnings": 7
+          },
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": 11.25
+          },
+          {
+            "playerId": "31",
+            "playerName": null,
+            "earnings": 3.5
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-12-14",
+        "pot": 0,
+        "participantsCount": 3,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 4
+          },
+          {
+            "playerId": "11",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -2
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-12-11",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 2.8
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -1.7
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 6.75
+          },
+          {
+            "playerId": "20",
+            "playerName": null,
+            "earnings": -1.8
+          },
+          {
+            "playerId": "22",
+            "playerName": null,
+            "earnings": -6.05
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-12-04",
+        "pot": 0,
+        "participantsCount": 6,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 4.42
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -3
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 1.91
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -3
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": 2.67
+          },
+          {
+            "playerId": "22",
+            "playerName": null,
+            "earnings": -3
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-11-28",
+        "pot": 0,
+        "participantsCount": 5,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 2.9
+          },
+          {
+            "playerId": "21",
+            "playerName": null,
+            "earnings": -1.2
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": 2.24
+          },
+          {
+            "playerId": "37",
+            "playerName": null,
+            "earnings": -3.57
+          },
+          {
+            "playerId": "40",
+            "playerName": null,
+            "earnings": -0.37
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-11-20",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -1.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 5.5
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-11-13",
+        "pot": 0,
+        "participantsCount": 7,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 11.5
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "16",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "28",
+            "playerName": null,
+            "earnings": 0.5
+          },
+          {
+            "playerId": "22",
+            "playerName": null,
+            "earnings": -2
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-11-06",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": 0
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 6
+          },
+          {
+            "playerId": "22",
+            "playerName": null,
+            "earnings": -4
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-10-30",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 8
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -6
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "22",
+            "playerName": null,
+            "earnings": 2
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-10-23",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": 10
+          },
+          {
+            "playerId": "12",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": -4
+          },
+          {
+            "playerId": "22",
+            "playerName": null,
+            "earnings": -4
+          }
+        ]
+      },
+      {
+        "id": "1",
+        "host": {
+          "id": "",
+          "name": "unknown"
+        },
+        "date": "2012-10-16",
+        "pot": 0,
+        "participantsCount": 4,
+        "participants": [
+          {
+            "playerId": "10",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "13",
+            "playerName": null,
+            "earnings": -2
+          },
+          {
+            "playerId": "14",
+            "playerName": null,
+            "earnings": 6
+          },
+          {
+            "playerId": "22",
+            "playerName": null,
+            "earnings": -2
+          }
+        ]
+      }
+    ]
+  }

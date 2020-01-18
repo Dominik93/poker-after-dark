@@ -11,6 +11,7 @@ import { ConfigService } from '../config.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 import { RemoveGameRequest } from '../model/remove-game-request';
+import { AdministrationService } from '../administration.service';
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
@@ -27,7 +28,7 @@ import { RemoveGameRequest } from '../model/remove-game-request';
 export class GamesComponent implements OnInit {
 
   administrationMode: boolean = false;
-  displayedColumns = ["date", "host", "players", "pot"];
+  displayedColumns = ["date", "host", "players", "pot", "actions"];
   dataSource: MatTableDataSource<Game>;
   games: Game[];
   players: Player[];
@@ -38,11 +39,17 @@ export class GamesComponent implements OnInit {
   isExpansionDetailRow = (index, row) => row.hasOwnProperty('detailRow');
 
   constructor(private router: Router,
+    private administrationService: AdministrationService,
     private configService: ConfigService,
     private playersService: PlayersService,
     private gamesService: GamesService) { }
 
   ngOnInit() {
+    this.administrationMode = this.administrationService.currentAdministrationMode;
+    this.administrationService.getAdministrationMode().subscribe(data => {
+      this.administrationMode = data;
+    })
+
     this.playersService.getPlayers().subscribe(data => {
       this.players = data.players;
       this.configService.getConfig().subscribe(data => {

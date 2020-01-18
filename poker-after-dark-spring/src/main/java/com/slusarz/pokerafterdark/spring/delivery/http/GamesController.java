@@ -1,9 +1,9 @@
 package com.slusarz.pokerafterdark.spring.delivery.http;
 
-import com.slusarz.pokerafterdark.aplication.cqrs.ServiceExecutor;
-import com.slusarz.pokerafterdark.aplication.game.GamesQueryResult;
-import com.slusarz.pokerafterdark.aplication.usecase.addgame.AddGameCommandResult;
-import com.slusarz.pokerafterdark.aplication.usecase.removegame.RemoveGameCommandResult;
+import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.game.GamesQueryResult;
+import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameCommandResult;
+import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandResult;
 import com.slusarz.pokerafterdark.specification.model.game.AddGameRequest;
 import com.slusarz.pokerafterdark.specification.model.game.AddGameResponse;
 import com.slusarz.pokerafterdark.specification.model.game.GetGamesRequest;
@@ -55,7 +55,7 @@ public class GamesController {
     @DeleteMapping("/{id}")
     public RemoveGameResponse removeGame(@PathVariable("id") String gameId) {
         return new CommandRequestHandler<RemoveGameResponse, String, RemoveGameCommandResult>
-                (serviceExecutor, addGameMapper, addGameMapper).handle(gameId);
+                (serviceExecutor, removeGameMapper, removeGameMapper).handle(gameId);
     }
 
 }

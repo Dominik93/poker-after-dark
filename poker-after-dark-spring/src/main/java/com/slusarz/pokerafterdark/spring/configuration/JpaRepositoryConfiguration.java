@@ -1,12 +1,12 @@
 package com.slusarz.pokerafterdark.spring.configuration;
 
-import com.slusarz.pokerafterdark.aplication.game.GameQueryRepository;
-import com.slusarz.pokerafterdark.aplication.livewinnings.LiveWinningsRepository;
-import com.slusarz.pokerafterdark.aplication.player.PlayerQueryRepository;
-import com.slusarz.pokerafterdark.aplication.profit.ProfitQueryRepository;
-import com.slusarz.pokerafterdark.aplication.profit.ProfitRepository;
-import com.slusarz.pokerafterdark.aplication.usecase.addgame.GameRepository;
-import com.slusarz.pokerafterdark.aplication.usecase.createplayer.PlayerRepository;
+import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
+import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;
+import com.slusarz.pokerafterdark.application.player.PlayerQueryRepository;
+import com.slusarz.pokerafterdark.application.profit.ProfitQueryRepository;
+import com.slusarz.pokerafterdark.application.profit.ProfitRepository;
+import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
+import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ParticipationEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.PlayerEntityMapper;
@@ -55,7 +55,6 @@ public class JpaRepositoryConfiguration {
         return new ProfitQueryJpaRepository(profitEntityMapper);
     }
 
-
     @Bean
     public PlayerQueryRepository playerQueryRepository(PlayerEntityMapper playerEntityMapper) {
         return new PlayerQueryJpaRepository(playerEntityMapper);
@@ -80,7 +79,6 @@ public class JpaRepositoryConfiguration {
     public GameEntityMapper gameEntityMapper(ParticipationEntityMapper participationEntityMapper) {
         return new GameEntityMapper(participationEntityMapper);
     }
-
 
     @Bean
     public GameQueryCaller gameQueryCaller() {
