@@ -18,12 +18,10 @@
             <groupId>com.slusarz.pokerafterdark</groupId>
             <artifactId>poker-after-dark-domain</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>
