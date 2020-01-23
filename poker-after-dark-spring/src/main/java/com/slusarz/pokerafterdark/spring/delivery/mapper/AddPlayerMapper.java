@@ -3,8 +3,8 @@ package com.slusarz.pokerafterdark.spring.delivery.mapper;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerCommand;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerCommandResult;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
-import com.slusarz.pokerafterdark.specification.model.player.AddPlayerRequest;
-import com.slusarz.pokerafterdark.specification.model.player.AddPlayerResponse;
+import com.slusarz.pokerafterdark.specification.api.AddPlayerRequest;
+import com.slusarz.pokerafterdark.specification.api.AddPlayerResponse;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.command.CommandMapper;
 import org.springframework.stereotype.Component;
 

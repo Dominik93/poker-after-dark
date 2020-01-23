@@ -3,7 +3,7 @@ package com.slusarz.pokerafterdark.spring.delivery.mapper;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommand;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandResult;
 import com.slusarz.pokerafterdark.domain.game.GameId;
-import com.slusarz.pokerafterdark.specification.model.game.RemoveGameResponse;
+import com.slusarz.pokerafterdark.specification.api.RemoveGameResponse;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.command.CommandMapper;
 import org.springframework.stereotype.Component;
 

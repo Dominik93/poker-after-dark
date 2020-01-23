@@ -2,8 +2,8 @@ package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
 import com.slusarz.pokerafterdark.application.player.PlayerProjection;
 import com.slusarz.pokerafterdark.application.player.PlayersQueryResult;
-import com.slusarz.pokerafterdark.specification.model.player.GetPlayersResponse;
-import com.slusarz.pokerafterdark.specification.model.player.Player;
+import com.slusarz.pokerafterdark.specification.api.GetPlayersResponse;
+import com.slusarz.pokerafterdark.specification.api.Player;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.query.ResultMapper;
 import org.springframework.stereotype.Component;
 
@@ -38,9 +38,9 @@ public class GetPlayersMapper implements ResultMapper<PlayersQueryResult, GetPla
                 .build();
     }
 
-    private static double round(double value, int places) {
+    private static BigDecimal round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
-        return BigDecimal.valueOf(value).setScale(places, RoundingMode.HALF_UP).doubleValue();
+        return BigDecimal.valueOf(value).setScale(places, RoundingMode.HALF_UP);
     }
 
 }

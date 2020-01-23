@@ -5,13 +5,14 @@ import com.slusarz.pokerafterdark.application.game.GamesQuery;
 import com.slusarz.pokerafterdark.application.game.GamesQueryResult;
 import com.slusarz.pokerafterdark.domain.participant.Participant;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
-import com.slusarz.pokerafterdark.specification.model.game.Game;
-import com.slusarz.pokerafterdark.specification.model.game.GetGamesRequest;
-import com.slusarz.pokerafterdark.specification.model.game.GetGamesResponse;
-import com.slusarz.pokerafterdark.specification.model.game.Host;
+import com.slusarz.pokerafterdark.specification.api.Game;
+import com.slusarz.pokerafterdark.specification.api.GetGamesRequest;
+import com.slusarz.pokerafterdark.specification.api.GetGamesResponse;
+import com.slusarz.pokerafterdark.specification.api.Host;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.query.QueryMapper;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -53,14 +54,14 @@ public class GetGamesMapper implements QueryMapper<GetGamesRequest, GamesQuery, 
                 .build();
     }
 
-    private List<com.slusarz.pokerafterdark.specification.model.game.Participant> toParticipants(List<Participant> participants) {
+    private List<com.slusarz.pokerafterdark.specification.api.Participant> toParticipants(List<Participant> participants) {
         return participants.stream().map(this::toParticipant).collect(Collectors.toList());
     }
 
-    private com.slusarz.pokerafterdark.specification.model.game.Participant toParticipant(Participant participant) {
-        return com.slusarz.pokerafterdark.specification.model.game.Participant.builder()
+    private com.slusarz.pokerafterdark.specification.api.Participant toParticipant(Participant participant) {
+        return com.slusarz.pokerafterdark.specification.api.Participant.builder()
                 .playerId(participant.getPlayerId().getId())
-                .earnings(participant.getEarnings().getValue())
+                .earnings(new BigDecimal(participant.getEarnings().getValue()))
                 .build();
     }
 
