@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.spring.delivery.http;
 
-import com.slusarz.pokerafterdark.specification.model.login.LoginRequest;
-import com.slusarz.pokerafterdark.specification.model.login.LoginResponse;
+import com.slusarz.pokerafterdark.specification.api.LoginRequest;
+import com.slusarz.pokerafterdark.specification.api.LoginResponse;
 import com.slusarz.pokerafterdark.spring.authentication.AuthenticationService;
 import com.slusarz.pokerafterdark.spring.token.Token;
 import org.springframework.beans.factory.annotation.Autowired;

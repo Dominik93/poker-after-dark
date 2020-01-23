@@ -2,8 +2,8 @@ package com.slusarz.pokerafterdark.spring.delivery.http;
 
 import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryResult;
-import com.slusarz.pokerafterdark.specification.model.profit.GetProfitRequest;
-import com.slusarz.pokerafterdark.specification.model.profit.GetProfitResponse;
+import com.slusarz.pokerafterdark.specification.api.GetProfitRequest;
+import com.slusarz.pokerafterdark.specification.api.GetProfitResponse;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.GetProfitsMapper;
 import com.slusarz.pokerafterdark.spring.delivery.request.QueryRequestHandler;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,7 +3,7 @@ package com.slusarz.pokerafterdark.spring.delivery.http;
 import com.slusarz.pokerafterdark.application.config.ConfigQuery;
 import com.slusarz.pokerafterdark.application.config.ConfigQueryResult;
 import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
-import com.slusarz.pokerafterdark.specification.model.config.GetConfigResponse;
+import com.slusarz.pokerafterdark.specification.api.GetConfigResponse;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.ConfigMapper;
 import com.slusarz.pokerafterdark.spring.delivery.request.QueryRequestHandler;
 import org.springframework.beans.factory.annotation.Autowired;
