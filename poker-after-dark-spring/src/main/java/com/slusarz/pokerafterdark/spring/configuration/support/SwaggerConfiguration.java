@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.support;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

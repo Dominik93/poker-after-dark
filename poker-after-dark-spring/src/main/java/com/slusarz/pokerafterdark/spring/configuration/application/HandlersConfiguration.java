@@ -1,6 +1,7 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.application;
 
 import com.slusarz.pokerafterdark.application.config.ConfigQueryHandler;
+import com.slusarz.pokerafterdark.application.config.ConfigProvider;
 import com.slusarz.pokerafterdark.application.events.EventBus;
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
 import com.slusarz.pokerafterdark.application.game.GamesQueryHandler;
@@ -36,8 +37,8 @@ public class HandlersConfiguration {
     }
 
     @Bean
-    public ConfigQueryHandler configQueryHandler(){
-        return new ConfigQueryHandler();
+    public ConfigQueryHandler configQueryHandler(ConfigProvider configProvider){
+        return new ConfigQueryHandler(configProvider);
     }
 
     @Bean

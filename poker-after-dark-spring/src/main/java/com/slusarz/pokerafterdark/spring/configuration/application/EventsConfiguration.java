@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.application;
 
 import com.slusarz.pokerafterdark.application.events.EventBus;
 import com.slusarz.pokerafterdark.application.events.EventHandler;

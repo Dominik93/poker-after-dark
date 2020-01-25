@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.web;
 
 import com.slusarz.pokerafterdark.spring.authentication.AuthenticationInterceptor;
 import com.slusarz.pokerafterdark.spring.context.ContextFactory;
