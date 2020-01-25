@@ -4,6 +4,6 @@ import com.slusarz.pokerafterdark.domain.game.Game;
 
 public class GameBeforeLastGameRuntimeException extends RuntimeException {
     public GameBeforeLastGameRuntimeException(Game lastGame, Game gameToAdd) {
-        super("Try add game [" + gameToAdd + "] before last game [" + lastGame + "]");
+        super("Try add game [" + gameToAdd + "] witch is before last game [" + lastGame + "]");
     }
 }

@@ -23,7 +23,7 @@ public class GameQueryCaller {
     private static final String SELECT_PARTICIPATION = "select game_id, player_id, earnings from PARTICIPATION where game_id in (:gameIds)";
     private static final String GAMES_IDS_PARAM = "gameIds";
 
-    private static final String SELECT_LAST_GAME = "select g from GameJpaEntity g order by g.date desc limit 1";
+    private static final String SELECT_LAST_GAME = "select g from GameJpaEntity g order by g.date desc";
 
 
     @PersistenceContext
@@ -31,6 +31,7 @@ public class GameQueryCaller {
 
     GameJpaEntity selectLastGame() {
         return (GameJpaEntity) entityManager.createQuery(SELECT_LAST_GAME)
+                .setMaxResults(1)
                 .getSingleResult();
     }
 
