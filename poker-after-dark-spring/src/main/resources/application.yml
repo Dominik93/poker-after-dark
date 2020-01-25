@@ -8,8 +8,6 @@ security:
       timeout: 30
     password: $2a$10$USo5c35DK.myZW58z2GC0OUMhe0vcSaSq9tIPolXzYPHY3TwTQym6
 spring:
-  profiles:
-    active: SWAGGER
   datasource:
     url: ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
