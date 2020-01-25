@@ -5,6 +5,7 @@ import lombok.ToString;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 /**
  * {{#description}}{{.}}{{/description}}{{^description}}{{classname}}.{{/description}}
@@ -17,9 +18,10 @@ import lombok.AllArgsConstructor;
 @Builder
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
 @AllArgsConstructor(staticName = "of")
 public{{#vendorExtensions.x-model-abstract}} abstract{{/vendorExtensions.x-model-abstract}} class {{classname}}{{#parent}} extends {{{parent}}}{{/parent}}{{#serializableModel}} implements Serializable{{/serializableModel}} {
-    {{#serizalizableModel}}
+    {{#serializableModel}}
     private static final long serialVersionUID = 1L;
     {{/serializableModel}}
     {{#vars}}
