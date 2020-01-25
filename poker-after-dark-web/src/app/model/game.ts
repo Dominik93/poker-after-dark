@@ -7,7 +7,7 @@ export class Game {
 
     host: Host;
 
-    date: Date;
+    date: string;
 
     pot: number;
 

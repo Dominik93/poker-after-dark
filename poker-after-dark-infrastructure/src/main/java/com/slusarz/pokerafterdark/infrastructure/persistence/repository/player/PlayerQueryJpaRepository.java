@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
+package com.slusarz.pokerafterdark.infrastructure.persistence.repository.player;
 
 import com.slusarz.pokerafterdark.application.player.PlayerProjection;
 import com.slusarz.pokerafterdark.application.player.PlayerQueryRepository;

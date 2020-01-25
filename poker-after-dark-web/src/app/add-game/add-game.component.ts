@@ -13,6 +13,8 @@ import { PlayersService } from '../players.service';
 import { Host } from '../model/host';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { AdministrationService } from '../administration.service';
+import { FormControl } from '@angular/forms';
+import { DateFormatter } from '../date/date-formatter';
 
 @Component({
   selector: 'app-add-game',
@@ -25,15 +27,17 @@ export class AddGameComponent implements OnInit {
   playersInGame: PlayerInGame[] = [];
   players: Player[];
   host: Player;
+  date = new FormControl(new Date());
 
   constructor(public dialog: MatDialog,
     private gamesService: GamesService,
+    private dateFormatter: DateFormatter,
     private administrationService: AdministrationService,
     private playersService: PlayersService,
     private configService: ConfigService) { }
 
   ngOnInit() {
-    if(!this.administrationService.currentAdministrationMode) {
+    if (!this.administrationService.currentAdministrationMode) {
       window.location.href = '#';
     }
 
@@ -80,10 +84,11 @@ export class AddGameComponent implements OnInit {
 
   onSave() {
     var request = new AddGameRequest();
+    request.skipValidation = false;
     request.game = new Game();
-    request.game.date = new Date();
-    request.game.host = new Host();
+    request.game.date = this.dateFormatter.format(this.date.value);
     request.game.pot = this.getPot();
+    request.game.host = new Host();
     request.game.host.id = this.host.id;
     request.game.host.name = this.host.name;
     request.game.participants = this.playersInGame.map(player => new Participant(player));
@@ -128,7 +133,7 @@ export class AddGameComponent implements OnInit {
     dialogRef.afterClosed().subscribe(results => {
       console.log('The dialog was closed');
       if (results !== undefined) {
-        results.forEach(result =>{
+        results.forEach(result => {
           this.playersInGame.push(new PlayerInGame(this.getPlayer(result)));
         });
       }

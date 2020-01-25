@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
+package com.slusarz.pokerafterdark.infrastructure.persistence.repository.profit;
 
 import com.slusarz.pokerafterdark.application.profit.ProfitRepository;
 import com.slusarz.pokerafterdark.domain.game.Game;

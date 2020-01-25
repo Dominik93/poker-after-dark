@@ -1,7 +1,8 @@
-package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
+package com.slusarz.pokerafterdark.infrastructure.persistence.repository.game;
 
 import com.slusarz.pokerafterdark.application.game.GameProjection;
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
+import com.slusarz.pokerafterdark.domain.game.Game;
 import com.slusarz.pokerafterdark.domain.game.GameId;
 import com.slusarz.pokerafterdark.domain.participant.Participant;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
@@ -46,6 +47,11 @@ public class GameQueryJpaRepository implements GameQueryRepository {
         return gameJpaEntities.stream()
                 .map(gameJpaEntity -> gameEntityMapper.toGame(gameJpaEntity, participants, playerIds))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Game readLast() {
+        return gameEntityMapper.toGame(gameQueryCaller.selectLastGame());
     }
 
     private List<Participant> toListOfParticipants(List<ParticipationResult> results) {
