@@ -12,7 +12,9 @@ import com.slusarz.pokerafterdark.specification.api.Game;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.command.CommandMapper;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
@@ -29,10 +31,11 @@ public class AddGameMapper implements CommandMapper<AddGameRequest, AddGameComma
     }
 
     private AddGameCommand toAddGameCommand(Game game, boolean skipValidation) {
-        return AddGameCommand.of(PlayerId.of(game.getHost().getId()),
-                game.getDate(),
-                Pot.of(game.getPot()),
-                toParticipants(game.getParticipants()), skipValidation);
+        PlayerId playerId = PlayerId.of(game.getHost().getId());
+        Pot pot = Pot.of(game.getPot());
+        LocalDate date = Optional.ofNullable(game.getDate()).orElse(LocalDate.now());
+        List<Participant> participants = toParticipants(game.getParticipants());
+        return AddGameCommand.of(playerId, date, pot, participants, skipValidation);
     }
 
     private List<Participant> toParticipants(List<com.slusarz.pokerafterdark.specification.api.Participant> participants) {

@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
+package com.slusarz.pokerafterdark.infrastructure.persistence.repository.game;
 
 import com.slusarz.pokerafterdark.domain.game.GameId;
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
@@ -23,16 +23,25 @@ public class GameQueryCaller {
     private static final String SELECT_PARTICIPATION = "select game_id, player_id, earnings from PARTICIPATION where game_id in (:gameIds)";
     private static final String GAMES_IDS_PARAM = "gameIds";
 
+    private static final String SELECT_LAST_GAME = "select g from GameJpaEntity g order by g.date desc";
+
+
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<GameJpaEntity> selectGames(LocalDate from, LocalDate to) {
+    GameJpaEntity selectLastGame() {
+        return (GameJpaEntity) entityManager.createQuery(SELECT_LAST_GAME)
+                .setMaxResults(1)
+                .getSingleResult();
+    }
+
+    List<GameJpaEntity> selectGames(LocalDate from, LocalDate to) {
         return (List<GameJpaEntity>) entityManager.createQuery(SELECT_GAMES_BETWEEN_DATE)
                 .setParameter(START_DATE_PARAM, from)
                 .setParameter(END_DATE_PARAM, to).getResultList();
     }
 
-    public List<ParticipationResult> selectParticipations(List<String> gameIds) {
+    List<ParticipationResult> selectParticipations(List<String> gameIds) {
         List<Object[]> resultList = entityManager.createNativeQuery(SELECT_PARTICIPATION)
                 .setParameter(GAMES_IDS_PARAM, gameIds).getResultList();
 

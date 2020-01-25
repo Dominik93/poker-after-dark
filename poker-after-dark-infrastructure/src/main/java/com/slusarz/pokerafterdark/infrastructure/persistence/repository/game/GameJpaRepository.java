@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
+package com.slusarz.pokerafterdark.infrastructure.persistence.repository.game;
 
 import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
 import com.slusarz.pokerafterdark.domain.game.Game;
@@ -20,9 +20,6 @@ import java.util.stream.Collectors;
 public class GameJpaRepository implements GameRepository {
 
     private static final String SELECT_PLAYERS = "select u from PlayerJpaEntity u ";
-    private static final String SELECT_GAMES_BETWEEN_DATE = "select g from GameJpaEntity g where g.date BETWEEN :startDate AND :endDate order by g.date desc ";
-    private static final String START_DATE_PARAM = "startDate";
-    private static final String END_DATE_PARAM = "endDate";
 
     @PersistenceContext
     private EntityManager entityManager;

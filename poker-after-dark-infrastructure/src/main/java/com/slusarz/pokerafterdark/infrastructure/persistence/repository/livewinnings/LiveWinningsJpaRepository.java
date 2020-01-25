@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.infrastructure.persistence.repository;
+package com.slusarz.pokerafterdark.infrastructure.persistence.repository.livewinnings;
 
 import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;
 import lombok.NoArgsConstructor;

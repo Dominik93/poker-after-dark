@@ -11,14 +11,14 @@ import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameEntityMa
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ParticipationEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.PlayerEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ProfitEntityMapper;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.GameJpaRepository;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.GameQueryCaller;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.GameQueryJpaRepository;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.LiveWinningsJpaRepository;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.PlayerJpaRepository;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.PlayerQueryJpaRepository;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.ProfitJpaRepository;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.ProfitQueryJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.GameJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.GameQueryCaller;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.GameQueryJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.livewinnings.LiveWinningsJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.player.PlayerJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.player.PlayerQueryJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.profit.ProfitJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.profit.ProfitQueryJpaRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -10,6 +10,7 @@ import com.slusarz.pokerafterdark.application.player.PlayersQueryHandler;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryHandler;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryRepository;
 import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameCommandHandler;
+import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameValidator;
 import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerCommandHandler;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
@@ -32,8 +33,10 @@ public class HandlersConfiguration {
     }
 
     @Bean
-    public AddGameCommandHandler addGameCommandHandler(@Qualifier("afterCommitEventBus")EventBus eventsBus, GameRepository gameRepository){
-        return new AddGameCommandHandler(eventsBus, gameRepository);
+    public AddGameCommandHandler addGameCommandHandler(@Qualifier("afterCommitEventBus")EventBus eventsBus,
+                                                       GameRepository gameRepository,
+                                                       AddGameValidator addGameValidator){
+        return new AddGameCommandHandler(eventsBus, gameRepository, addGameValidator);
     }
 
     @Bean

@@ -20,6 +20,6 @@ public class AddGameCommand implements Command {
 
     private List<Participant> participants;
 
-    private boolean skipValidation;
+    private boolean skipPotValidation;
 
 }
