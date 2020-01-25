@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.persistence;
 
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
 import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;

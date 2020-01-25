@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.persistence;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,22 +11,26 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
 public class JpaConfiguration {
 
+    private static final String PERSISTENCE_PACKAGES
+            = "com.slusarz.pokerafterdark.infrastructure.persistence";
+
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
+            HiberanteProperties hiberanteProperties,
+            DataSource dataSource) {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
 
-        em.setPackagesToScan("com.slusarz.pokerafterdark.infrastructure.persistence");
+        em.setPackagesToScan(PERSISTENCE_PACKAGES);
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
-        em.setJpaProperties(additionalProperties());
+        em.setJpaProperties(hiberanteProperties.getAdditionalProperties());
 
         return em;
     }
@@ -37,18 +41,4 @@ public class JpaConfiguration {
         transactionManager.setEntityManagerFactory(emf);
         return transactionManager;
     }
-
-    Properties additionalProperties() {
-        Properties properties = new Properties();
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-        properties.setProperty("hibernate.jdbc.batch_size", "5");
-        properties.put("hibernate.generate_statistics", "true");
-
-        properties.put("hibernate.order_inserts", "true");
-        properties.put("hibernate.order_updates", "true");
-        properties.put("hibernate.jdbc.batch_versioned_data", "true");
-        properties.setProperty("hibernate.show_sql", "true");
-        return properties;
-    }
-
 }

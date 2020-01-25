@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.application;
 
 import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsSynchronizer;
 import com.slusarz.pokerafterdark.application.profit.ProfitRepository;

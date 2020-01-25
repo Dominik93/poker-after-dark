@@ -2,11 +2,6 @@ server:
   servlet:
     context-path: /pokerafterdark
   port: ${PORT:8080}
-security:
-  administration:
-    token:
-      timeout: 30
-    password: $2a$10$USo5c35DK.myZW58z2GC0OUMhe0vcSaSq9tIPolXzYPHY3TwTQym6
 spring:
   datasource:
     url: ${JDBC_DATABASE_URL}
@@ -16,8 +11,25 @@ spring:
   jpa:
     properties:
       hibernate:
-        format_sql: false
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        format_sql: false
+        generate_statistics: true
+        order_inserts: true
+        order_updates: true
+        jdbc:
+          batch_size: 5
+          batch_versioned_data: true
+poker-after-dark:
+  entry:
+    chips: 1000
+    money: 10
+  pages:
+    from: 2000-01-01
+  administration:
+    token:
+      timeout: 30
+    password: $2a$10$USo5c35DK.myZW58z2GC0OUMhe0vcSaSq9tIPolXzYPHY3TwTQym6
 logging:
   level:
     org:

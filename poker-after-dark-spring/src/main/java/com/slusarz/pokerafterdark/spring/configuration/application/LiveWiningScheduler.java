@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.application;
 
 import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;
 import lombok.extern.slf4j.Slf4j;

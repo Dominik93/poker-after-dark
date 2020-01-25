@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.security;
 
 import com.slusarz.pokerafterdark.spring.token.TokenGenerator;
 import com.slusarz.pokerafterdark.spring.token.TokenTimeoutProvider;

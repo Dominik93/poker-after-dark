@@ -1,4 +1,4 @@
-package com.slusarz.pokerafterdark.spring.configuration;
+package com.slusarz.pokerafterdark.spring.configuration.security;
 
 import com.slusarz.pokerafterdark.spring.authentication.AuthenticationService;
 import com.slusarz.pokerafterdark.spring.password.PasswordProvider;
