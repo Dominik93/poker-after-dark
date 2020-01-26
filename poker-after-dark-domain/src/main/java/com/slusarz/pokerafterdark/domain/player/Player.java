@@ -1,6 +1,7 @@
 package com.slusarz.pokerafterdark.domain.player;
 
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
+import com.slusarz.pokerafterdark.domain.validation.ValidationError;
 import com.slusarz.pokerafterdark.domain.validation.ValidationExecutor;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -18,19 +19,19 @@ import javax.validation.constraints.NotNull;
 public class Player {
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_PLAYER_ID)
     private PlayerId playerId;
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_PLAYER_NAME)
     private PlayerName playerName;
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_LIVE_WINNINGS)
     private Earnings liveEarnings;
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_NUMBER_OF_PLAYS)
     private NumberOfPlays numberOfPlays;
 
     public static Player of(PlayerId playerId, PlayerName playerName, Earnings liveEarnings, NumberOfPlays numberOfPlays) {
@@ -38,7 +39,7 @@ public class Player {
     }
 
     public static Player newPlayer(PlayerId playerId, PlayerName playerName) {
-        return ValidationExecutor.validateAndReturn(new Player(playerId, playerName, Earnings.of(0), NumberOfPlays.of(0)));
+        return ValidationExecutor.validateAndReturn(new Player(playerId, playerName, Earnings.zero(), NumberOfPlays.zero()));
     }
 
     public void addWin(Double value) {

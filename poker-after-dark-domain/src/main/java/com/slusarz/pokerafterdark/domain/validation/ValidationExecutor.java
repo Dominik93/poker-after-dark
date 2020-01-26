@@ -21,13 +21,8 @@ public class ValidationExecutor {
         Set<ConstraintViolation<Object>> violations = validator.validate(validatedObject);
 
         if (!violations.isEmpty()) {
-            throw new RuntimeException(concatMessages(violations));
+            throw new ValidationException(violations);
         }
     }
-
-    private static String concatMessages(Set<ConstraintViolation<Object>> constraintViolations) {
-        return constraintViolations.stream().map(ConstraintViolation::getMessage).collect(Collectors.joining());
-    }
-
 
 }

@@ -1,5 +1,6 @@
 package com.slusarz.pokerafterdark.domain.game;
 
+import com.slusarz.pokerafterdark.domain.validation.ValidationError;
 import com.slusarz.pokerafterdark.domain.participant.Participant;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.validation.ValidationExecutor;
@@ -22,22 +23,22 @@ import java.util.List;
 public class Game {
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_GAME_ID)
     private GameId gameId;
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_HOST_ID)
     private PlayerId host;
 
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_GAME_DATE)
     private LocalDate date;
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_POT)
     private Pot pot;
 
     @Valid
-    @NotEmpty
+    @NotEmpty(message = ValidationError.EMPTY_PARTICIPANTS)
     private List<Participant> participants;
 
     public static Game of(GameId gameId, PlayerId host, LocalDate date, Pot pot, List<Participant> participants) {

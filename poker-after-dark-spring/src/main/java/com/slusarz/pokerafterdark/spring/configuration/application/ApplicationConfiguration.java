@@ -5,6 +5,7 @@ import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsSynchroni
 import com.slusarz.pokerafterdark.application.profit.ProfitRepository;
 import com.slusarz.pokerafterdark.application.profit.ProfitsSynchronizer;
 import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameValidator;
+import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerValidator;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,11 @@ public class ApplicationConfiguration {
     @Bean
     public AddGameValidator addGameValidator(GameQueryRepository gameQueryRepository) {
         return new AddGameValidator(gameQueryRepository);
+    }
+
+    @Bean
+    public CreatePlayerValidator createPlayerValidator(PlayerRepository playerRepository) {
+        return new CreatePlayerValidator(playerRepository);
     }
 
 }

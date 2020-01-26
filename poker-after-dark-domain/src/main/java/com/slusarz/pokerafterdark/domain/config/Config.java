@@ -1,5 +1,6 @@
 package com.slusarz.pokerafterdark.domain.config;
 
+import com.slusarz.pokerafterdark.domain.validation.ValidationError;
 import com.slusarz.pokerafterdark.domain.validation.ValidationExecutor;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -18,15 +19,14 @@ import javax.validation.constraints.NotNull;
 public final class Config {
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_ENTRY_FEE)
     private EntryFee entryFee;
 
     @Valid
-    @NotNull
+    @NotNull(message = ValidationError.MANDATORY_PAGES_FILTER)
     private ListFilter listFilter;
 
     public static Config of(EntryFee entryFee, ListFilter listFilter) {
-        Config config = new Config(entryFee, listFilter);
-        return ValidationExecutor.validateAndReturn(config);
+        return ValidationExecutor.validateAndReturn(new Config(entryFee, listFilter));
     }
 }

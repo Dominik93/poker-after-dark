@@ -28,8 +28,8 @@ public class PlayerEntityMapper {
         return PlayerProjection.of(playerId,
                 PlayerName.of(playerJpaEntity.getName()),
                 Earnings.of(playerJpaEntity.getLiveWinnings()),
-                maxWin.getOrDefault(playerId, Earnings.of(0)),
-                minWin.getOrDefault(playerId, Earnings.of(0)),
+                maxWin.getOrDefault(playerId, Earnings.zero()),
+                minWin.getOrDefault(playerId, Earnings.zero()),
                 NumberOfPlays.of(playerJpaEntity.getNumberOfPlays()));
     }
 }

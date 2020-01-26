@@ -55,7 +55,7 @@ public class ProfitEntityMapper {
             List<Pair<Integer, Earnings>> earnings = profitMap.get(playerName);
             Pair<Integer, Earnings> pair = new Pair<>(lp, Earnings.of(profit));
             if (Objects.isNull(earnings)) {
-                profitMap.put(playerName, new ArrayList<>(Arrays.asList(new Pair<>(0, Earnings.of(0)), pair)));
+                profitMap.put(playerName, new ArrayList<>(Arrays.asList(new Pair<>(0, Earnings.zero()), pair)));
             } else {
                 earnings.add(pair);
             }
@@ -80,7 +80,7 @@ public class ProfitEntityMapper {
 
     private Earnings getLastItem(List<Earnings> earnings) {
         if (earnings.isEmpty()) {
-            return Earnings.of(0);
+            return Earnings.zero();
         }
         return earnings.get(earnings.size() - 1);
     }

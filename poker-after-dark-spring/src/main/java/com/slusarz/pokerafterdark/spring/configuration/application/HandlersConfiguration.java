@@ -13,6 +13,7 @@ import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameCommandHand
 import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameValidator;
 import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerCommandHandler;
+import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerValidator;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandHandler;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -23,12 +24,15 @@ import org.springframework.context.annotation.Configuration;
 public class HandlersConfiguration {
 
     @Bean
-    public CreatePlayerCommandHandler createPlayerCommandHandler(PlayerRepository playerRepository){
-        return new CreatePlayerCommandHandler(playerRepository);
+    public CreatePlayerCommandHandler createPlayerCommandHandler(@Qualifier("afterCommitEventBus") EventBus eventsBus,
+                                                                 CreatePlayerValidator createPlayerValidator,
+                                                                 PlayerRepository playerRepository){
+        return new CreatePlayerCommandHandler(playerRepository, createPlayerValidator, eventsBus);
     }
 
     @Bean
-    public RemoveGameCommandHandler removeGameCommandHandler(@Qualifier("afterCommitEventBus") EventBus eventsBus, GameRepository gameRepository){
+    public RemoveGameCommandHandler removeGameCommandHandler(@Qualifier("afterCommitEventBus") EventBus eventsBus,
+                                                             GameRepository gameRepository){
         return new RemoveGameCommandHandler(eventsBus, gameRepository);
     }
 

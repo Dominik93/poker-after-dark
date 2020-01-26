@@ -46,7 +46,7 @@ public class ProfitsSynchronizer {
 
     private Earnings getEarnings(Profit profit) {
         if (profit.getWinnings().isEmpty()) {
-            return Earnings.of(0);
+            return Earnings.zero();
         } else {
             return profit.getWinnings().get(profit.getWinnings().size() - 1);
 
