@@ -8,6 +8,7 @@ import com.slusarz.pokerafterdark.infrastructure.persistence.entity.GameJpaEntit
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ParticipationEntityMapper;
+import lombok.AllArgsConstructor;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,6 +18,7 @@ import java.util.UUID;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+@AllArgsConstructor
 public class GameJpaRepository implements GameRepository {
 
     private static final String SELECT_PLAYERS = "select u from PlayerJpaEntity u ";

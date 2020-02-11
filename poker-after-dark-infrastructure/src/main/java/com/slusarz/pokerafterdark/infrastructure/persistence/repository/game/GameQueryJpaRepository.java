@@ -9,6 +9,7 @@ import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.GameJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.result.ParticipationResult;
+import lombok.AllArgsConstructor;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@AllArgsConstructor
 public class GameQueryJpaRepository implements GameQueryRepository {
 
     @PersistenceContext

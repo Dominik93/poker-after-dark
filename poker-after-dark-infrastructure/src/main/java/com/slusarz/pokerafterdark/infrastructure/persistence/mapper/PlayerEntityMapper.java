@@ -2,10 +2,8 @@ package com.slusarz.pokerafterdark.infrastructure.persistence.mapper;
 
 import com.slusarz.pokerafterdark.application.player.PlayerProjection;
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
-import com.slusarz.pokerafterdark.domain.player.NumberOfPlays;
 import com.slusarz.pokerafterdark.domain.player.Player;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
-import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
 import lombok.NoArgsConstructor;
 
@@ -15,21 +13,21 @@ import java.util.Map;
 public class PlayerEntityMapper {
 
     public Player toPlayer(PlayerJpaEntity playerJpaEntity) {
-        return Player.of(PlayerId.of(playerJpaEntity.getId()),
-                PlayerName.of(playerJpaEntity.getName()),
+        return Player.of(playerJpaEntity.getPlayerId(),
+                playerJpaEntity.getPlayerName(),
                 Earnings.of(playerJpaEntity.getLiveWinnings()),
-                NumberOfPlays.of(playerJpaEntity.getNumberOfPlays()));
+                playerJpaEntity.getNumberOfPlays());
     }
 
     public PlayerProjection toPlayerProjection(PlayerJpaEntity playerJpaEntity,
                                                Map<PlayerId, Earnings> maxWin,
                                                Map<PlayerId, Earnings> minWin) {
-        PlayerId playerId = PlayerId.of(playerJpaEntity.getId());
+        PlayerId playerId = playerJpaEntity.getPlayerId();
         return PlayerProjection.of(playerId,
-                PlayerName.of(playerJpaEntity.getName()),
-                Earnings.of(playerJpaEntity.getLiveWinnings()),
+                playerJpaEntity.getPlayerName(),
+                playerJpaEntity.getEarnings(),
                 maxWin.getOrDefault(playerId, Earnings.zero()),
                 minWin.getOrDefault(playerId, Earnings.zero()),
-                NumberOfPlays.of(playerJpaEntity.getNumberOfPlays()));
+                playerJpaEntity.getNumberOfPlays());
     }
 }
