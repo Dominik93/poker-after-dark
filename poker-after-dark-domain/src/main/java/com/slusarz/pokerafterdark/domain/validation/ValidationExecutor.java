@@ -5,7 +5,6 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class ValidationExecutor {
 
@@ -21,13 +20,8 @@ public class ValidationExecutor {
         Set<ConstraintViolation<Object>> violations = validator.validate(validatedObject);
 
         if (!violations.isEmpty()) {
-            throw new RuntimeException(concatMessages(violations));
+            throw new ValidationException(violations);
         }
     }
-
-    private static String concatMessages(Set<ConstraintViolation<Object>> constraintViolations) {
-        return constraintViolations.stream().map(ConstraintViolation::getMessage).collect(Collectors.joining());
-    }
-
 
 }

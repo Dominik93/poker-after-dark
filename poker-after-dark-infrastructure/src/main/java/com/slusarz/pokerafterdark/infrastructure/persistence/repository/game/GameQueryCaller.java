@@ -5,6 +5,7 @@ import com.slusarz.pokerafterdark.domain.participant.Earnings;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.GameJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.result.ParticipationResult;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.EntityManager;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @NoArgsConstructor
+@AllArgsConstructor
 public class GameQueryCaller {
 
     private static final String SELECT_GAMES_BETWEEN_DATE = "select g from GameJpaEntity g where g.date BETWEEN :startDate AND :endDate order by g.date desc";

@@ -7,4 +7,8 @@ public class Earnings {
 
     private double value;
 
+    public static Earnings zero() {
+        return new Earnings(0);
+    }
+
 }
