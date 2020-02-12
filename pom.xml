@@ -16,20 +16,44 @@
     <name>Poker After Dark</name>
     <description>Project poker after dark</description>
 
-    <modules>
-        <module>poker-after-dark-application</module>
-        <module>poker-after-dark-domain</module>
-        <module>poker-after-dark-infrastructure</module>
-        <module>poker-after-dark-spring</module>
-        <module>poker-after-dark-specification</module>
-        <module>poker-after-dark-web</module>
-    </modules>
-
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>all</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>poker-after-dark-application</module>
+                <module>poker-after-dark-domain</module>
+                <module>poker-after-dark-infrastructure</module>
+                <module>poker-after-dark-spring</module>
+                <module>poker-after-dark-specification</module>
+                <module>poker-after-dark-web</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>frontend</id>
+            <modules>
+                <module>poker-after-dark-web</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>backend</id>
+            <modules>
+                <module>poker-after-dark-application</module>
+                <module>poker-after-dark-domain</module>
+                <module>poker-after-dark-infrastructure</module>
+                <module>poker-after-dark-spring</module>
+                <module>poker-after-dark-specification</module>
+            </modules>
+        </profile>
+    </profiles>
 
     <dependencyManagement>
         <dependencies>

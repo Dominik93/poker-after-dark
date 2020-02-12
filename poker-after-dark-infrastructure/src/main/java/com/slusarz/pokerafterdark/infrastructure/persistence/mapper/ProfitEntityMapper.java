@@ -51,7 +51,7 @@ public class ProfitEntityMapper {
         for (Object[] userProfit : userProfits) {
             PlayerName playerName = PlayerName.of((String) userProfit[PLAYER_NAME_INDEX]);
             Double profit = (Double) userProfit[PROFIT_INDEX];
-            Integer lp = ((BigDecimal) userProfit[LP_INDEX]).intValue();
+            Integer lp = Integer.valueOf(userProfit[LP_INDEX].toString());
             List<Pair<Integer, Earnings>> earnings = profitMap.get(playerName);
             Pair<Integer, Earnings> pair = new Pair<>(lp, Earnings.of(profit));
             if (Objects.isNull(earnings)) {

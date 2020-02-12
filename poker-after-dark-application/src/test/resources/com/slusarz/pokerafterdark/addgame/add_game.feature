@@ -39,16 +39,6 @@ Feature: Add game
     Then Game was not added
     And Add game event was not emitted
 
-
-
-
-
-
-
-
-
-
-
   Scenario: Should add new game with matching earnings and skip validation
     Given Add game command
     And Pot matches earnings

@@ -21,7 +21,6 @@ public class ExceptionsHandler {
         return exceptions.get(exceptionClass);
     }
 
-
     public int size(Class e) {
         return exceptions.getOrDefault(e, Collections.emptyList()).size();
     }

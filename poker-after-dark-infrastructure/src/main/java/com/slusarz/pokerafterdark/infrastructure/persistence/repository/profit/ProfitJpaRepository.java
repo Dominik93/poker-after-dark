@@ -8,12 +8,14 @@ import com.slusarz.pokerafterdark.domain.profit.Profit;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.GameJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ProfitEntityMapper;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Slf4j
+@AllArgsConstructor
 public class ProfitJpaRepository implements ProfitRepository {
 
     private static final String SELECT_MAX_LP = "select max(p.lp) from ProfitJpaEntity p";

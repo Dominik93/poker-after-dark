@@ -8,7 +8,7 @@ Feature: Create player
     And Player created event was emitted
 
 
-  Scenario: Should not create new player
+  Scenario: Should not create new player because player name exist
     Given Create player command with existing name
     When Invoke create player handler
     Then New player was not created

@@ -8,6 +8,7 @@ import com.slusarz.pokerafterdark.domain.profit.Profit;
 import com.slusarz.pokerafterdark.infrastructure.persistence.common.Pair;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ProfitEntityMapper;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.EntityManager;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Slf4j
+@AllArgsConstructor
 public class ProfitQueryJpaRepository implements ProfitQueryRepository {
     private static final String SELECT_PROFITS_BETWEEN_DATE = "select pl.name, p.lp, p.profit from PROFIT p " +
             "join PLAYER pl on pl.id = p.player_id " +

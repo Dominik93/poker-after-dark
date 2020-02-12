@@ -172,7 +172,7 @@ INSERT INTO public.profit(
 
 INSERT INTO public.profit(
 	id, lp, date, profit, player_id, game_id)
-	VALUES ('GAME_5_PLAYER_2', 5, '2019-08-30', 30, 'PLAYER_3', 'GAME_5');
+	VALUES ('GAME_5_PLAYER_2', 5, '2019-08-30', 30, 'PLAYER_2', 'GAME_5');
 
 INSERT INTO public.profit(
 	id, lp, date, profit, player_id, game_id)
