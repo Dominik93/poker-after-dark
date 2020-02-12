@@ -1,7 +1,6 @@
 package com.slusarz.pokerafterdark.spring.permission;
 
 import com.slusarz.pokerafterdark.spring.context.ContextHolder;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

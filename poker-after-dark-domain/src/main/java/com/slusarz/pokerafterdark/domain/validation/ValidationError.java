@@ -7,10 +7,10 @@ public class ValidationError {
 
     private static final String PREFIX = "PAD_";
 
-
     public static final String MANDATORY_PAGES_FILTER = PREFIX + "MANDATORY_PAGES_FILTER";
 
     public static final String MANDATORY_ENTRY_FEE = PREFIX + "MANDATORY_ENTRY_FEE";
+
     public static final String MANDATORY_PAGES_FILTER_FROM = PREFIX + "MANDATORY_PAGES_FILTER_FROM";
 
     public static final String MANDATORY_PAGES_FILTER_TO = PREFIX + "MANDATORY_PAGES_FILTER_TO";

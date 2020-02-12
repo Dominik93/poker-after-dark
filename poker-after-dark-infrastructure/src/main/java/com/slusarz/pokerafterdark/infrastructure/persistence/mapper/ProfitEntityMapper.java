@@ -9,7 +9,6 @@ import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEnt
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.ProfitJpaEntity;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;

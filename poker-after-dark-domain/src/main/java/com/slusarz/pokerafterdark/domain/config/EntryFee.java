@@ -4,7 +4,6 @@ import com.slusarz.pokerafterdark.domain.validation.ValidationError;
 import lombok.Value;
 
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 @Value(staticConstructor = "of")
 public class EntryFee {

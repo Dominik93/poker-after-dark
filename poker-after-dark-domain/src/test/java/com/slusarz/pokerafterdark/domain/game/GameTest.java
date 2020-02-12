@@ -1,12 +1,8 @@
 package com.slusarz.pokerafterdark.domain.game;
 
-import com.slusarz.pokerafterdark.domain.game.Game;
-import com.slusarz.pokerafterdark.domain.game.GameId;
-import com.slusarz.pokerafterdark.domain.game.Pot;
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
 import com.slusarz.pokerafterdark.domain.participant.Participant;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
-import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import com.slusarz.pokerafterdark.domain.validation.ValidationError;
 import com.slusarz.pokerafterdark.domain.validation.ValidationException;
 import org.junit.Assert;
