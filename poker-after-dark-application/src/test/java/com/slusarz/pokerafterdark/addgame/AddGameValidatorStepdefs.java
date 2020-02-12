@@ -35,7 +35,7 @@ public class AddGameValidatorStepdefs {
         participants = new ArrayList<>();
     }
 
-    @Given("^Participants with pot sum to zero")
+    @Given("^Participants with pot sum to zero$")
     public void participiantsWithPotSumTo() {
         participants.add(Participant.of(PlayerId.of("PLAYER_1"), Earnings.of(20)));
         participants.add(Participant.of(PlayerId.of("PLAYER_1"), Earnings.of(-20)));
@@ -56,7 +56,7 @@ public class AddGameValidatorStepdefs {
         Assert.assertEquals(0, exceptionsHandler.size(PotNotMatchRuntimeException.class));
     }
 
-    @Given("^Participants with pot not sum zero")
+    @Given("^Participants with pot not sum zero$")
     public void participantsWithPotNotSum() {
         participants.add(Participant.of(PlayerId.of("PLAYER_1"), Earnings.of(20)));
         participants.add(Participant.of(PlayerId.of("PLAYER_1"), Earnings.of(20)));
