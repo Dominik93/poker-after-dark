@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PasswordProvider {
 
-    @Value("${security.administration.password}")
+    @Value("${poker-after-dark.administration.password}")
     private String encodedPassword;
 
     public String getPassword() {

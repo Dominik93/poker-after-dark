@@ -1,0 +1,200 @@
+---
+swagger: "2.0"
+info:
+  version: "v1"
+  title: "poker-after-dark"
+tags:
+  - name: "Poker After Dark API"
+definitions:
+  GetGamesResponse:
+    type: "object"
+    properties:
+      games:
+        type: "array"
+        items:
+          $ref: "#/definitions/Game"
+  GetGamesRequest:
+    type: "object"
+    properties:
+      from:
+        type: "string"
+        format: "date"
+      to:
+        type: "string"
+        format: "date"
+      playersIds:
+        type: "array"
+        items:
+          type: "string"
+      required:
+        - "from"
+        - "to"
+        - "playersIds"
+  AddGameRequest:
+    type: "object"
+    properties:
+      game:
+        $ref: "#/definitions/Game"
+      skipValidation:
+        type: "boolean"
+  AddGameResponse:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+  RemoveGameRequest:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+  RemoveGameResponse:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+  Host:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      name:
+        type: "string"
+  Participant:
+    type: "object"
+    properties:
+      playerId:
+        type: "string"
+      playerName:
+        type: "string"
+      earnings:
+        type: "number"
+  Game:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      host:
+        $ref: "#/definitions/Host"
+      date:
+        type: "string"
+        format: "date"
+      pot:
+        type: "integer"
+      participantsCount:
+        type: "integer"
+      participants:
+        type: "array"
+        items:
+          $ref: "#/definitions/Participant"
+  AddPlayerRequest:
+    type: "object"
+    properties:
+      playerName:
+        type: "string"
+  AddPlayerResponse:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+      playerId:
+        type: "string"
+  GetPlayersResponse:
+    type: "object"
+    properties:
+      players:
+        type: "array"
+        items:
+          $ref: "#/definitions/Player"
+  Player:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      name:
+        type: "string"
+      gamesPlayed:
+        type: "integer"
+      liveEarnings:
+        type: "number"
+      biggestWin:
+        type: "number"
+      biggestLose:
+        type: "number"
+  GetProfitRequest:
+    type: "object"
+    properties:
+      from:
+        type: "string"
+        format: "date"
+      to:
+        type: "string"
+        format: "date"
+      playersIds:
+        type: "array"
+        items:
+          type: "string"
+    required:
+      - "from"
+      - "to"
+      - "playersIds"
+  GetProfitResponse:
+    type: "object"
+    properties:
+      profits:
+        type: "array"
+        items:
+          $ref: "#/definitions/Profit"
+    required:
+      - "profits"
+  Profit:
+    type: "object"
+    properties:
+      playerId:
+        type: "string"
+      playerName:
+        type: "string"
+      dataPoints:
+        type: "array"
+        items:
+          $ref: "number"
+    required:
+      - "success"
+  LoginResponse:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+      token:
+        type: "string"
+    required:
+      - "success"
+  LoginRequest:
+    type: "object"
+    properties:
+      password:
+        type: "string"
+    required:
+      - "password"
+  Config:
+    type: "object"
+    properties:
+      entryFeeInChips:
+        type: "integer"
+      entryFeeInMoney:
+        type: "integer"
+      from:
+        type: "string"
+        format: "date"
+      to:
+        type: "string"
+        format: "date"
+    required:
+      - "entryFeeInChips"
+      - "entryFeeInMoney"
+      - "from"
+      - "to"
+  GetConfigResponse:
+    type: "object"
+    properties:
+      config:
+        $ref: "#/definitions/Config"

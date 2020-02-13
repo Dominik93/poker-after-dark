@@ -1,6 +1,7 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.entity;
 
 import com.slusarz.pokerafterdark.domain.participant.Earnings;
+import com.slusarz.pokerafterdark.domain.player.NumberOfPlays;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import lombok.Builder;
@@ -81,6 +82,10 @@ public class PlayerJpaEntity {
 
     public Earnings getEarnings() {
         return Earnings.of(liveWinnings);
+    }
+
+    public NumberOfPlays getNumberOfPlays() {
+        return NumberOfPlays.of(numberOfPlays);
     }
 
 }

@@ -4,27 +4,50 @@
       <button mat-raised-button color="primary" class="floatRight" (click)="onSave()">Save</button>
     </div>
     <div class="card-body">
-      <div class="row col-md-4">
-        <mat-label>Host</mat-label>
-        <mat-select [(ngModel)]="host" name="player">
-          <mat-option *ngFor="let player of players" [value]="player">
-            {{player.name}}
-          </mat-option>
-        </mat-select>
+      <div class="row">
+        <div class="col-md-4">
+          <mat-label>Host</mat-label>
+          <mat-select [(ngModel)]="host" name="player">
+            <mat-option *ngFor="let player of players" [value]="player">
+              {{player.name}}
+            </mat-option>
+          </mat-select>
+        </div>
+
+        <div class="col-md-2">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
       </div>
+
       <br>
+      
+      <div class="row">
+        <mat-form-field class="col-md-2">
+          <input matInput [(ngModel)]="config.entryFeeInChips" placeholder="Entry fee in chips">
+        </mat-form-field>
+        <mat-form-field class="col-md-2">
+          <input matInput [(ngModel)]="config.entryFeeInMoney" placeholder="Entry fee in Money">
+        </mat-form-field>
+        <mat-form-field class="col-md-2">
+          <input matInput [(ngModel)]="config.entryFeeInMoney/config.entryFeeInChips" placeholder="One chips" disabled>
+        </mat-form-field>
+      </div>
       
       <br>
       <mat-divider></mat-divider>
       <br>
       <br>
-      
+
       <div class="row" *ngFor="let player of playersInGame; last as last; index as i; trackBy:customTrackBy">
         <mat-form-field class="col-md-4">
           <input matInput [(ngModel)]="playersInGame[i].player.name" disabled>
         </mat-form-field>
         <mat-form-field class="col-md-2">
-          <input matInput [(ngModel)]="playersInGame[i].buyIn"  (change)="onChange()" placeholder="Buy in">
+          <input matInput [(ngModel)]="playersInGame[i].buyIn" (change)="onChange()" placeholder="Buy in">
         </mat-form-field>
         <mat-form-field class="col-md-2">
           <input matInput [(ngModel)]="playersInGame[i].winningsInChips" (change)="onChange()" placeholder="Win chips">
@@ -44,17 +67,6 @@
       <div class="form-group col-md-2">
         <button mat-raised-button color="primary" *ngIf="isEmptyPlayers()" (click)="onAddPlayer()">Add player</button>
       </div>
-    </div>
-    <div class="row">
-      <mat-form-field class="col-md-2">
-        <input matInput [(ngModel)]="config.entryFeeInChips" placeholder="Entry fee in chips">
-      </mat-form-field>
-      <mat-form-field class="col-md-2">
-        <input matInput [(ngModel)]="config.entryFeeInMoney" placeholder="Entry fee in Money">
-      </mat-form-field>
-      <mat-form-field class="col-md-2">
-        <input matInput [(ngModel)]="config.entryFeeInMoney/config.entryFeeInChips" placeholder="One chips" disabled>
-      </mat-form-field>
     </div>
   </div>
 

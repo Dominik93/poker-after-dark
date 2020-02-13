@@ -1,0 +1,63 @@
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+/**
+ * {{#description}}{{.}}{{/description}}{{^description}}{{classname}}.{{/description}}
+ */
+{{>generatedAnnotation}}
+{{#discriminator}}
+{{>typeInfoAnnotation}}{{/discriminator}}
+@Getter
+@Setter
+@Builder
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor(staticName = "of")
+public{{#vendorExtensions.x-model-abstract}} abstract{{/vendorExtensions.x-model-abstract}} class {{classname}}{{#parent}} extends {{{parent}}}{{/parent}}{{#serializableModel}} implements Serializable{{/serializableModel}} {
+    {{#serializableModel}}
+    private static final long serialVersionUID = 1L;
+    {{/serializableModel}}
+    {{#vars}}
+        {{#isEnum}}
+            {{^isContainer}}
+                {{>enumClass}}
+            {{/isContainer}}
+        {{/isEnum}}
+        {{#items.isEnum}}
+            {{#items}}
+                {{^isContainer}}
+                    {{>enumClass}}
+                {{/isContainer}}
+           {{/items}}
+        {{/items.isEnum}}
+        {{#description}}
+    /**
+    * {{{description}}}
+    *
+    * {{#minimum}}
+    *  minimum: {{minimum}}
+    * {{/minimum}}
+    * {{#maximum}}
+    * maximum: {{maximum}}
+    * {{/maximum}}
+    */
+        {{/description}}
+        {{#vendorExtensions.extraAnnotation}}
+            {{{vendorExtensions.extraAnnotation}}}
+        {{/vendorExtensions.extraAnnotation}}
+        {{#isContainer}}
+    private {{{datatypeWithEnum}}} {{name}}{{#required}} = {{{defaultValue}}}{{/required}}{{^required}} = null{{/required}};
+        {{/isContainer}}
+        {{^isContainer}}
+    private {{{datatypeWithEnum}}} {{name}} = {{{defaultValue}}};
+        {{/isContainer}}
+    {{/vars}}
+
+}

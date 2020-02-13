@@ -1,8 +1,5 @@
 package com.slusarz.pokerafterdark.spring.authentication;
 
-import com.slusarz.pokerafterdark.spring.context.AdministrationContext;
-import com.slusarz.pokerafterdark.spring.context.AnonymousContext;
-import com.slusarz.pokerafterdark.spring.context.Context;
 import com.slusarz.pokerafterdark.spring.context.ContextFactory;
 import com.slusarz.pokerafterdark.spring.context.ContextHolder;
 import lombok.AllArgsConstructor;

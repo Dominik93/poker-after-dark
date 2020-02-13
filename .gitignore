@@ -29,6 +29,7 @@ hs_err_pid*
 # target
 target/
 target/*
+poker-after-dark-spring/src/main/resources/static/
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
