@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { GetConfigResponse } from './model/get-config-response';
+import { GetConfigResponse } from 'src/app/shared/models/get-config-response';
 
 @Injectable({
   providedIn: 'root'

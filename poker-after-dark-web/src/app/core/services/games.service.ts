@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { GetGamesResponse } from './model/get-games-response';
-import { AddGameResponse } from './model/add-game-response';
-import { AddGameRequest } from './model/add-game-request';
-import { GetGamesRequest } from './model/get-games-request';
-import { RemoveGameRequest } from './model/remove-game-request';
-import { RemoveGameResponse } from './model/remove-game-response';
+import { GetGamesRequest } from 'src/app/shared/models/get-games-request';
+import { GetGamesResponse } from 'src/app/shared/models/get-games-response';
+import { AddGameRequest } from 'src/app/shared/models/add-game-request';
+import { AddGameResponse } from 'src/app/shared/models/add-game-response';
+import { RemoveGameResponse } from 'src/app/shared/models/remove-game-response';
+import { RemoveGameRequest } from 'src/app/shared/models/remove-game-request';
 
 @Injectable({
   providedIn: 'root'

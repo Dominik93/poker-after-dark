@@ -3,7 +3,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 import { Observable, of } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { ResponseHandler } from './reponse-handler';
-import { AdministrationService } from 'src/app/administration.service';
+import { AdministrationService } from 'src/app/core/services/administration.service';
 
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {

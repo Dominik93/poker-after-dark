@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
-import { LoginService } from '../login.service';
-import { LoginRequest } from '../model/login-request';
-import { AdministrationService } from '../administration.service';
+import { LoginService } from '../services/login.service';
+import { AdministrationService } from '../services/administration.service';
+import { LoginRequest } from 'src/app/shared/models/login-request';
 
 @Component({
   selector: 'app-menu',

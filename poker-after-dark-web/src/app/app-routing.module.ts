@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GamesComponent } from './games/games.component';
-import { WinningsChartComponent } from './winnings-chart/winnings-chart.component';
-import { HomeComponent } from './home/home.component';
-import { AddGameComponent } from './add-game/add-game.component';
-import { PlayersComponent } from './players/players.component';
-import { AddPlayerComponent } from './add-player/add-player.component';
+import { GamesComponent } from './modules/game/games/games.component';
+import { WinningsChartComponent } from './shared/components/winnings-chart/winnings-chart.component';
+import { HomeComponent } from './core/home/home.component';
+import { AddGameComponent } from './modules/game/add-game/add-game.component';
+import { PlayersComponent } from './modules/player/players/players.component';
+import { AddPlayerComponent } from './modules/player/add-player/add-player.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },

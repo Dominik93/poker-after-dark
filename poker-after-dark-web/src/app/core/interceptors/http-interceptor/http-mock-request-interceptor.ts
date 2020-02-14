@@ -5,12 +5,12 @@ import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment.js';
 import { tap, catchError } from 'rxjs/operators';
 
-import * as players from '../../../mocks/players.json'
-import * as config from '../../../mocks/config.json'
-import * as gamesPages from '../../../mocks/games.pages.json'
-import * as profit from '../../../mocks/profit.json'
+import * as players from '../../mocks/players.json'
+import * as config from '../../mocks/config.json'
+import * as gamesPages from '../../mocks/games.pages.json'
+import * as profit from '../../mocks/profit.json'
+import { AdministrationService } from 'src/app/core/services/administration.service.js';
 import { ResponseHandler } from './reponse-handler.js';
-import { AdministrationService } from 'src/app/administration.service.js';
 
 const urls = [
 

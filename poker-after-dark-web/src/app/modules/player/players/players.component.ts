@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatTableDataSource, MatSort } from '@angular/material';
-import { Player } from '../model/player';
-import { PlayersService } from '../players.service';
-import { AdministrationService } from '../administration.service';
+import { AdministrationService } from '../../../core/services/administration.service';
+import { PlayersService } from 'src/app/core/services/players.service';
+import { Player } from 'src/app/shared/models/player';
 
 @Component({
   selector: 'app-players',

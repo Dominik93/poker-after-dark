@@ -1,17 +1,17 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort } from '@angular/material';
-import { GamesService } from '../games.service';
-import { Game } from '../model/game';
-import { Router, ActivatedRoute } from '@angular/router';
-import { GetGamesRequest } from '../model/get-games-request';
-import { Player } from '../model/player';
-import { PlayersService } from '../players.service';
-import { Config } from '../model/config';
-import { ConfigService } from '../config.service';
+import { GamesService } from '../../../core/services/games.service';
+import { Router } from '@angular/router';
+import { ConfigService } from '../../../core/services/config.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { AdministrationService } from '../../../core/services/administration.service';
+import { PlayersService } from 'src/app/core/services/players.service';
+import { Game } from 'src/app/shared/models/game';
+import { Config } from 'src/app/shared/models/config';
+import { Player } from 'src/app/shared/models/player';
+import { RemoveGameRequest } from 'src/app/shared/models/remove-game-request';
+import { GetGamesRequest } from 'src/app/shared/models/get-games-request';
 
-import { RemoveGameRequest } from '../model/remove-game-request';
-import { AdministrationService } from '../administration.service';
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',

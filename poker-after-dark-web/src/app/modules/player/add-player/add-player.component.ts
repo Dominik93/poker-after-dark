@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayersService } from '../players.service';
-import { AddPlayerRequest } from '../model/add-player-request';
-import { AdministrationService } from '../administration.service';
+import { AdministrationService } from '../../../core/services/administration.service';
+import { PlayersService } from 'src/app/core/services/players.service';
+import { AddPlayerRequest } from 'src/app/shared/models/add-player-request';
 
 @Component({
   selector: 'app-add-player',

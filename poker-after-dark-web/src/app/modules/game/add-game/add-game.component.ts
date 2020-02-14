@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../config.service';
-import { Config } from '../model/config';
-import { PlayerInGame } from '../model/player-in-game';
-import { PromptDialogComponent } from '../prompt-dialog/prompt-dialog.component';
+import { ConfigService } from '../../../core/services/config.service';
+import { PromptDialogComponent } from '../../../shared/components/prompt-dialog/prompt-dialog.component';
 import { MatDialog } from '@angular/material';
-import { GamesService } from '../games.service';
-import { AddGameRequest } from '../model/add-game-request';
-import { Game } from '../model/game';
-import { Participant } from '../model/participant';
-import { Player } from '../model/player';
-import { PlayersService } from '../players.service';
-import { Host } from '../model/host';
-import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
-import { AdministrationService } from '../administration.service';
+import { GamesService } from '../../../core/services/games.service';
+import { ConfirmationDialogComponent } from '../../../shared/components/confirmation-dialog/confirmation-dialog.component';
+import { AdministrationService } from '../../../core/services/administration.service';
 import { FormControl } from '@angular/forms';
-import { DateFormatter } from '../date/date-formatter';
+import { DateFormatter } from '../../../shared/date/date-formatter';
+import { PlayersService } from 'src/app/core/services/players.service';
+import { Player } from 'src/app/shared/models/player';
+import { Config } from 'src/app/shared/models/config';
+import { PlayerInGame } from 'src/app/shared/models/player-in-game';
+import { AddGameRequest } from 'src/app/shared/models/add-game-request';
+import { Game } from 'src/app/shared/models/game';
+import { Host } from 'src/app/shared/models/host';
+import { Participant } from 'src/app/shared/models/participant';
 
 @Component({
   selector: 'app-add-game',
