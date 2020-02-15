@@ -23,11 +23,21 @@ public class PlayerEntityMapper {
                                                Map<PlayerId, Earnings> maxWin,
                                                Map<PlayerId, Earnings> minWin) {
         PlayerId playerId = playerJpaEntity.getPlayerId();
+        return toPlayerProjection(playerJpaEntity,
+                maxWin.getOrDefault(playerId, Earnings.zero()),
+                minWin.getOrDefault(playerId, Earnings.zero()));
+    }
+
+    public PlayerProjection toPlayerProjection(PlayerJpaEntity playerJpaEntity,
+                                               Earnings maxWin,
+                                               Earnings minWin) {
+        PlayerId playerId = playerJpaEntity.getPlayerId();
         return PlayerProjection.of(playerId,
                 playerJpaEntity.getPlayerName(),
                 playerJpaEntity.getEarnings(),
-                maxWin.getOrDefault(playerId, Earnings.zero()),
-                minWin.getOrDefault(playerId, Earnings.zero()),
+                maxWin,
+                minWin,
                 playerJpaEntity.getNumberOfPlays());
     }
+
 }
