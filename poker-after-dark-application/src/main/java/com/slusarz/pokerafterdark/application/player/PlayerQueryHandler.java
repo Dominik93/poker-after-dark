@@ -9,7 +9,7 @@ public class PlayerQueryHandler implements QueryHandler<PlayerQueryResult, Playe
     private PlayerQueryRepository playerJpaRepository;
 
     @Override
-    public PlayerQueryResult handle(PlayerQuery playersQuery) {
-        return PlayerQueryResult.of(playerJpaRepository.read(playersQuery.getPlayerId()));
+    public PlayerQueryResult handle(PlayerQuery playerQuery) {
+        return PlayerQueryResult.of(playerJpaRepository.read(playerQuery.getPlayerId()));
     }
 }
