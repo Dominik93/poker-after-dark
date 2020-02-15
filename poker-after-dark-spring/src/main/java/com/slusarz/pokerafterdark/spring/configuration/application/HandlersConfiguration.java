@@ -5,6 +5,7 @@ import com.slusarz.pokerafterdark.application.config.ConfigQueryHandler;
 import com.slusarz.pokerafterdark.application.events.EventBus;
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
 import com.slusarz.pokerafterdark.application.game.GamesQueryHandler;
+import com.slusarz.pokerafterdark.application.player.PlayerQueryHandler;
 import com.slusarz.pokerafterdark.application.player.PlayerQueryRepository;
 import com.slusarz.pokerafterdark.application.player.PlayersQueryHandler;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryHandler;
@@ -59,10 +60,14 @@ public class HandlersConfiguration {
     }
 
     @Bean
-    public ProfitQueryHandler profitQueryHandler(ProfitQueryRepository profitQueryRepository) {
-        return new ProfitQueryHandler(profitQueryRepository);
+    public PlayerQueryHandler playerQueryHandler(PlayerQueryRepository playerQueryRepository){
+        return new PlayerQueryHandler(playerQueryRepository);
     }
 
-
+    @Bean
+    public ProfitQueryHandler profitQueryHandler(ProfitQueryRepository profitQueryRepository,
+                                                 ConfigProvider configProvider) {
+        return new ProfitQueryHandler(profitQueryRepository, configProvider);
+    }
 
 }

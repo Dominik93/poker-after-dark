@@ -1,19 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GamesComponent } from './games/games.component';
-import { WinningsChartComponent } from './winnings-chart/winnings-chart.component';
-import { HomeComponent } from './home/home.component';
-import { AddGameComponent } from './add-game/add-game.component';
-import { PlayersComponent } from './players/players.component';
-import { AddPlayerComponent } from './add-player/add-player.component';
 
 const routes: Routes = [
-{ path: '', component: HomeComponent },
-{ path: 'players', component: PlayersComponent },
-{ path: 'players/new', component: AddPlayerComponent },
-{ path: 'games', component: GamesComponent },
-{ path: 'game/new', component: AddGameComponent },
-{ path: 'chart', component: WinningsChartComponent }
 ];
 
 @NgModule({
