@@ -18,6 +18,7 @@ const urls = [
         urlRegex: environment.baseUrl + 'login',
         method: 'POST',
         jsonProvider: (request) => {
+            console.log('login post provider')
             if (request.body.password === 'correct') {
                 return {
                     default: {
@@ -42,9 +43,10 @@ const urls = [
         },
     },
     {
-        urlRegex: environment.baseUrl + 'players',
+        urlRegex: environment.baseUrl + 'players$',
         method: 'GET',
         jsonProvider: (request) => {
+            console.log('players get provider')
             return players;
         },
     },
@@ -52,6 +54,7 @@ const urls = [
         urlRegex: environment.baseUrl + 'players',
         method: 'POST',
         jsonProvider: (request) => {
+            console.log('players post provider')
             var player = {
                 "id": Math.random().toString(),
                 "name": request.body.playerName,
@@ -75,6 +78,7 @@ const urls = [
         urlRegex: environment.baseUrl + 'profit',
         method: 'POST',
         jsonProvider: (request) => {
+            console.log('profit post provider')
             if (request.body.playersIds.length > 0) {
                 return {
                     default: {
@@ -89,9 +93,24 @@ const urls = [
         }
     },
     {
+        urlRegex: environment.baseUrl + 'players/.*',
+        method: 'GET',
+        jsonProvider: (request) => {
+            console.log('player/id get provider')
+            var splittedUrl = request.url.split('/');
+            var playerId = splittedUrl[splittedUrl.length - 1];
+            return {
+                default: {
+                    player: players.players.find(player => player.id === playerId)
+                }
+            }
+        },
+    },
+    {
         urlRegex: environment.baseUrl + 'games/.*',
         method: 'DELETE',
         jsonProvider: (request) => {
+            console.log('games delete provider')
             var splittedUrl = request.url.split('/');
             var gameId = splittedUrl[splittedUrl.length - 1];
             const index = gamesPages.games.findIndex(game => game.id === gameId);
@@ -113,6 +132,7 @@ const urls = [
         urlRegex: environment.baseUrl + 'games$',
         method: 'POST',
         jsonProvider: (request) => {
+            console.log('games post provider')
             var game = {
                 "id": Math.random().toString(),
                 "host": {
@@ -150,6 +170,7 @@ const urls = [
         urlRegex: environment.baseUrl + 'games/pages$',
         method: 'POST',
         jsonProvider: (request) => {
+            console.log('games/pages post provider')
             return gamesPages;
         }
     },
@@ -169,6 +190,7 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
         for (const element of urls) {
             var regexp = new RegExp(element.urlRegex);
             if (authRequest.method === element.method && regexp.test(authRequest.url)) {
+                console.log(authRequest.body)
                 console.log('Loaded from json: ' + authRequest.url);
                 return of(new HttpResponse({ status: 200, body: ((element.jsonProvider(authRequest)) as any).default })).pipe(
                     tap(evt => {

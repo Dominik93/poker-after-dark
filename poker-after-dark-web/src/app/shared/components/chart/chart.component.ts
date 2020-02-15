@@ -12,19 +12,40 @@ export class ChartComponent implements OnInit {
 
   @Input() title = 'Chart';
 
-  @Input() playerIds: string[];
+  _playerIds: string[] = [];
 
-  @Input() from: Date;
+  _from: Date;
 
-  @Input() to: Date;
+  _to: Date;
 
   constructor(private profitService: ProfitService) { }
+  
+  @Input()
+  set from(from) {
+    this._from = from;
+    this.init();
+  }
+
+  @Input()
+  set to(to) {
+    this._to = to;
+    this.init();
+  }
+  
+  @Input()
+  set playerIds(playersIds) {
+    this._playerIds = playersIds;
+    this.init();
+  }
 
   ngOnInit() {
+  }
+
+  init() {
     var request = new GetProfitRequest();
-    request.playersIds = this.playerIds;
-    request.from = this.from;
-    request.to = this.to;
+    request.playersIds = this._playerIds;
+    request.from = this._from;
+    request.to = this._to;
     this.renderChart(request);
   }
 

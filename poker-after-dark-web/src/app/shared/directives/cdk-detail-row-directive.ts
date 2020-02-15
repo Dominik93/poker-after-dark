@@ -21,7 +21,7 @@ export class CdkDetailRowDirective {
     }
   }
 
-  @Input('cdkDetailRowTpl')
+  @Input('cdkDetailRowTemplate')
   set template(value: TemplateRef<any>) {
     if (value !== this.tRef) {
       this.tRef = value;

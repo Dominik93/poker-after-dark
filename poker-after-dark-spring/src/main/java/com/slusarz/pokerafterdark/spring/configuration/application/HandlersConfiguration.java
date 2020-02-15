@@ -5,6 +5,7 @@ import com.slusarz.pokerafterdark.application.config.ConfigQueryHandler;
 import com.slusarz.pokerafterdark.application.events.EventBus;
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
 import com.slusarz.pokerafterdark.application.game.GamesQueryHandler;
+import com.slusarz.pokerafterdark.application.player.PlayerQueryHandler;
 import com.slusarz.pokerafterdark.application.player.PlayerQueryRepository;
 import com.slusarz.pokerafterdark.application.player.PlayersQueryHandler;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryHandler;
@@ -56,6 +57,11 @@ public class HandlersConfiguration {
     @Bean
     public PlayersQueryHandler playersQueryHandler(PlayerQueryRepository playerQueryRepository){
         return new PlayersQueryHandler(playerQueryRepository);
+    }
+
+    @Bean
+    public PlayerQueryHandler playerQueryHandler(PlayerQueryRepository playerQueryRepository){
+        return new PlayerQueryHandler(playerQueryRepository);
     }
 
     @Bean

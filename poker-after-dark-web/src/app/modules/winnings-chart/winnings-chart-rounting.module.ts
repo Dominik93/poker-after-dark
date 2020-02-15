@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { WinningsChartComponent } from './components/winnings-chart.component';
 
 const routes: Routes = [
+{ path: 'chart', component: WinningsChartComponent }
 ];
 
 @NgModule({
@@ -10,4 +12,4 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class WinningsChartRoutingModule { }

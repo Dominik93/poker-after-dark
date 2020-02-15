@@ -1,8 +1,10 @@
 package com.slusarz.pokerafterdark.infrastructure.player;
 
 import com.slusarz.pokerafterdark.application.player.PlayerProjection;
+import com.slusarz.pokerafterdark.domain.participant.Earnings;
 import com.slusarz.pokerafterdark.domain.player.NumberOfPlays;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
+import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import com.slusarz.pokerafterdark.infrastructure.TestJpaConfiguration;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.PlayerEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.player.PlayerQueryJpaRepository;
@@ -39,6 +41,23 @@ public class PlayersQueryRepositoryTest {
     @Test
     @Transactional
     @Sql("classpath:read_players.sql")
+    public void shouldReadPlayer() {
+        PlayerProjection expectedPlayer
+                = PlayerProjection.of(PlayerId.of("PLAYER_3"),
+                                        PlayerName.of("PLAYER_NAME_3"),
+                                        Earnings.of(-110),
+                                        Earnings.of(10),
+                                        Earnings.of(-60),
+                                        NumberOfPlays.of(5));
+
+        PlayerProjection playerProjection = playerQueryJpaRepository.read(expectedPlayer.getPlayerId());
+
+        assertPlayer(expectedPlayer, playerProjection);
+    }
+
+    @Test
+    @Transactional
+    @Sql("classpath:read_players.sql")
     public void shouldReadPlayers() {
         List<PlayerProjection> playerProjections = playerQueryJpaRepository.readPlayers();
 
@@ -57,4 +76,17 @@ public class PlayersQueryRepositoryTest {
         Assert.assertEquals(NumberOfPlays.of(2), playerProjections.get(3).getNumberOfPlays());
         Assert.assertEquals(NumberOfPlays.of(0), playerProjections.get(4).getNumberOfPlays());
     }
+
+    private static void assertPlayer(PlayerProjection expected, PlayerProjection actual) {
+        Assert.assertNotNull(expected);
+        Assert.assertEquals(expected.getPlayerId(), actual.getPlayerId());
+        Assert.assertEquals(expected.getLiveEarnings(), actual.getLiveEarnings());
+        Assert.assertEquals(expected.getNumberOfPlays(), actual.getNumberOfPlays());
+        Assert.assertEquals(expected.getPlayerName(), actual.getPlayerName());
+        Assert.assertEquals(expected.getBiggestLose(), actual.getBiggestLose());
+        Assert.assertEquals(expected.getBiggestWin(), actual.getBiggestWin());
+        Assert.assertEquals(expected, actual);
+
+    }
+
 }

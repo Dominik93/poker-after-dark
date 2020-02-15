@@ -98,6 +98,12 @@ definitions:
         type: "boolean"
       playerId:
         type: "string"
+  GetPlayerResponse:
+    type: "object"
+    properties:
+      players:
+        type: "object"
+        $ref: "#/definitions/Player"
   GetPlayersResponse:
     type: "object"
     properties:
@@ -197,4 +203,5 @@ definitions:
     type: "object"
     properties:
       config:
+        type: "object"
         $ref: "#/definitions/Config"

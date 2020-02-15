@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort } from '@angular/material';
-import { GamesService } from '../../../core/services/games.service';
+import { GamesService } from '../../../../core/services/games.service';
 import { Router } from '@angular/router';
-import { ConfigService } from '../../../core/services/config.service';
+import { ConfigService } from '../../../../core/services/config.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { AdministrationService } from '../../../core/services/administration.service';
+import { AdministrationService } from '../../../../core/services/administration.service';
 import { PlayersService } from 'src/app/core/services/players.service';
 import { Game } from 'src/app/shared/models/game';
 import { Config } from 'src/app/shared/models/config';

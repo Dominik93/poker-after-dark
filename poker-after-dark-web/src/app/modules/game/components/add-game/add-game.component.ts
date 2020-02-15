@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../../../core/services/config.service';
-import { PromptDialogComponent } from '../../../shared/components/prompt-dialog/prompt-dialog.component';
+import { ConfigService } from '../../../../core/services/config.service';
+import { PromptDialogComponent } from '../../../../shared/components/prompt-dialog/prompt-dialog.component';
 import { MatDialog } from '@angular/material';
-import { GamesService } from '../../../core/services/games.service';
-import { ConfirmationDialogComponent } from '../../../shared/components/confirmation-dialog/confirmation-dialog.component';
-import { AdministrationService } from '../../../core/services/administration.service';
+import { GamesService } from '../../../../core/services/games.service';
+import { ConfirmationDialogComponent } from '../../../../shared/components/confirmation-dialog/confirmation-dialog.component';
+import { AdministrationService } from '../../../../core/services/administration.service';
 import { FormControl } from '@angular/forms';
-import { DateFormatter } from '../../../shared/date/date-formatter';
+import { DateFormatter } from '../../../../shared/date/date-formatter';
 import { PlayersService } from 'src/app/core/services/players.service';
 import { Player } from 'src/app/shared/models/player';
 import { Config } from 'src/app/shared/models/config';

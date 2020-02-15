@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { GetPlayersResponse } from 'src/app/shared/models/get-players-response';
 import { AddPlayerRequest } from 'src/app/shared/models/add-player-request';
 import { AddPlayerResponse } from 'src/app/shared/models/add-player-response';
+import { GetPlayerResponse } from 'src/app/shared/models/get-player-response';
 
 
 @Injectable({
@@ -15,6 +16,10 @@ export class PlayersService {
   private path: string = environment.baseUrl + "players";
 
   constructor(private http: HttpClient) { }
+
+  public getPlayer(id: string) {
+    return this.http.get<GetPlayerResponse>(this.path + '/' + id);
+  }
 
   public getPlayers() {
     return this.http.get<GetPlayersResponse>(this.path);

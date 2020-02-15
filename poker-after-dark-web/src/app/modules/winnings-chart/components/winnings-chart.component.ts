@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../../core/services/config.service';
 import { FormControl } from '@angular/forms';
 import { PlayersService } from '../../../core/services/players.service';
-import { Player } from '../../models/player';
+import { Player } from '../../../shared/models/player';
 
 @Component({
   selector: 'app-winnings-chart',
@@ -11,6 +11,7 @@ import { Player } from '../../models/player';
 })
 export class WinningsChartComponent implements OnInit {
 
+  title = 'Live winnings';
   playersControl = new FormControl();
   players: Player[];
 

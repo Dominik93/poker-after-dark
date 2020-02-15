@@ -1,13 +1,21 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatTableDataSource, MatSort } from '@angular/material';
-import { AdministrationService } from '../../../core/services/administration.service';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { AdministrationService } from '../../../../core/services/administration.service';
 import { PlayersService } from 'src/app/core/services/players.service';
 import { Player } from 'src/app/shared/models/player';
 
 @Component({
   selector: 'app-players',
   templateUrl: './players.component.html',
+  animations: [
+    trigger('detailExpand', [
+      state('void', style({ height: '0px', minHeight: '0', visibility: 'hidden' })),
+      state('*', style({ height: '*', visibility: 'visible' })),
+      transition('void <=> *', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
@@ -39,7 +47,11 @@ export class PlayersComponent implements OnInit {
   }
   
   onAddPlayer() {
-    this.router.navigate(['/players/new']);
+    this.router.navigate(['/players/create']);
+  }
+
+  onShowDetails(element): void {
+    this.router.navigate(['/players/details', element.id]);
   }
 
 }

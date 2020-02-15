@@ -1,0 +1,50 @@
+<div class="generic-container" style='margin-left: 0%; position: absolute; width: 100%;'>
+  <div class="card card-default">
+    <!-- Default card contents -->
+    <div class="card-header"><span class="lead">Players</span>
+      <button mat-raised-button color="primary" class="floatRight" *ngIf="administrationMode"
+        (click)="onAddPlayer()">Add player</button>
+    </div>
+    <div class="card-body">
+      <mat-form-field class="filter">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+
+      <div class="table-responsive">
+        <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="liveEarnings">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Live Earnings</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{ element.liveEarnings }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="biggestWin">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Biggest Win</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{ element.biggestWin }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="biggestLose">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Biggest Lose</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{ element.biggestLose }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="gamesPlayed">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Games Played</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{ element.gamesPlayed }} </mat-cell>
+          </ng-container>
+         
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row" 
+          [cdkDetailRow]="row" [cdkDetailRowTemplate]="playerDetailsTemplate"></mat-row>
+        </mat-table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #playerDetailsTemplate let-element>
+  <div class="mat-row detail-row" [@detailExpand] style="overflow: hidden">
+    <button mat-raised-button color="primary" class="floatRight" style="margin-left: 20px; margin-top: 5px;" (click)="onShowDetails(element)">Details</button> 
+  </div>
+</ng-template>
