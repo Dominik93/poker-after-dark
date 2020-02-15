@@ -65,10 +65,9 @@ public class HandlersConfiguration {
     }
 
     @Bean
-    public ProfitQueryHandler profitQueryHandler(ProfitQueryRepository profitQueryRepository) {
-        return new ProfitQueryHandler(profitQueryRepository);
+    public ProfitQueryHandler profitQueryHandler(ProfitQueryRepository profitQueryRepository,
+                                                 ConfigProvider configProvider) {
+        return new ProfitQueryHandler(profitQueryRepository, configProvider);
     }
-
-
 
 }

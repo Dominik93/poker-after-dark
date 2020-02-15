@@ -101,7 +101,7 @@ definitions:
   GetPlayerResponse:
     type: "object"
     properties:
-      players:
+      player:
         type: "object"
         $ref: "#/definitions/Player"
   GetPlayersResponse:

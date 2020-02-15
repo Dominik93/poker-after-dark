@@ -28,7 +28,7 @@ public class PlayerQueryJpaRepository implements PlayerQueryRepository {
             = "select player_id, max(earnings), min(earnings) from participation group by player_id";
 
     private static final String SELECT_EARNINGS_FOR_PLAYER
-            = "select player_id, max(earnings), min(earnings) from participation where player_id = :playerId";
+            = "select player_id, max(earnings), min(earnings) from participation where player_id = :playerId group by player_id";
 
     @PersistenceContext
     private EntityManager entityManager;
