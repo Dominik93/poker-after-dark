@@ -1,12 +1,11 @@
 export class GetProfitRequest {
   
-    gameTypes: string[];
+    gameTypes: string[] = [];
 
     from: Date;
 
     to: Date;
 
-    playersIds: string[];
-
+    playersIds: string[] = [];
 
 }

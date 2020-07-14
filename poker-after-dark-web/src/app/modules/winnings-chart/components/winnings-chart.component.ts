@@ -16,7 +16,7 @@ export class WinningsChartComponent implements OnInit {
   players: Player[];
 
   playerIds: string[];
-  gameTypes: string[] = ['CASH', 'TOURNAMET'];
+  gameTypes: string[] = ['CASH', 'TOURNAMENT'];
   from;
   to;
 

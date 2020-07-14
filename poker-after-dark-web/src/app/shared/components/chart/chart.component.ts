@@ -12,9 +12,9 @@ export class ChartComponent implements OnInit {
 
   @Input() title = 'Chart';
 
-  _gameTypes: string[] = []
+  _gameTypes: string[];
 
-  _playerIds: string[] = [];
+  _playerIds: string[];
 
   _from: Date;
 
@@ -50,12 +50,14 @@ export class ChartComponent implements OnInit {
   }
 
   init() {
-    var request = new GetProfitRequest();
-    request.playersIds = this._playerIds;
-    request.from = this._from;
-    request.to = this._to;
-    request.gameTypes = this._gameTypes;
-    this.renderChart(request);
+    if (!(this._gameTypes === undefined || this._playerIds === undefined)) {
+      var request = new GetProfitRequest();
+      request.playersIds = this._playerIds;
+      request.from = this._from;
+      request.to = this._to;
+      request.gameTypes = this._gameTypes;
+      this.renderChart(request);
+    }
   }
 
   renderChart(request) {

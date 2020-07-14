@@ -28,20 +28,20 @@ public class ProfitQueryJpaRepository implements ProfitQueryRepository {
             "join PLAYER pl on pl.id = p.player_id " +
             "join GAME g on g.id = p.game_id " +
             "where pl.id in ( :playerIds ) and p.date BETWEEN :startDate AND :endDate " +
-            "and g.type in ( :type )" +
+            "and g.type in ( :types ) " +
             "order by p.date asc";
     private static final String SELECT_PROFITS_BETWEEN_DATE_EMPTY_PLAYERS = "select pl.name, p.lp, p.profit from PROFIT p " +
             "join PLAYER pl on pl.id = p.player_id " +
             "join GAME g on g.id = p.game_id " +
             "where p.date BETWEEN :startDate AND :endDate " +
-            "and g.type in ( :type ) " +
+            "and g.type in ( :types ) " +
             "order by p.date asc";
     private static final String SELECT_PLAYERS_BY_IDS = "select p from PlayerJpaEntity p where p.id in ( :playerIds )";
     private static final String SELECT_PLAYERS = "select p from PlayerJpaEntity p";
     private static final String START_DATE_PARAM = "startDate";
     private static final String END_DATE_PARAM = "endDate";
     private static final String PLAYER_IDS_PARAM = "playerIds";
-    private static final String GAME_TYPE_PARAM = "type";
+    private static final String GAME_TYPE_PARAM = "types";
 
     private static final String SELECT_MAX_LP = "select max(p.lp) from ProfitJpaEntity p";
 
@@ -75,7 +75,7 @@ public class ProfitQueryJpaRepository implements ProfitQueryRepository {
 
     private List<Object[]> getUserProfit(List<GameType> gameType, LocalDate from, LocalDate to, List<PlayerId> playerIds) {
         Query query = entityManager.createNativeQuery(selectProfits.get(playerIds.isEmpty()))
-                .setParameter(GAME_TYPE_PARAM, gameType)
+                .setParameter(GAME_TYPE_PARAM, gameType.stream().map(Enum::name).collect(Collectors.toList()))
                 .setParameter(START_DATE_PARAM, from)
                 .setParameter(END_DATE_PARAM, to);
         if (!playerIds.isEmpty()) {
