@@ -2,11 +2,13 @@ package com.slusarz.pokerafterdark.spring.cqrs;
 
 import com.slusarz.pokerafterdark.application.cqrs.handler.HandlerProvider;
 import com.slusarz.pokerafterdark.application.cqrs.query.QueryHandler;
+import com.slusarz.pokerafterdark.spring.cqrs.exceptions.ExecutionException;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Slf4j
 public class QueryHandlerProvider implements HandlerProvider {
@@ -25,7 +27,11 @@ public class QueryHandlerProvider implements HandlerProvider {
     }
 
     public QueryHandler getHandler(Object query) {
-        return queryHandlers.get(query.getClass());
+        QueryHandler queryHandler = queryHandlers.get(query.getClass());
+        if (Objects.isNull(queryHandler) ){
+            throw new ExecutionException(query);
+        }
+        return queryHandler;
     }
 
 }

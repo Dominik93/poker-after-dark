@@ -1,6 +1,5 @@
 package com.slusarz.pokerafterdark.application.game;
 
-import com.slusarz.pokerafterdark.domain.game.Game;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 
 import java.time.LocalDate;
@@ -10,5 +9,4 @@ public interface GameQueryRepository {
 
     List<GameProjection> read(LocalDate from, LocalDate to, List<PlayerId> playerIds);
 
-    Game readLast();
 }

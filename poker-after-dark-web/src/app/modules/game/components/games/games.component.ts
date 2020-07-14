@@ -6,11 +6,11 @@ import { ConfigService } from '../../../../core/services/config.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { AdministrationService } from '../../../../core/services/administration.service';
 import { PlayersService } from 'src/app/core/services/players.service';
-import { Game } from 'src/app/shared/models/game';
-import { Config } from 'src/app/shared/models/config';
-import { Player } from 'src/app/shared/models/player';
-import { RemoveGameRequest } from 'src/app/shared/models/remove-game-request';
-import { GetGamesRequest } from 'src/app/shared/models/get-games-request';
+import { Game } from 'src/app/shared/models/game/game';
+import { Config } from 'src/app/shared/models/config/config';
+import { RemoveGameRequest } from 'src/app/shared/models/game/remove-game-request';
+import { GetGamesRequest } from 'src/app/shared/models/game/get-games-request';
+import { Player } from 'src/app/shared/models/player/player';
 
 @Component({
   selector: 'app-games',
@@ -28,7 +28,7 @@ import { GetGamesRequest } from 'src/app/shared/models/get-games-request';
 export class GamesComponent implements OnInit {
 
   administrationMode: boolean = false;
-  displayedColumns = ["date", "host", "players", "pot", "actions"];
+  displayedColumns = ["symbol", "date", "host", "players", "pot", "actions"];
   dataSource: MatTableDataSource<Game>;
   games: Game[];
   players: Player[];
@@ -63,8 +63,13 @@ export class GamesComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  onAddGame() {
-    this.router.navigate(['/game/new']);
+  onAddTournament() {
+    this.router.navigate(['/tournament/new']);
+  }
+
+  
+  onAddCashGame() {
+    this.router.navigate(['/cash-game/new']);
   }
 
   onRemoveGame(game: Game) {

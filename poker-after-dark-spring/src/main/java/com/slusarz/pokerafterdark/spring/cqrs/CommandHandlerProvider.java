@@ -2,11 +2,13 @@ package com.slusarz.pokerafterdark.spring.cqrs;
 
 import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
 import com.slusarz.pokerafterdark.application.cqrs.handler.HandlerProvider;
+import com.slusarz.pokerafterdark.spring.cqrs.exceptions.ExecutionException;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Slf4j
 public class CommandHandlerProvider implements HandlerProvider {
@@ -25,6 +27,10 @@ public class CommandHandlerProvider implements HandlerProvider {
     }
 
     public CommandHandler getHandler(Object command) {
-        return commandHandlers.get(command.getClass());
+        CommandHandler commandHandler = commandHandlers.get(command.getClass());
+        if (Objects.isNull(commandHandler) ){
+            throw new ExecutionException(command);
+        }
+        return commandHandler;
     }
 }

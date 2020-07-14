@@ -7,7 +7,7 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode
 @AllArgsConstructor
-public class Pair<K, V> {
+public class Pair<K, V> { // todo use apache common? or other lib?
 
     private final K key;
 

@@ -3,9 +3,10 @@ package com.slusarz.pokerafterdark.application.usecase.removegame;
 import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
 import com.slusarz.pokerafterdark.application.events.EventBus;
 import com.slusarz.pokerafterdark.application.permission.RequiredAdministrationPermission;
-import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
 import com.slusarz.pokerafterdark.application.usecase.removegame.event.RemoveGameEvent;
+import com.slusarz.pokerafterdark.application.usecase.removegame.validator.RemoveGameValidator;
 import com.slusarz.pokerafterdark.domain.game.GameId;
+import com.slusarz.pokerafterdark.domain.game.GameRepository;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -15,10 +16,15 @@ public class RemoveGameCommandHandler implements CommandHandler<RemoveGameComman
 
     private GameRepository gameJpaRepository;
 
+    private RemoveGameValidator removeGameValidator;
+
     @Override
     @RequiredAdministrationPermission
     public RemoveGameCommandResult handle(RemoveGameCommand removeGameCommand) {
         GameId gameId = removeGameCommand.getGameId();
+
+        removeGameValidator.validate(gameId);
+
         gameJpaRepository.remove(gameId);
         eventsBus.fireEvent(RemoveGameEvent.of(gameId));
         return RemoveGameCommandResult.of();

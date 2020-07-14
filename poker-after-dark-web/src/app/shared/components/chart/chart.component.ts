@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as CanvasJS from 'canvasjs-2.3.2/canvasjs.min';
 import { ProfitService } from '../../../core/services/profit.service';
-import { GetProfitRequest } from '../../models/get-profit-request';
+import { GetProfitRequest } from '../../models/profit/get-profit-request';
 
 @Component({
   selector: 'app-chart',
@@ -11,6 +11,8 @@ import { GetProfitRequest } from '../../models/get-profit-request';
 export class ChartComponent implements OnInit {
 
   @Input() title = 'Chart';
+
+  _gameTypes: string[] = []
 
   _playerIds: string[] = [];
 
@@ -33,6 +35,12 @@ export class ChartComponent implements OnInit {
   }
   
   @Input()
+  set gameTypes(gameTypes) {
+    this._gameTypes = gameTypes;
+    this.init();
+  }
+
+  @Input()
   set playerIds(playersIds) {
     this._playerIds = playersIds;
     this.init();
@@ -46,6 +54,7 @@ export class ChartComponent implements OnInit {
     request.playersIds = this._playerIds;
     request.from = this._from;
     request.to = this._to;
+    request.gameTypes = this._gameTypes;
     this.renderChart(request);
   }
 

@@ -7,6 +7,14 @@ public class ValidationError {
 
     private static final String PREFIX = "PAD_";
 
+    public static final String INVALID_TOURNAMENT_PARTICIPANTS = PREFIX + "INVALID_TOURNAMENT_PARTICIPANTS";
+
+    public static final String MANDATORY_PLACE = PREFIX + "MANDATORY_PLACE";
+
+    public static final String NEGATIVE_PLACE = PREFIX + "NEGATIVE_PLACE";
+
+    public static final String MANDATORY_TOURNAMENT_ID = PREFIX + "MANDATORY_TOURNAMENT_ID";
+
     public static final String MANDATORY_PAGES_FILTER = PREFIX + "MANDATORY_PAGES_FILTER";
 
     public static final String MANDATORY_ENTRY_FEE = PREFIX + "MANDATORY_ENTRY_FEE";
@@ -41,7 +49,9 @@ public class ValidationError {
 
     public static final String MANDATORY_GAME_DATE = PREFIX + "MANDATORY_GAME_DATE";
 
-    public static final String EMPTY_PARTICIPANTS = PREFIX + "EMPTY_PARTICIPANTS";
+    public static final String EMPTY_CASH_GAME_PARTICIPANTS = PREFIX + "EMPTY_CASH_GAME_PARTICIPANTS";
+
+    public static final String EMPTY_TOURNAMENT_PARTICIPANTS = PREFIX + "EMPTY_TOURNAMENT_PARTICIPANTS";
 
     public static final String POT_BELOW_ZERO = PREFIX + "POT_BELOW_ZERO";
 }

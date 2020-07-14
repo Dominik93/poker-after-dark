@@ -2,7 +2,8 @@ package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
 import com.slusarz.pokerafterdark.application.profit.ProfitQuery;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryResult;
-import com.slusarz.pokerafterdark.domain.participant.Earnings;
+import com.slusarz.pokerafterdark.domain.earnings.Earnings;
+import com.slusarz.pokerafterdark.domain.game.GameType;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.specification.api.GetProfitRequest;
 import com.slusarz.pokerafterdark.specification.api.GetProfitResponse;
@@ -20,7 +21,8 @@ public class GetProfitsMapper implements QueryMapper<GetProfitRequest, ProfitQue
     @Override
     public ProfitQuery toQuery(GetProfitRequest request) {
         List<PlayerId> playerIds = request.getPlayersIds().stream().map(PlayerId::of).collect(Collectors.toList());
-        return ProfitQuery.of(request.getFrom(), request.getTo(), playerIds);
+        List<GameType> gameTypes = request.getGameTypes().stream().map(Enum::name).map(GameType::valueOf).collect(Collectors.toList());
+        return ProfitQuery.of(request.getFrom(), request.getTo(), gameTypes, playerIds);
     }
 
     @Override

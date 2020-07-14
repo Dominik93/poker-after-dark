@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.application.usecase.removegame.event;
 
 import com.slusarz.pokerafterdark.application.events.EventHandler;
-import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;
+import com.slusarz.pokerafterdark.application.livewinnings.PlayerProjectionRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -9,11 +9,11 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 public class RemoveGameEventHandler implements EventHandler<RemoveGameEvent> {
 
-    private LiveWinningsRepository liveWinningsJpaRepository;
+    private PlayerProjectionRepository synchronize;
 
     @Override
     public void handle(RemoveGameEvent event) {
-        liveWinningsJpaRepository.synchronize();
+        synchronize.synchronize();
     }
 
     @Override

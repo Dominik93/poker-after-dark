@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.domain.game;
 
-import com.slusarz.pokerafterdark.domain.participant.Participant;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
+import com.slusarz.pokerafterdark.domain.pot.Pot;
 import com.slusarz.pokerafterdark.domain.validation.ValidationError;
 import com.slusarz.pokerafterdark.domain.validation.ValidationExecutor;
 import lombok.AccessLevel;
@@ -11,10 +11,8 @@ import lombok.Getter;
 import lombok.ToString;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
-import java.util.List;
 
 @Getter
 @ToString
@@ -31,17 +29,13 @@ public class Game {
     private PlayerId host;
 
     @NotNull(message = ValidationError.MANDATORY_GAME_DATE)
-    private LocalDate date;
+    private LocalDate occurrenceDate;
 
     @Valid
     @NotNull(message = ValidationError.MANDATORY_POT)
     private Pot pot;
 
-    @Valid
-    @NotEmpty(message = ValidationError.EMPTY_PARTICIPANTS)
-    private List<Participant> participants;
-
-    public static Game of(GameId gameId, PlayerId host, LocalDate date, Pot pot, List<Participant> participants) {
-        return ValidationExecutor.validateAndReturn(new Game(gameId, host, date, pot, participants));
+    public static Game of(GameId cashGameId, PlayerId host, LocalDate occurrenceDate, Pot pot) {
+        return ValidationExecutor.validateAndReturn(new Game(cashGameId, host, occurrenceDate, pot));
     }
 }

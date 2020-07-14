@@ -7,22 +7,34 @@ import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
 import com.slusarz.pokerafterdark.application.game.GamesQueryHandler;
 import com.slusarz.pokerafterdark.application.player.PlayerQueryHandler;
 import com.slusarz.pokerafterdark.application.player.PlayerQueryRepository;
-import com.slusarz.pokerafterdark.application.player.PlayersQueryHandler;
+import com.slusarz.pokerafterdark.application.players.PlayersQueryHandler;
+import com.slusarz.pokerafterdark.application.players.PlayersQueryRepository;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryHandler;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryRepository;
-import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameCommandHandler;
-import com.slusarz.pokerafterdark.application.usecase.addgame.AddGameValidator;
-import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
+import com.slusarz.pokerafterdark.application.usecase.addcashgame.AddCashGameCommandHandler;
+import com.slusarz.pokerafterdark.application.usecase.addgame.validator.AddGameValidator;
+import com.slusarz.pokerafterdark.application.usecase.addtournament.AddTournamentCommandHandler;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerCommandHandler;
-import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerValidator;
-import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
+import com.slusarz.pokerafterdark.application.usecase.createplayer.validator.CreatePlayerValidator;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandHandler;
+import com.slusarz.pokerafterdark.application.usecase.removegame.validator.RemoveGameValidator;
+import com.slusarz.pokerafterdark.domain.cashgame.CashGameRepository;
+import com.slusarz.pokerafterdark.domain.game.GameRepository;
+import com.slusarz.pokerafterdark.domain.player.PlayerRepository;
+import com.slusarz.pokerafterdark.domain.tournament.TournamentRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class HandlersConfiguration {
+
+    @Bean
+    public AddTournamentCommandHandler addTournamentCommandHandler(@Qualifier("afterCommitEventBus") EventBus eventsBus,
+                                                                   TournamentRepository tournamentRepository,
+                                                                   AddGameValidator addGameValidator) {
+        return new AddTournamentCommandHandler(eventsBus, tournamentRepository, addGameValidator);
+    }
 
     @Bean
     public CreatePlayerCommandHandler createPlayerCommandHandler(@Qualifier("afterCommitEventBus") EventBus eventsBus,
@@ -33,15 +45,16 @@ public class HandlersConfiguration {
 
     @Bean
     public RemoveGameCommandHandler removeGameCommandHandler(@Qualifier("afterCommitEventBus") EventBus eventsBus,
-                                                             GameRepository gameRepository){
-        return new RemoveGameCommandHandler(eventsBus, gameRepository);
+                                                             GameRepository gameRepository,
+                                                             RemoveGameValidator removeGameValidator){
+        return new RemoveGameCommandHandler(eventsBus, gameRepository, removeGameValidator);
     }
 
     @Bean
-    public AddGameCommandHandler addGameCommandHandler(@Qualifier("afterCommitEventBus")EventBus eventsBus,
-                                                       GameRepository gameRepository,
-                                                       AddGameValidator addGameValidator){
-        return new AddGameCommandHandler(eventsBus, gameRepository, addGameValidator);
+    public AddCashGameCommandHandler addGameCommandHandler(@Qualifier("afterCommitEventBus")EventBus eventsBus,
+                                                           CashGameRepository cashGameRepository,
+                                                           AddGameValidator addGameValidator){
+        return new AddCashGameCommandHandler(eventsBus, cashGameRepository, addGameValidator);
     }
 
     @Bean
@@ -55,8 +68,8 @@ public class HandlersConfiguration {
     }
 
     @Bean
-    public PlayersQueryHandler playersQueryHandler(PlayerQueryRepository playerQueryRepository){
-        return new PlayersQueryHandler(playerQueryRepository);
+    public PlayersQueryHandler playersQueryHandler(PlayersQueryRepository playersQueryRepository){
+        return new PlayersQueryHandler(playersQueryRepository);
     }
 
     @Bean

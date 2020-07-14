@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { GetProfitResponse } from 'src/app/shared/models/get-profit-response';
-import { GetProfitRequest } from 'src/app/shared/models/get-profit-request';
+import { GetProfitResponse } from 'src/app/shared/models/profit/get-profit-response';
+import { GetProfitRequest } from 'src/app/shared/models/profit/get-profit-request';
 
 @Injectable({
   providedIn: 'root'

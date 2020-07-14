@@ -4,7 +4,7 @@ import { MatTableDataSource, MatSort } from '@angular/material';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { AdministrationService } from '../../../../core/services/administration.service';
 import { PlayersService } from 'src/app/core/services/players.service';
-import { Player } from 'src/app/shared/models/player';
+import { Player } from 'src/app/shared/models/player/player';
 
 @Component({
   selector: 'app-players',

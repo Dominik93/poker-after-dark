@@ -3,9 +3,11 @@ package com.slusarz.pokerafterdark.spring.delivery.mapper;
 import com.slusarz.pokerafterdark.application.game.GameProjection;
 import com.slusarz.pokerafterdark.application.game.GamesQuery;
 import com.slusarz.pokerafterdark.application.game.GamesQueryResult;
-import com.slusarz.pokerafterdark.domain.participant.Participant;
+import com.slusarz.pokerafterdark.application.game.ParticipantProjection;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
+import com.slusarz.pokerafterdark.domain.tournament.Place;
 import com.slusarz.pokerafterdark.specification.api.Game;
+import com.slusarz.pokerafterdark.specification.api.GameActions;
 import com.slusarz.pokerafterdark.specification.api.GetGamesRequest;
 import com.slusarz.pokerafterdark.specification.api.GetGamesResponse;
 import com.slusarz.pokerafterdark.specification.api.Host;
@@ -41,9 +43,13 @@ public class GetGamesMapper implements QueryMapper<GetGamesRequest, GamesQuery, 
         return Game.builder().date(game.getDate())
                 .host(toHost(game))
                 .id(game.getGameId().getId())
-                .participantsCount(game.getParticipants().size())
+                .actions(GameActions.builder()
+                        .remove(game.getActions().isRemove())
+                        .build())
+                .type(Game.TypeEnum.valueOf(game.getGameType().name()))
+                .participantsCount(game.getParticipantProjections().size())
                 .pot(game.getPot().getValue())
-                .participants(toParticipants(game.getParticipants()))
+                .participants(toParticipants(game.getParticipantProjections()))
                 .build();
     }
 
@@ -54,14 +60,17 @@ public class GetGamesMapper implements QueryMapper<GetGamesRequest, GamesQuery, 
                 .build();
     }
 
-    private List<com.slusarz.pokerafterdark.specification.api.Participant> toParticipants(List<Participant> participants) {
-        return participants.stream().map(this::toParticipant).collect(Collectors.toList());
+    private List<com.slusarz.pokerafterdark.specification.api.Participant> toParticipants(
+            List<ParticipantProjection> participantProjections) {
+        return participantProjections.stream().map(this::toParticipant).collect(Collectors.toList());
     }
 
-    private com.slusarz.pokerafterdark.specification.api.Participant toParticipant(Participant participant) {
+    private com.slusarz.pokerafterdark.specification.api.Participant toParticipant(ParticipantProjection participantProjection) {
         return com.slusarz.pokerafterdark.specification.api.Participant.builder()
-                .playerId(participant.getPlayerId().getId())
-                .earnings(new BigDecimal(participant.getEarnings().getValue()))
+                .playerId(participantProjection.getPlayerId().getId())
+                .playerName(participantProjection.getPlayerName().getName())
+                .earnings(new BigDecimal(participantProjection.getEarnings().getValue()))
+                .place(participantProjection.getPlace().map(Place::getPlace).orElse(null))
                 .build();
     }
 

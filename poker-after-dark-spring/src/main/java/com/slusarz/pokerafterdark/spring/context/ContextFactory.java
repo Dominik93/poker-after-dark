@@ -9,6 +9,7 @@ public class ContextFactory {
     private AuthenticationService authenticationService;
 
     public Context createContext(String token) {
+        authenticationService.authenticateToken(token);
         if (authenticationService.isAuthenticated(token)) {
             return new AdministrationContext(token);
         }

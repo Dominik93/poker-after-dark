@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.domain.profit;
 
-import com.slusarz.pokerafterdark.domain.participant.Earnings;
+import com.slusarz.pokerafterdark.domain.earnings.Earnings;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import com.slusarz.pokerafterdark.domain.validation.ValidationError;

@@ -1,10 +1,7 @@
 package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
 import com.slusarz.pokerafterdark.application.player.PlayerProjection;
-import com.slusarz.pokerafterdark.application.player.PlayersQueryResult;
-import com.slusarz.pokerafterdark.specification.api.GetPlayersResponse;
 import com.slusarz.pokerafterdark.specification.api.Player;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.query.ResultMapper;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;

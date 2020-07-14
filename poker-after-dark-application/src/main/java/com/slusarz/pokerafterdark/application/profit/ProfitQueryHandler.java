@@ -20,7 +20,7 @@ public class ProfitQueryHandler implements QueryHandler<ProfitQueryResult, Profi
     public ProfitQueryResult handle(ProfitQuery profitQuery) {
         LocalDate from = Optional.ofNullable(profitQuery.getFrom()).orElse(configProvider.getPagesFrom());
         LocalDate to = Optional.ofNullable(profitQuery.getTo()).orElse(configProvider.getPagesTo());
-        List<Profit> profits = gameJpaRepository.getProfits(from, to, profitQuery.getPlayerIds());
+        List<Profit> profits = gameJpaRepository.getProfits(profitQuery.getGameType(), from, to, profitQuery.getPlayerIds());
         return ProfitQueryResult.of(profits);
     }
 }
