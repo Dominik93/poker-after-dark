@@ -30,14 +30,24 @@ definitions:
         - "from"
         - "to"
         - "playersIds"
-  AddGameRequest:
+  AddCachGameRequest:
     type: "object"
     properties:
       game:
-        $ref: "#/definitions/Game"
+        $ref: "#/definitions/CashGame"
       skipValidation:
         type: "boolean"
   AddGameResponse:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+  AddTournamentRequest:
+    type: "object"
+    properties:
+      tournament:
+        $ref: "#/definitions/Tournament"
+  AddTournamentResponse:
     type: "object"
     properties:
       success:
@@ -66,13 +76,78 @@ definitions:
         type: "string"
       playerName:
         type: "string"
+      place:
+        type: "integer"
       earnings:
         type: "number"
+  TournamentParticipant:
+    type: "object"
+    properties:
+      playerId:
+        type: "string"
+      playerName:
+        type: "string"
+      place:
+        type: "integer"
+      earnings:
+        type: "number"
+  CashGameParticipant:
+    type: "object"
+    properties:
+      playerId:
+        type: "string"
+      playerName:
+        type: "string"
+      earnings:
+        type: "number"
+  Tournament:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      host:
+        $ref: "#/definitions/Host"
+      date:
+        type: "string"
+        format: "date"
+      pot:
+        type: "integer"
+      participants:
+        type: "array"
+        items:
+          $ref: "#/definitions/TournamentParticipant"
+  CashGame:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      host:
+        $ref: "#/definitions/Host"
+      date:
+        type: "string"
+        format: "date"
+      pot:
+        type: "integer"
+      participants:
+        type: "array"
+        items:
+          $ref: "#/definitions/CashGameParticipant"
+  GameActions:
+    type: "object"
+    properties:
+      remove:
+        type: "boolean"
   Game:
     type: "object"
     properties:
       id:
         type: "string"
+      actions:
+        type: "object"
+        $ref: "#/definitions/GameActions"
+      type:
+        type: string
+        enum: [CASH, TOURNAMENT]
       host:
         $ref: "#/definitions/Host"
       date:
@@ -129,6 +204,13 @@ definitions:
   GetProfitRequest:
     type: "object"
     properties:
+      gameTypes:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+            - CASH
+            - TOURNAMENT
       from:
         type: "string"
         format: "date"
@@ -140,6 +222,7 @@ definitions:
         items:
           type: "string"
     required:
+      - "gameType"
       - "from"
       - "to"
       - "playersIds"

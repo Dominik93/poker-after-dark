@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { HttpModule } from '@angular/http';
 import { GamesComponent } from './components/games/games.component';
-import { AddGameComponent } from './components/add-game/add-game.component';
 import { PromptDialogComponent } from 'src/app/shared/components/prompt-dialog/prompt-dialog.component';
 import { LoginDialogComponent } from 'src/app/core/login-dialog/login-dialog.component';
 import { ConfirmationDialogComponent } from 'src/app/shared/components/confirmation-dialog/confirmation-dialog.component';
@@ -18,7 +17,6 @@ import { GameRoutingModule } from './game-routing.module';
 @NgModule({
     declarations: [
         GamesComponent,
-        AddGameComponent,
     ],
     entryComponents: [
         PromptDialogComponent,

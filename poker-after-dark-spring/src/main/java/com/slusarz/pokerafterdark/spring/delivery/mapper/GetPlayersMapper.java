@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
-import com.slusarz.pokerafterdark.application.player.PlayersQueryResult;
+import com.slusarz.pokerafterdark.application.players.PlayersQueryResult;
 import com.slusarz.pokerafterdark.specification.api.GetPlayersResponse;
 import com.slusarz.pokerafterdark.spring.delivery.mapper.query.ResultMapper;
 import org.springframework.beans.factory.annotation.Autowired;

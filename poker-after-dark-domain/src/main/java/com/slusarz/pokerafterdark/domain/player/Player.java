@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.domain.player;
 
-import com.slusarz.pokerafterdark.domain.participant.Earnings;
+import com.slusarz.pokerafterdark.domain.earnings.Earnings;
 import com.slusarz.pokerafterdark.domain.validation.ValidationError;
 import com.slusarz.pokerafterdark.domain.validation.ValidationExecutor;
 import lombok.AccessLevel;

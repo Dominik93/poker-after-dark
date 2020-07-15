@@ -1,12 +1,13 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.repository.profit;
 
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryRepository;
-import com.slusarz.pokerafterdark.domain.participant.Earnings;
+import com.slusarz.pokerafterdark.domain.earnings.Earnings;
+import com.slusarz.pokerafterdark.domain.game.GameType;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import com.slusarz.pokerafterdark.domain.profit.Profit;
 import com.slusarz.pokerafterdark.infrastructure.persistence.common.Pair;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.player.PlayerJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ProfitEntityMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,15 +26,22 @@ import java.util.stream.Collectors;
 public class ProfitQueryJpaRepository implements ProfitQueryRepository {
     private static final String SELECT_PROFITS_BETWEEN_DATE = "select pl.name, p.lp, p.profit from PROFIT p " +
             "join PLAYER pl on pl.id = p.player_id " +
-            "where pl.id in ( :playerIds ) and p.date BETWEEN :startDate AND :endDate order by p.date asc";
+            "join GAME g on g.id = p.game_id " +
+            "where pl.id in ( :playerIds ) and p.date BETWEEN :startDate AND :endDate " +
+            "and g.type in ( :types ) " +
+            "order by p.date asc";
     private static final String SELECT_PROFITS_BETWEEN_DATE_EMPTY_PLAYERS = "select pl.name, p.lp, p.profit from PROFIT p " +
             "join PLAYER pl on pl.id = p.player_id " +
-            "where p.date BETWEEN :startDate AND :endDate order by p.date asc";
+            "join GAME g on g.id = p.game_id " +
+            "where p.date BETWEEN :startDate AND :endDate " +
+            "and g.type in ( :types ) " +
+            "order by p.date asc";
     private static final String SELECT_PLAYERS_BY_IDS = "select p from PlayerJpaEntity p where p.id in ( :playerIds )";
     private static final String SELECT_PLAYERS = "select p from PlayerJpaEntity p";
     private static final String START_DATE_PARAM = "startDate";
     private static final String END_DATE_PARAM = "endDate";
     private static final String PLAYER_IDS_PARAM = "playerIds";
+    private static final String GAME_TYPE_PARAM = "types";
 
     private static final String SELECT_MAX_LP = "select max(p.lp) from ProfitJpaEntity p";
 
@@ -57,16 +65,17 @@ public class ProfitQueryJpaRepository implements ProfitQueryRepository {
     }
 
     @Override
-    public List<Profit> getProfits(LocalDate from, LocalDate to, List<PlayerId> playerIds) {
-        List<Object[]> userProfits = getUserProfit(from, to, playerIds);
+    public List<Profit> getProfits(List<GameType> gameType, LocalDate from, LocalDate to, List<PlayerId> playerIds) {
+        List<Object[]> userProfits = getUserProfit(gameType, from, to, playerIds);
         int gameNumber = (int) entityManager.createQuery(SELECT_MAX_LP).getSingleResult();
         Map<PlayerName, List<Pair<Integer, Earnings>>> profitMap = profitEntityMapper.toProfitMap(userProfits);
         List<PlayerJpaEntity> playerJpaEntities = getPlayers(playerIds);
         return playerJpaEntities.stream().map(playerJpaEntity -> profitEntityMapper.toProfit(playerJpaEntity, gameNumber, profitMap)).collect(Collectors.toList());
     }
 
-    private List<Object[]> getUserProfit(LocalDate from, LocalDate to, List<PlayerId> playerIds) {
+    private List<Object[]> getUserProfit(List<GameType> gameType, LocalDate from, LocalDate to, List<PlayerId> playerIds) {
         Query query = entityManager.createNativeQuery(selectProfits.get(playerIds.isEmpty()))
+                .setParameter(GAME_TYPE_PARAM, gameType.stream().map(Enum::name).collect(Collectors.toList()))
                 .setParameter(START_DATE_PARAM, from)
                 .setParameter(END_DATE_PARAM, to);
         if (!playerIds.isEmpty()) {

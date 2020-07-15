@@ -10,7 +10,9 @@ import javax.validation.ConstraintViolation;
 public class AssertValidationUtil {
 
     public static void assertValidationMessage(ValidationException ex, String expectedMessage) {
-        Assert.assertTrue(ex.getConstraintViolations().stream().map(ConstraintViolation::getMessage)
+        Assert.assertTrue(ex.getConstraintViolations()
+                .stream()
+                .map(ConstraintViolation::getMessage)
                 .anyMatch(message -> message.equals(expectedMessage)));
     }
 

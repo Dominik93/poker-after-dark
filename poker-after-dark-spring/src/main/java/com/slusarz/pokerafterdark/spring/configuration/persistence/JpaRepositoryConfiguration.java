@@ -1,24 +1,34 @@
 package com.slusarz.pokerafterdark.spring.configuration.persistence;
 
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
-import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsRepository;
+import com.slusarz.pokerafterdark.application.livewinnings.PlayerProjectionRepository;
 import com.slusarz.pokerafterdark.application.player.PlayerQueryRepository;
+import com.slusarz.pokerafterdark.application.players.PlayersQueryRepository;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryRepository;
-import com.slusarz.pokerafterdark.application.profit.ProfitRepository;
-import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
-import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
+import com.slusarz.pokerafterdark.domain.cashgame.CashGameRepository;
+import com.slusarz.pokerafterdark.domain.game.GameRepository;
+import com.slusarz.pokerafterdark.domain.player.PlayerRepository;
+import com.slusarz.pokerafterdark.domain.profit.ProfitRepository;
+import com.slusarz.pokerafterdark.domain.tournament.TournamentRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.CashGameEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameEntityMapper;
+import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameProjectionEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ParticipationEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.PlayerEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ProfitEntityMapper;
+import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.TournamentEntityMapper;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.cashgame.CashGameJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.GameCaller;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.GameJpaRepository;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.GameQueryCaller;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.GameQueryJpaRepository;
-import com.slusarz.pokerafterdark.infrastructure.persistence.repository.livewinnings.LiveWinningsJpaRepository;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.player.PlayerJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.player.PlayerProjectionJpaRepository;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.player.PlayerQueryJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.players.PlayersQueryJpaRepository;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.profit.ProfitJpaRepository;
 import com.slusarz.pokerafterdark.infrastructure.persistence.repository.profit.ProfitQueryJpaRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.tournament.TournamentJpaRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -26,18 +36,32 @@ import org.springframework.context.annotation.Configuration;
 public class JpaRepositoryConfiguration {
 
     @Bean
-    public LiveWinningsRepository liveWinningsRepository() {
-        return new LiveWinningsJpaRepository();
+    public TournamentRepository tournamentRepository(TournamentEntityMapper tournamentEntityMapper,
+                                                     ParticipationEntityMapper participationEntityMapper){
+        return new TournamentJpaRepository(tournamentEntityMapper, participationEntityMapper);
     }
 
     @Bean
-    public GameRepository gameRepository(GameEntityMapper gameEntityMapper, ParticipationEntityMapper participationEntityMapper) {
-        return new GameJpaRepository(gameEntityMapper, participationEntityMapper);
+    public PlayerProjectionRepository playerProjectionRepository() {
+        return new PlayerProjectionJpaRepository();
     }
 
     @Bean
-    public GameQueryRepository gameQueryRepository(GameQueryCaller gameQueryCaller, GameEntityMapper gameEntityMapper) {
-        return new GameQueryJpaRepository(gameQueryCaller, gameEntityMapper);
+    public CashGameRepository cashGameRepository(CashGameEntityMapper cashGameEntityMapper,
+                                                 ParticipationEntityMapper participationEntityMapper) {
+        return new CashGameJpaRepository(cashGameEntityMapper, participationEntityMapper);
+    }
+
+    @Bean
+    public GameRepository gameRepository(GameCaller gameCaller, GameEntityMapper gameEntityMapper) {
+        return new GameJpaRepository(gameCaller,gameEntityMapper);
+    }
+
+    @Bean
+    public GameQueryRepository gameQueryRepository(GameQueryCaller gameQueryCaller,
+                                                   GameCaller gameCaller,
+                                                   GameProjectionEntityMapper gameProjectionEntityMapper) {
+        return new GameQueryJpaRepository(gameQueryCaller, gameCaller, gameProjectionEntityMapper);
     }
 
     @Bean
@@ -61,6 +85,21 @@ public class JpaRepositoryConfiguration {
     }
 
     @Bean
+    public PlayersQueryRepository playersQueryRepository(PlayerEntityMapper playerEntityMapper) {
+        return new PlayersQueryJpaRepository(playerEntityMapper);
+    }
+
+    @Bean
+    public GameCaller gameCaller() {
+        return new GameCaller();
+    }
+
+    @Bean
+    public GameQueryCaller gameQueryCaller() {
+        return new GameQueryCaller();
+    }
+
+    @Bean
     public ProfitEntityMapper profitEntityMapper() {
         return new ProfitEntityMapper();
     }
@@ -76,12 +115,23 @@ public class JpaRepositoryConfiguration {
     }
 
     @Bean
-    public GameEntityMapper gameEntityMapper(ParticipationEntityMapper participationEntityMapper) {
-        return new GameEntityMapper(participationEntityMapper);
+    public TournamentEntityMapper tournamentEntityMapper() {
+        return new TournamentEntityMapper();
     }
 
     @Bean
-    public GameQueryCaller gameQueryCaller() {
-        return new GameQueryCaller();
+    public CashGameEntityMapper cashGameEntityMapper() {
+        return new CashGameEntityMapper();
     }
+
+    @Bean
+    public GameEntityMapper gameEntityMapper() {
+        return new GameEntityMapper();
+    }
+
+    @Bean
+    public GameProjectionEntityMapper gameProjectionEntityMapper() {
+        return new GameProjectionEntityMapper();
+    }
+
 }

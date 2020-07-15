@@ -16,9 +16,9 @@ public class SimpleCommandExecutor implements CommandExecutor {
     public CommandResult execute(Command command) {
         log.info("Execute command [" + command + "]");
         long ttime = System.currentTimeMillis();
-        CommandResult queryResult = handlerProvider.getHandler(command).handle(command);
-        log.info("Query executed in " + (System.currentTimeMillis() - ttime) + "ms, result = [" + queryResult + "]");
-        return queryResult;
+        CommandResult commandResult = handlerProvider.getHandler(command).handle(command);
+        log.info("Command executed in " + (System.currentTimeMillis() - ttime) + "ms, result = [" + commandResult + "]");
+        return commandResult;
     }
 
 }

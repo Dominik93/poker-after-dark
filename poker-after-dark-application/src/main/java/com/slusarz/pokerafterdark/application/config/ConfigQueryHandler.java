@@ -13,10 +13,8 @@ public class ConfigQueryHandler implements QueryHandler<ConfigQueryResult, Confi
 
     @Override
     public ConfigQueryResult handle(ConfigQuery command) {
-        EntryFee entryFee
-                = EntryFee.of(configProvider.getEntryChips(), configProvider.getEntryMoney());
-        ListFilter listFilter
-                = ListFilter.of(configProvider.getPagesFrom(), configProvider.getPagesTo());
+        EntryFee entryFee = EntryFee.of(configProvider.getEntryChips(), configProvider.getEntryMoney());
+        ListFilter listFilter = ListFilter.of(configProvider.getPagesFrom(), configProvider.getPagesTo());
         return ConfigQueryResult.of(Config.of(entryFee, listFilter));
     }
 }

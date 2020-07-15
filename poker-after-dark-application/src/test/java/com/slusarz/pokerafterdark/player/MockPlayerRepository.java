@@ -1,9 +1,9 @@
 package com.slusarz.pokerafterdark.player;
 
-import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
 import com.slusarz.pokerafterdark.domain.player.Player;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
+import com.slusarz.pokerafterdark.domain.player.PlayerRepository;
 
 import java.util.ArrayList;
 import java.util.HashMap;

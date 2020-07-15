@@ -1,10 +1,10 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.repository.player;
 
-import com.slusarz.pokerafterdark.application.usecase.createplayer.PlayerRepository;
 import com.slusarz.pokerafterdark.domain.player.Player;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
+import com.slusarz.pokerafterdark.domain.player.PlayerRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.player.PlayerJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.PlayerEntityMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

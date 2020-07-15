@@ -2,12 +2,11 @@ package com.slusarz.pokerafterdark.infrastructure.persistence.repository.game;
 
 import com.slusarz.pokerafterdark.application.game.GameProjection;
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
-import com.slusarz.pokerafterdark.domain.game.Game;
+import com.slusarz.pokerafterdark.application.game.ParticipantProjection;
 import com.slusarz.pokerafterdark.domain.game.GameId;
-import com.slusarz.pokerafterdark.domain.participant.Participant;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.GameJpaEntity;
-import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameEntityMapper;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.game.GameJpaEntity;
+import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameProjectionEntityMapper;
 import com.slusarz.pokerafterdark.infrastructure.persistence.result.ParticipationResult;
 import lombok.AllArgsConstructor;
 
@@ -26,11 +25,16 @@ public class GameQueryJpaRepository implements GameQueryRepository {
 
     private GameQueryCaller gameQueryCaller;
 
-    private GameEntityMapper gameEntityMapper;
+    private GameCaller gameCaller;
 
-    public GameQueryJpaRepository(GameQueryCaller gameQueryCaller, GameEntityMapper gameEntityMapper) {
+    private GameProjectionEntityMapper gameProjectionEntityMapper;
+
+    public GameQueryJpaRepository(GameQueryCaller gameQueryCaller,
+                                  GameCaller gameCaller,
+                                  GameProjectionEntityMapper gameProjectionEntityMapper) {
         this.gameQueryCaller = gameQueryCaller;
-        this.gameEntityMapper = gameEntityMapper;
+        this.gameCaller = gameCaller;
+        this.gameProjectionEntityMapper = gameProjectionEntityMapper;
     }
 
     public List<GameProjection> read(LocalDate from, LocalDate to, List<PlayerId> playerIds) {
@@ -40,25 +44,23 @@ public class GameQueryJpaRepository implements GameQueryRepository {
 
         List<ParticipationResult> participationJpaEntities = gameQueryCaller.selectParticipations(gameIds);
 
-        Map<GameId, List<Participant>> participants
-                = participationJpaEntities.stream().collect(Collectors.groupingBy(ParticipationResult::getGameId))
+
+        Map<GameId, List<ParticipantProjection>> participants = participationJpaEntities.stream()
+                .collect(Collectors.groupingBy(ParticipationResult::getGameId))
                 .entrySet()
                 .stream()
                 .collect(Collectors.toMap(Map.Entry::getKey, object -> toListOfParticipants(object.getValue())));
 
+        GameJpaEntity lastGame = gameCaller.readLast();
+
         return gameJpaEntities.stream()
-                .map(gameJpaEntity -> gameEntityMapper.toGame(gameJpaEntity, participants, playerIds))
+                .map(gameJpaEntity -> gameProjectionEntityMapper.toGameProjection(lastGame, gameJpaEntity, participants, playerIds))
                 .collect(Collectors.toList());
     }
 
-    @Override
-    public Game readLast() {
-        return gameEntityMapper.toGame(gameQueryCaller.selectLastGame());
-    }
-
-    private List<Participant> toListOfParticipants(List<ParticipationResult> results) {
+    private List<ParticipantProjection> toListOfParticipants(List<ParticipationResult> results) {
         return results.stream()
-                .map(result -> Participant.of(result.getPlayerId(), result.getEarnings()))
+                .map(result -> ParticipantProjection.of(result.getPlayerId(), result.getPlayerName(), result.getEarnings(), result.getPlace()))
                 .collect(Collectors.toList());
     }
 

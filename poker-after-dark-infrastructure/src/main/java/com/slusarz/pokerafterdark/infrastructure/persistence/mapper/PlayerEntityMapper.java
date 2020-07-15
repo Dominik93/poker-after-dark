@@ -1,10 +1,10 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.mapper;
 
 import com.slusarz.pokerafterdark.application.player.PlayerProjection;
-import com.slusarz.pokerafterdark.domain.participant.Earnings;
+import com.slusarz.pokerafterdark.domain.earnings.Earnings;
 import com.slusarz.pokerafterdark.domain.player.Player;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.player.PlayerJpaEntity;
 import lombok.NoArgsConstructor;
 
 import java.util.Map;
