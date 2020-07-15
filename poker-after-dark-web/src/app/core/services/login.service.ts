@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { LoginRequest } from 'src/app/shared/models/login-request';
-import { LoginResponse } from 'src/app/shared/models/login-response';
+import { LoginRequest } from 'src/app/shared/models/login/login-request';
+import { LoginResponse } from 'src/app/shared/models/login/login-response';
 
 @Injectable({
   providedIn: 'root'

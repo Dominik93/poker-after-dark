@@ -19,6 +19,8 @@ import { PlayerModule } from './modules/player/player-module';
 import { CoreModule } from './core/core.module';
 import { WinningsChartModule } from './modules/winnings-chart/winnings-chart.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CashGameModule } from './modules/cash-game/cash-game-module';
+import { TournamentModule } from './modules/tournament/tournament-module';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     CoreModule,
     GameModule,
+    CashGameModule,
+    TournamentModule,
     PlayerModule,
     WinningsChartModule,
     MaterialModule,

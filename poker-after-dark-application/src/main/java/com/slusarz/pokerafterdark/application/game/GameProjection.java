@@ -1,9 +1,9 @@
 package com.slusarz.pokerafterdark.application.game;
 
 import com.slusarz.pokerafterdark.domain.game.GameId;
-import com.slusarz.pokerafterdark.domain.game.Host;
-import com.slusarz.pokerafterdark.domain.game.Pot;
-import com.slusarz.pokerafterdark.domain.participant.Participant;
+import com.slusarz.pokerafterdark.domain.game.GameType;
+import com.slusarz.pokerafterdark.domain.player.Host;
+import com.slusarz.pokerafterdark.domain.pot.Pot;
 import lombok.NonNull;
 import lombok.Value;
 
@@ -17,6 +17,12 @@ public class GameProjection {
     @Valid
     @NonNull
     private GameId gameId;
+
+    @NonNull
+    private GameActions actions;
+
+    @NonNull
+    private GameType gameType;
 
     @Valid
     @NonNull
@@ -32,5 +38,5 @@ public class GameProjection {
 
     @Valid
     @NonNull
-    private List<Participant> participants;
+    private List<ParticipantProjection> participantProjections;
 }

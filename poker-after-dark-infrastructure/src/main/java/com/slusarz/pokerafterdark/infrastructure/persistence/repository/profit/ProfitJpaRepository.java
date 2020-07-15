@@ -1,12 +1,12 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.repository.profit;
 
-import com.slusarz.pokerafterdark.application.profit.ProfitRepository;
+import com.slusarz.pokerafterdark.domain.earnings.Earnings;
 import com.slusarz.pokerafterdark.domain.game.Game;
-import com.slusarz.pokerafterdark.domain.participant.Earnings;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.profit.Profit;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.GameJpaEntity;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
+import com.slusarz.pokerafterdark.domain.profit.ProfitRepository;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.game.GameJpaEntity;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.player.PlayerJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.ProfitEntityMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -36,9 +36,9 @@ public class ProfitJpaRepository implements ProfitRepository {
     }
 
     @Override
-    public void add(Game game, Profit profit, Earnings win, int gameNumber) {
+    public void add(Game cashGame, Profit profit, Earnings win, int gameNumber) {
         PlayerJpaEntity playerJpaEntity = entityManager.find(PlayerJpaEntity.class, profit.getPlayerId().getId());
-        GameJpaEntity gameJpaEntity = entityManager.find(GameJpaEntity.class, game.getGameId().getId());
+        GameJpaEntity gameJpaEntity = entityManager.find(GameJpaEntity.class, cashGame.getGameId().getId());
         playerJpaEntity.addProfit(profitEntityMapper.toProfitEntity(gameJpaEntity, win.getValue(), gameNumber));
         entityManager.persist(playerJpaEntity);
         entityManager.flush();

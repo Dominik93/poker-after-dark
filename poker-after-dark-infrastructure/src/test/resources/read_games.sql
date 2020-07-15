@@ -21,24 +21,24 @@ INSERT INTO player(
 
 -- GAMES
 INSERT INTO public.game(
-	id, date, pot, player_id)
-	VALUES ('GAME_1', '2018-02-01', 60, 'PLAYER_1');
+	id, date, pot, player_id, type)
+	VALUES ('GAME_1', '2018-02-01', 60, 'PLAYER_1', 'CASH');
 
 INSERT INTO public.game(
-	id, date, pot, player_id)
-	VALUES ('GAME_2', '2018-08-01', 30, 'PLAYER_2');
+	id, date, pot, player_id, type)
+	VALUES ('GAME_2', '2018-08-01', 30, 'PLAYER_2', 'CASH');
 	
 INSERT INTO public.game(
-	id, date, pot, player_id)
-	VALUES ('GAME_3', '2018-09-22', 100, 'PLAYER_1');
+	id, date, pot, player_id, type)
+	VALUES ('GAME_3', '2018-09-22', 100, 'PLAYER_1', 'CASH');
 	
 INSERT INTO public.game(
-	id, date, pot, player_id)
-	VALUES ('GAME_4', '2019-01-01', 120, 'PLAYER_3');
+	id, date, pot, player_id, type)
+	VALUES ('GAME_4', '2019-01-01', 120, 'PLAYER_3', 'CASH');
 	
 INSERT INTO public.game(
-	id, date, pot, player_id)
-	VALUES ('GAME_5', '2019-08-30', 60, 'PLAYER_1');
+	id, date, pot, player_id, type)
+	VALUES ('GAME_5', '2019-08-30', 60, 'PLAYER_1', 'CASH');
 
 
 -- GAME_1

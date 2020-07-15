@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.slusarz.pokerafterdark</groupId>
     <artifactId>poker-after-dark</artifactId>
-    <version>1.0.11</version>
+    <version>1.0.12-SNAPSHOT</version>
 
     <name>Poker After Dark</name>
     <description>Project poker after dark</description>
@@ -29,8 +29,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-                <module>poker-after-dark-application</module>
                 <module>poker-after-dark-domain</module>
+                <module>poker-after-dark-application</module>
                 <module>poker-after-dark-infrastructure</module>
                 <module>poker-after-dark-spring</module>
                 <module>poker-after-dark-specification</module>
@@ -46,8 +46,8 @@
         <profile>
             <id>backend</id>
             <modules>
-                <module>poker-after-dark-application</module>
                 <module>poker-after-dark-domain</module>
+                <module>poker-after-dark-application</module>
                 <module>poker-after-dark-infrastructure</module>
                 <module>poker-after-dark-spring</module>
                 <module>poker-after-dark-specification</module>

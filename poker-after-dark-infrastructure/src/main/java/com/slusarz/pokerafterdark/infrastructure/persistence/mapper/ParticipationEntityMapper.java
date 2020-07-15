@@ -1,24 +1,26 @@
 package com.slusarz.pokerafterdark.infrastructure.persistence.mapper;
 
-import com.slusarz.pokerafterdark.domain.participant.Participant;
-import com.slusarz.pokerafterdark.domain.player.PlayerId;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.ParticipationJpaEntity;
-import com.slusarz.pokerafterdark.infrastructure.persistence.entity.PlayerJpaEntity;
+import com.slusarz.pokerafterdark.domain.cashgame.CashGameParticipant;
+import com.slusarz.pokerafterdark.domain.tournament.TournamentParticipant;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.participation.ParticipationJpaEntity;
+import com.slusarz.pokerafterdark.infrastructure.persistence.entity.player.PlayerJpaEntity;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class ParticipationEntityMapper {
 
-    public ParticipationJpaEntity toParticipationJpaEntity(PlayerJpaEntity playerJpaEntity, Participant participant) {
+    public ParticipationJpaEntity toParticipationJpaEntity(PlayerJpaEntity playerJpaEntity, CashGameParticipant cashGameParticipant) {
         return ParticipationJpaEntity.builder()
-                .earnings(participant.getEarnings().getValue())
+                .earnings(cashGameParticipant.getEarnings().getValue())
                 .player(playerJpaEntity)
                 .build();
     }
 
-
-    public Participant toParticipation(ParticipationJpaEntity participationJpaEntity) {
-        return Participant.of(PlayerId.of(participationJpaEntity.getPlayer().getId()), participationJpaEntity.getEarnings());
+    public ParticipationJpaEntity toParticipationJpaEntity(PlayerJpaEntity playerJpaEntity, TournamentParticipant cashGameParticipant) {
+        return ParticipationJpaEntity.builder()
+                .earnings(cashGameParticipant.getEarnings().getValue())
+                .player(playerJpaEntity)
+                .build();
     }
 
 }

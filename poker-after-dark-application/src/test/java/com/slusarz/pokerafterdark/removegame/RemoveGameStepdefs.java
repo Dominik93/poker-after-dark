@@ -2,12 +2,13 @@ package com.slusarz.pokerafterdark.removegame;
 
 import com.slusarz.pokerafterdark.ExceptionsHandler;
 import com.slusarz.pokerafterdark.application.events.EventBus;
-import com.slusarz.pokerafterdark.application.usecase.addgame.GameRepository;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommand;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandHandler;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandResult;
 import com.slusarz.pokerafterdark.application.usecase.removegame.event.RemoveGameEvent;
+import com.slusarz.pokerafterdark.application.usecase.removegame.validator.RemoveGameValidator;
 import com.slusarz.pokerafterdark.domain.game.GameId;
+import com.slusarz.pokerafterdark.domain.game.GameRepository;
 import com.slusarz.pokerafterdark.game.MockGameRepository;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -21,18 +22,24 @@ import static org.mockito.Mockito.*;
 
 public class RemoveGameStepdefs {
 
-
     private GameRepository gameRepository;
+
     private RemoveGameCommandResult removeGameCommandResult;
+
     private RemoveGameCommand removeGameCommand;
+
     private EventBus eventBus;
+
     private ExceptionsHandler exceptionsHandler;
+
+    private RemoveGameValidator removeGameValidator;
 
     @Before
     public void setUp() {
         exceptionsHandler = new ExceptionsHandler();
         eventBus = mock(EventBus.class);
         gameRepository = new MockGameRepository();
+        removeGameValidator = new RemoveGameValidator(gameRepository);
     }
 
     @Given("^Remove game command with existing id$")
@@ -43,7 +50,8 @@ public class RemoveGameStepdefs {
     @When("^Invoke remove game handler$")
     public void invokeRemoveGameHandler() {
         try {
-            removeGameCommandResult = new RemoveGameCommandHandler(eventBus, gameRepository).handle(removeGameCommand);
+            removeGameCommandResult = new RemoveGameCommandHandler(eventBus, gameRepository, removeGameValidator)
+                    .handle(removeGameCommand);
         } catch (Exception e) {
             exceptionsHandler.put(e);
         }

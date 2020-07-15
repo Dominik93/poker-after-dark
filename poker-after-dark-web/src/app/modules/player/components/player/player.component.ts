@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { PlayersService } from 'src/app/core/services/players.service';
-import { Player } from 'src/app/shared/models/player';
 
 @Component({
   selector: 'app-player',
@@ -12,6 +11,8 @@ import { Player } from 'src/app/shared/models/player';
 export class PlayerComponent implements OnInit {
 
   title = '';
+
+  gameTypes: string[] = ['CASH'];
 
   player;
 

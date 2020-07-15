@@ -129,16 +129,18 @@ const urls = [
         }
     },
     {
-        urlRegex: environment.baseUrl + 'games$',
+        urlRegex: environment.baseUrl + 'cash-game$',
         method: 'POST',
         jsonProvider: (request) => {
             console.log('games post provider')
             var game = {
                 "id": Math.random().toString(),
+                "type" : "CASH_GAME",
                 "host": {
                     "id": request.body.game.host.id,
                     "name": request.body.game.host.name
                 },
+                "actions": { "remove": true},
                 "date": request.body.game.date.toLocaleString(),
                 "pot": request.body.game.pot,
                 "participantsCount": request.body.game.participants.length,
@@ -148,6 +150,46 @@ const urls = [
 
             profit.profits.forEach(profit => profit.dataPoints.push(profit.dataPoints[profit.dataPoints.length - 1]))
             game.participants.forEach(participian => {
+                var player = players.players.find(player => player.id === participian.playerId);
+                player.gamesPlayed++;
+                if (player.biggestWin < participian.earnings) {
+                    player.biggestWin = participian.earnings;
+                }
+                if (player.biggestLose > participian.earnings) {
+                    player.biggestLose = participian.earnings;
+                }
+                var pr = profit.profits.find(profit => profit.playerId === participian.playerId);
+                pr.dataPoints[pr.dataPoints.length - 1] = (pr.dataPoints[pr.dataPoints.length - 1] + participian.earnings)
+            })
+            return {
+                default: {
+                    success: true
+                }
+            }
+        }
+    },
+    {
+        urlRegex: environment.baseUrl + 'tournament$',
+        method: 'POST',
+        jsonProvider: (request) => {
+            console.log('tournament post provider')
+            var tournament = {
+                "id": Math.random().toString(),
+                "type" : "TOURNAMENT",
+                "host": {
+                    "id": request.body.tournament.host.id,
+                    "name": request.body.tournament.host.name
+                },
+                "actions": { "remove": true},
+                "date": request.body.tournament.date.toLocaleString(),
+                "pot": request.body.tournament.pot,
+                "participantsCount": request.body.tournament.participants.length,
+                "participants": request.body.tournament.participants
+            };
+            gamesPages.games.unshift(tournament);
+
+            profit.profits.forEach(profit => profit.dataPoints.push(profit.dataPoints[profit.dataPoints.length - 1]))
+            tournament.participants.forEach(participian => {
                 var player = players.players.find(player => player.id === participian.playerId);
                 player.gamesPlayed++;
                 if (player.biggestWin < participian.earnings) {
