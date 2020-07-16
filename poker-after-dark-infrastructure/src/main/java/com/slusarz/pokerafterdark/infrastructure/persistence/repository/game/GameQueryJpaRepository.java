@@ -7,7 +7,7 @@ import com.slusarz.pokerafterdark.domain.game.GameId;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.game.GameJpaEntity;
 import com.slusarz.pokerafterdark.infrastructure.persistence.mapper.GameProjectionEntityMapper;
-import com.slusarz.pokerafterdark.infrastructure.persistence.result.ParticipationResult;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.result.ParticipationResult;
 import lombok.AllArgsConstructor;
 
 import javax.persistence.EntityManager;

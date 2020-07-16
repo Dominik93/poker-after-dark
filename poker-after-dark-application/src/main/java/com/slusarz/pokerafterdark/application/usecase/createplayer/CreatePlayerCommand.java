@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.usecase.createplayer;
 
-import com.slusarz.pokerafterdark.application.cqrs.command.Command;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.Command;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import lombok.Value;
 

@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.players;
 
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryResult;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryResult;
 import com.slusarz.pokerafterdark.application.player.PlayerProjection;
 import lombok.Value;
 

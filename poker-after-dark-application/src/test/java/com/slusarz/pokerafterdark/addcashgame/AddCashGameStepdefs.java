@@ -1,8 +1,10 @@
 package com.slusarz.pokerafterdark.addcashgame;
 
+import com.slusarz.pokerafterdark.CountUtil;
 import com.slusarz.pokerafterdark.ExceptionsHandler;
+import com.slusarz.pokerafterdark.TestCommandExecutor;
 import com.slusarz.pokerafterdark.TimeUtil;
-import com.slusarz.pokerafterdark.application.events.EventBus;
+import com.slusarz.pokerafterdark.application.common.events.EventBus;
 import com.slusarz.pokerafterdark.application.usecase.addcashgame.AddCashGameCommand;
 import com.slusarz.pokerafterdark.application.usecase.addcashgame.AddCashGameCommandHandler;
 import com.slusarz.pokerafterdark.application.usecase.addcashgame.AddCashGameCommandResult;
@@ -52,6 +54,8 @@ public class AddCashGameStepdefs {
 
     private Pot pot;
 
+    private TestCommandExecutor testCommandExecutor;
+
     @Before
     public void setUp() {
         gameRepository = mock(GameRepository.class);
@@ -59,6 +63,7 @@ public class AddCashGameStepdefs {
         cashGameRepository = new MockCashGameRepository();
         exceptionsHandler = new ExceptionsHandler();
         eventBus = mock(EventBus.class);
+        testCommandExecutor = new TestCommandExecutor(exceptionsHandler);
     }
 
     @And("^With skip validation set to \"([^\"]*)\"$")
@@ -84,35 +89,31 @@ public class AddCashGameStepdefs {
 
     @When("^Invoke add game handler$")
     public void invokeAddGameHandler() {
-        try {
-            addCashGameCommand = AddCashGameCommand.of(PlayerId.of("PLAYER_1"), LocalDate.now(), pot, cashGameParticipants, skipPotValidation);
-            addCashGameCommandResult = new AddCashGameCommandHandler(eventBus, cashGameRepository, addGameValidator)
-                    .handle(addCashGameCommand);
-        } catch (Exception e) {
-            exceptionsHandler.put(e);
-        }
+        addCashGameCommand = AddCashGameCommand.of(PlayerId.of("PLAYER_1"), LocalDate.now(), pot, cashGameParticipants, skipPotValidation);
+        AddCashGameCommandHandler addCashGameCommandHandler = new AddCashGameCommandHandler(eventBus, cashGameRepository, addGameValidator);
+        addCashGameCommandResult = testCommandExecutor.execute(addCashGameCommandHandler, addCashGameCommand);
     }
 
     @Then("^Game was not added$")
     public void gameWasNotAdded() {
         Assert.assertNull(addCashGameCommandResult);
-        Assert.assertTrue(exceptionsHandler.size() > 0);
+        Assert.assertTrue(exceptionsHandler.isNotEmpty());
     }
 
     @Then("^Game was added$")
     public void gameWasAdded() {
         Assert.assertNotNull(addCashGameCommandResult);
-        Assert.assertEquals(0, exceptionsHandler.size());
+        Assert.assertTrue(exceptionsHandler.isEmpty());
     }
 
     @And("^Add game event was not emitted$")
     public void addGameEventWasNotEmitted() {
-        verify(eventBus, times(0)).fireEvent(any());
+        verify(eventBus, times(CountUtil.ZERO)).fireEvent(any());
     }
 
     @And("^Add game event was emitted$")
     public void addGameEventWasEmitted() {
-        verify(eventBus, times(1)).fireEvent(any(AddCashGameEvent.class));
+        verify(eventBus, times(CountUtil.ONCE)).fireEvent(any(AddCashGameEvent.class));
     }
 
     @Given("^Add game command$")

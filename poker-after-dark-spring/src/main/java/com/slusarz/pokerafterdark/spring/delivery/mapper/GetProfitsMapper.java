@@ -8,7 +8,7 @@ import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.specification.api.GetProfitRequest;
 import com.slusarz.pokerafterdark.specification.api.GetProfitResponse;
 import com.slusarz.pokerafterdark.specification.api.Profit;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.query.QueryMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.query.QueryMapper;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;

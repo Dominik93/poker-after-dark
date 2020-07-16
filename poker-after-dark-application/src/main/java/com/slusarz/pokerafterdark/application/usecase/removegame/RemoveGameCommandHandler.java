@@ -1,8 +1,8 @@
 package com.slusarz.pokerafterdark.application.usecase.removegame;
 
-import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
-import com.slusarz.pokerafterdark.application.events.EventBus;
-import com.slusarz.pokerafterdark.application.permission.RequiredAdministrationPermission;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.CommandHandler;
+import com.slusarz.pokerafterdark.application.common.events.EventBus;
+import com.slusarz.pokerafterdark.application.common.permission.RequiredAdministrationPermission;
 import com.slusarz.pokerafterdark.application.usecase.removegame.event.RemoveGameEvent;
 import com.slusarz.pokerafterdark.application.usecase.removegame.validator.RemoveGameValidator;
 import com.slusarz.pokerafterdark.domain.game.GameId;

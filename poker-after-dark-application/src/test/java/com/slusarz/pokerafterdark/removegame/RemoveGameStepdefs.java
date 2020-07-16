@@ -1,7 +1,9 @@
 package com.slusarz.pokerafterdark.removegame;
 
+import com.slusarz.pokerafterdark.CountUtil;
 import com.slusarz.pokerafterdark.ExceptionsHandler;
-import com.slusarz.pokerafterdark.application.events.EventBus;
+import com.slusarz.pokerafterdark.TestCommandExecutor;
+import com.slusarz.pokerafterdark.application.common.events.EventBus;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommand;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandHandler;
 import com.slusarz.pokerafterdark.application.usecase.removegame.RemoveGameCommandResult;
@@ -34,12 +36,15 @@ public class RemoveGameStepdefs {
 
     private RemoveGameValidator removeGameValidator;
 
+    private TestCommandExecutor testCommandExecutor;
+
     @Before
     public void setUp() {
         exceptionsHandler = new ExceptionsHandler();
         eventBus = mock(EventBus.class);
         gameRepository = new MockGameRepository();
         removeGameValidator = new RemoveGameValidator(gameRepository);
+        testCommandExecutor = new TestCommandExecutor(exceptionsHandler);
     }
 
     @Given("^Remove game command with existing id$")
@@ -49,12 +54,8 @@ public class RemoveGameStepdefs {
 
     @When("^Invoke remove game handler$")
     public void invokeRemoveGameHandler() {
-        try {
-            removeGameCommandResult = new RemoveGameCommandHandler(eventBus, gameRepository, removeGameValidator)
-                    .handle(removeGameCommand);
-        } catch (Exception e) {
-            exceptionsHandler.put(e);
-        }
+        RemoveGameCommandHandler removeGameCommandHandler = new RemoveGameCommandHandler(eventBus, gameRepository, removeGameValidator);
+        removeGameCommandResult = testCommandExecutor.execute(removeGameCommandHandler, removeGameCommand);
     }
 
     @Then("^Game was removed$")
@@ -64,7 +65,7 @@ public class RemoveGameStepdefs {
 
     @And("^Game removed event was emitted$")
     public void gameRemovedEventWasEmitted() {
-        verify(eventBus, times(1)).fireEvent(any(RemoveGameEvent.class));
+        verify(eventBus, times(CountUtil.ONCE)).fireEvent(any(RemoveGameEvent.class));
     }
 
 }

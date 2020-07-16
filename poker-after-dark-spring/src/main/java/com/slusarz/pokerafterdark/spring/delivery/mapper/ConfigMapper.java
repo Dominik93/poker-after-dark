@@ -5,7 +5,7 @@ import com.slusarz.pokerafterdark.domain.config.EntryFee;
 import com.slusarz.pokerafterdark.domain.config.ListFilter;
 import com.slusarz.pokerafterdark.specification.api.Config;
 import com.slusarz.pokerafterdark.specification.api.GetConfigResponse;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.query.ResultMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.query.ResultMapper;
 import org.springframework.stereotype.Component;
 
 @Component

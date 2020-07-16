@@ -10,7 +10,7 @@ import com.slusarz.pokerafterdark.domain.tournament.TournamentParticipant;
 import com.slusarz.pokerafterdark.specification.api.AddGameResponse;
 import com.slusarz.pokerafterdark.specification.api.AddTournamentRequest;
 import com.slusarz.pokerafterdark.specification.api.Tournament;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.command.CommandMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.command.CommandMapper;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

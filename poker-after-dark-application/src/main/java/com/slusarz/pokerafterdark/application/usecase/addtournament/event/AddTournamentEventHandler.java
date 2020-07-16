@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.usecase.addtournament.event;
 
-import com.slusarz.pokerafterdark.application.events.EventHandler;
+import com.slusarz.pokerafterdark.application.common.events.EventHandler;
 import com.slusarz.pokerafterdark.application.livewinnings.LiveWinningsSynchronizer;
 import com.slusarz.pokerafterdark.application.profit.ProfitsSynchronizer;
 import com.slusarz.pokerafterdark.domain.tournament.Tournament;

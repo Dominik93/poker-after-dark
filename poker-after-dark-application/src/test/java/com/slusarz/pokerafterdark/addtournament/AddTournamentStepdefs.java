@@ -1,8 +1,11 @@
 package com.slusarz.pokerafterdark.addtournament;
 
 import com.slusarz.pokerafterdark.BooleanUtil;
+import com.slusarz.pokerafterdark.CountUtil;
 import com.slusarz.pokerafterdark.ExceptionsHandler;
-import com.slusarz.pokerafterdark.application.events.EventBus;
+import com.slusarz.pokerafterdark.TestCommandExecutor;
+import com.slusarz.pokerafterdark.TimeUtil;
+import com.slusarz.pokerafterdark.application.common.events.EventBus;
 import com.slusarz.pokerafterdark.application.usecase.addgame.validator.AddGameValidator;
 import com.slusarz.pokerafterdark.application.usecase.addtournament.AddTournamentCommand;
 import com.slusarz.pokerafterdark.application.usecase.addtournament.AddTournamentCommandHandler;
@@ -25,6 +28,7 @@ import org.junit.Assert;
 import org.mockito.Mockito;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -48,24 +52,34 @@ public class AddTournamentStepdefs {
 
     private TournamentRepository tournamentRepository;
 
+    private AddTournamentCommand addTournamentCommand;
+
+    private TestCommandExecutor testCommandExecutor;
+
     @Before
     public void setUp() {
+        tournamentParticipants = new ArrayList<>();
+        pot = Pot.of(50);
         tournamentRepository = Mockito.mock(TournamentRepository.class);
         when(tournamentRepository.generateId()).thenReturn(TournamentId.of(UUID.randomUUID().toString()));
         gameRepository = Mockito.mock(GameRepository.class);
         addGameValidator = new AddGameValidator(gameRepository);
         exceptionsHandler = new ExceptionsHandler();
         eventBus = mock(EventBus.class);
+        testCommandExecutor = new TestCommandExecutor(exceptionsHandler);
     }
 
-    @Given("^Add tournament command$")
+    @Given("^Operator fill tournament form$")
     public void addTournamentCommand() {
+        PlayerId host = PlayerId.of("PLAYER_ID_1");
+        LocalDate occurrenceDate = LocalDate.now();
+        addTournamentCommand = AddTournamentCommand.of(host, occurrenceDate, pot, tournamentParticipants);
     }
 
     @And("^With tournament date \"([^\"]*)\" last game$")
     public void withDateLastGame(String time) {
         Game game = mock(Game.class);
-        if ("after".equals(time)) {
+        if (TimeUtil.isAfter(time)) {
             when(game.getOccurrenceDate()).thenReturn(LocalDate.now().minusDays(1));
         } else {
             when(game.getOccurrenceDate()).thenReturn(LocalDate.now().plusDays(1));
@@ -73,62 +87,44 @@ public class AddTournamentStepdefs {
         when(gameRepository.readLast()).thenReturn(game);
     }
 
-    @And("^With pot \"([^\"]*)\" earnings$")
-    public void withPotEarnings(String matches) throws Throwable {
-        if (BooleanUtil.convertString(matches)) {
-            pot = Pot.of(50);
-            tournamentParticipants = Arrays.asList(
+    @And("^With pot \"([^\"]*)\" matches earnings$")
+    public void withPotMatchesEarnings(String matches) {
+        if (BooleanUtil.isTrue(matches)) {
+            tournamentParticipants.addAll(Arrays.asList(
                     TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(-10 + 50 * 0.7), Place.of(1)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(-10 + 50 * 0.3), Place.of(2)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(-10), Place.of(3)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(-10), Place.of(4)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(-10), Place.of(5))
-            );
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_2"), Earnings.of(-10 + 50 * 0.3), Place.of(2)),
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_3"), Earnings.of(-10), Place.of(3)),
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_4"), Earnings.of(-10), Place.of(4)),
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_5"), Earnings.of(-10), Place.of(5))
+            ));
         } else {
-            pot = Pot.of(50);
-            tournamentParticipants = Arrays.asList(
+            tournamentParticipants.addAll(Arrays.asList(
                     TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(50 * 0.7), Place.of(1)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(50 * 0.3), Place.of(2)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(50 * 0.1), Place.of(3)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(0), Place.of(4)),
-                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_1"), Earnings.of(0), Place.of(5))
-            );
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_2"), Earnings.of(50 * 0.3), Place.of(2)),
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_3"), Earnings.of(50 * 0.1), Place.of(3)),
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_4"), Earnings.of(0), Place.of(4)),
+                    TournamentParticipant.of(PlayerId.of("PLAYER_ID_5"), Earnings.of(0), Place.of(5))
+            ));
         }
     }
 
-    @When("^Invoke add tournament command handler$")
-    public void invokeAddTournamentCommandHandler() {
-        AddTournamentCommand addTournamentCommand = AddTournamentCommand.of(
-                PlayerId.of("PLAYER_ID_1"),
-                LocalDate.now(),
-                pot,
-                tournamentParticipants);
-        try {
-            new AddTournamentCommandHandler(eventBus, tournamentRepository, addGameValidator)
-                    .handle(addTournamentCommand);
-        } catch (Exception e) {
-            exceptionsHandler.put(e);
-        }
+    @When("^Administrator save tournament$")
+    public void administratorSaveTournament() {
+        AddTournamentCommandHandler addTournamentCommandHandler
+                = new AddTournamentCommandHandler(eventBus, tournamentRepository, addGameValidator);
+        testCommandExecutor.execute(addTournamentCommandHandler, addTournamentCommand);
     }
 
-
-    @Then("^Tournament was \"([^\"]*)\"$")
-    public void tournamentWas(String wasAdded) throws Throwable {
-        if (BooleanUtil.convertString(wasAdded)) {
-            Assert.assertEquals(0, exceptionsHandler.size());
-            Mockito.verify(tournamentRepository, times(1)).save(any());
+    @Then("^Tournament \"([^\"]*)\" added$")
+    public void tournamentWas(String wasAdded) {
+        if (BooleanUtil.isTrue(wasAdded)) {
+            Assert.assertTrue(exceptionsHandler.isEmpty());
+            verify(eventBus, times(CountUtil.ONCE)).fireEvent(any(AddTournamentEvent.class));
+            Mockito.verify(tournamentRepository, times(CountUtil.ONCE)).save(any());
         } else {
-            Assert.assertTrue(exceptionsHandler.size() > 0);
-            Mockito.verify(tournamentRepository, times(0)).save(any());
-        }
-    }
-
-    @And("^Add tournament event was \"([^\"]*)\".$")
-    public void addTournamentEventWas(String wasEmitted) {
-        if (BooleanUtil.convertString(wasEmitted)) {
-            verify(eventBus, times(1)).fireEvent(any(AddTournamentEvent.class));
-        } else {
-            verify(eventBus, times(0)).fireEvent(any());
+            Assert.assertTrue(exceptionsHandler.isNotEmpty());
+            Mockito.verify(tournamentRepository, times(CountUtil.ZERO)).save(any());
+            verify(eventBus, times(CountUtil.ZERO)).fireEvent(any());
         }
     }
 

@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.players;
 
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryHandler;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryHandler;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

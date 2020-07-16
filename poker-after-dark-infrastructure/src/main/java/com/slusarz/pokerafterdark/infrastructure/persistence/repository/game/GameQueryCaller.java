@@ -6,7 +6,7 @@ import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import com.slusarz.pokerafterdark.domain.tournament.Place;
 import com.slusarz.pokerafterdark.infrastructure.persistence.entity.game.GameJpaEntity;
-import com.slusarz.pokerafterdark.infrastructure.persistence.result.ParticipationResult;
+import com.slusarz.pokerafterdark.infrastructure.persistence.repository.game.result.ParticipationResult;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 

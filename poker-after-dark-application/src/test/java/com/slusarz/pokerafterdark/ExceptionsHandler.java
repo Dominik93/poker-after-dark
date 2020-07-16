@@ -22,14 +22,19 @@ public class ExceptionsHandler {
     }
 
     public List<Exception> get(Class exceptionClass) {
-        return exceptions.get(exceptionClass);
+        return exceptions.getOrDefault(exceptionClass, Collections.emptyList());
     }
 
     public int size(Class e) {
         return exceptions.getOrDefault(e, Collections.emptyList()).size();
     }
 
-    public int size() {
-        return (int) exceptions.values().stream().mapToLong(List::size).sum();
+    public boolean isEmpty() {
+        return exceptions.isEmpty();
     }
+
+    public boolean isNotEmpty() {
+        return !isEmpty();
+    }
+
 }

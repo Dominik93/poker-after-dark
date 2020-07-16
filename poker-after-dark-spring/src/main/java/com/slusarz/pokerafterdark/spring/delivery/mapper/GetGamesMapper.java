@@ -11,7 +11,7 @@ import com.slusarz.pokerafterdark.specification.api.GameActions;
 import com.slusarz.pokerafterdark.specification.api.GetGamesRequest;
 import com.slusarz.pokerafterdark.specification.api.GetGamesResponse;
 import com.slusarz.pokerafterdark.specification.api.Host;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.query.QueryMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.query.QueryMapper;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
