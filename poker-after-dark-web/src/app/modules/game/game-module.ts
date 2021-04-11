@@ -13,10 +13,12 @@ import { MatNativeDateModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from 'src/app/core/core.module';
 import { GameRoutingModule } from './game-routing.module';
+import { PokerTableComponent } from './components/poker-table/poker-table.component';
 
 @NgModule({
     declarations: [
         GamesComponent,
+        PokerTableComponent
     ],
     entryComponents: [
         PromptDialogComponent,

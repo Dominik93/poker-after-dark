@@ -41,7 +41,6 @@ export class MenuComponent implements OnInit {
   }
 
   redirect(url) {
-    console.log(url);
     window.location.href = url;
   }
 }

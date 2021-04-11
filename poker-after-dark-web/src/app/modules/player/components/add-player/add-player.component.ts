@@ -25,7 +25,6 @@ export class AddPlayerComponent implements OnInit {
     var request = new AddPlayerRequest();
     request.playerName = this.playerName;
     this.playersService.addplayer(request).subscribe(data => {
-      console.log(data.success);
     })
   }
 

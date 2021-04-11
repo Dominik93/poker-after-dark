@@ -97,7 +97,6 @@ export class AddCashGameComponent implements OnInit {
 
     if (this.isGameCorrect()) {
       this.gamesService.addCashGame(request).subscribe(data => {
-        console.log(data.success);
         //window.location.href = '#';
       });
     } else {
@@ -109,11 +108,9 @@ export class AddCashGameComponent implements OnInit {
       });
 
       dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
         if (result === true) {
           request.skipValidation = true;
           this.gamesService.addCashGame(request).subscribe(data => {
-            console.log(data.success);
             //window.location.href = '#';
           });
         }
@@ -133,7 +130,6 @@ export class AddCashGameComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(results => {
-      console.log('The dialog was closed');
       if (results !== undefined) {
         results.forEach(result => {
           this.playersInGame.push(new PlayerInGame(this.getPlayer(result)));

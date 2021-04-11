@@ -66,7 +66,6 @@ export class GamesComponent implements OnInit {
   onAddTournament() {
     this.router.navigate(['/tournament/new']);
   }
-
   
   onAddCashGame() {
     this.router.navigate(['/cash-game/new']);
@@ -76,7 +75,6 @@ export class GamesComponent implements OnInit {
     var request = new RemoveGameRequest();
     request.id = game.id;
     this.gamesService.removeGame(request).subscribe(data => {
-      console.log(data.success);
       const index = this.games.indexOf(game, 0);
       if (index > -1) {
         this.games.splice(index, 1);
@@ -97,10 +95,5 @@ export class GamesComponent implements OnInit {
       this.dataSource.sort = this.sort;
     })
   }
-
-  getPlayerName(playerId: string) {
-    return this.players.find(player => player.id === playerId).name;
-  }
-
 
 }

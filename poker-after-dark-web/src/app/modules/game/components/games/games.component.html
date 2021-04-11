@@ -1,6 +1,5 @@
 <div class="generic-container" style='margin-left: 0%; position: absolute; width: 100%;'>
   <div class="card card-default">
-    <!-- Default card contents -->
     <div class="card-header"><span class="lead">Games</span>
       <button mat-raised-button color="primary" class="floatRight" *ngIf="administrationMode" (click)="onAddTournament()">Add tournament</button>
       <button mat-raised-button color="primary" class="floatRight" *ngIf="administrationMode" (click)="onAddCashGame()">Add cash game</button>
@@ -36,7 +35,7 @@
             <mat-cell *matCellDef="let element"> {{ element.participantsCount }} </mat-cell>
           </ng-container>
           <ng-container matColumnDef="actions">
-            <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
             <mat-cell *matCellDef="let element"> 
                 <button *ngIf="administrationMode && element.actions.remove" mat-raised-button color="primary" (click)="onRemoveGame(element)">Remove</button> </mat-cell>
           </ng-container>
@@ -45,25 +44,11 @@
             [cdkDetailRowTemplate]="gameDetailsTemplate"></mat-row>
         </mat-table>
       </div>
-
-
       <ng-template #gameDetailsTemplate let-element>
         <div class="mat-row detail-row" [@detailExpand] style="overflow: hidden">
-           <div class="row" style="margin-left: 50px;" *ngFor="let participant of element.participants">
-            <div class="col-md-1">
-              {{ participant.place }}
-            </div>
-            <div class="col-md-2">
-              {{ getPlayerName(participant.playerId) }}
-            </div>
-            <div class="col-md-3">
-              {{ participant.earnings }}
-            </div>
-          </div>
+          <app-poker-table [participants]="element.participants" [players]="players" [pot]="element.pot"></app-poker-table>
         </div>
       </ng-template>
-
     </div>
   </div>
-
 </div>

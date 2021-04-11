@@ -1,0 +1,12 @@
+<div class="poker-table">
+<mat-grid-list cols="7" rowHeight="100px">
+  <mat-grid-tile *ngFor="let seat of seats" [colspan]="1" [rowspan]="1">
+    <div class="{{seat.theme}}">
+    <button mat-raised-button color="primary"
+          matBadge="{{seat.score}}" matBadgePosition="before" matBadgeColor="accent">
+      {{seat.label}}
+    </button>
+  </div>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
