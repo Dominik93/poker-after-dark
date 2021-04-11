@@ -3,7 +3,7 @@
 }
 
 .poker-table {
-    background-image: url('/assets/table.png');
+    background-image: url('/pokerafterdark/assets/table.png'), url('/assets/table.png');
     background-repeat: no-repeat;
     background-position: center; 
 }

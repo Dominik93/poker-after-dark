@@ -6,6 +6,7 @@ import { Player } from 'src/app/shared/models/player/player';
 export class Seat {
   seat: number;
   label: string = '';
+  shortLabel: string = '';
   score: number;
   theme: string = 'metalic-theme';
 
@@ -72,11 +73,11 @@ export class PokerTableComponent implements OnInit {
     const seats = this.seatMap.get(this.__participants.length);
     this.__participants.forEach((participant, index) => {
         const seat = this.findSeat(seats[index]);
-        seat.label = this.getPlayerName(participant.playerId);
+        const playerName = this.getPlayerName(participant.playerId);
+        seat.shortLabel = playerName.length > 10 ? (playerName.substring(0, 10) + '...') : playerName;
+        seat.label = playerName.length > 10 ? playerName : '';
         seat.score = participant.earnings
-        seat.theme = isNaN((participant.place)) ?
-         'metalic-theme' :
-          this.places.get(participant.place) || 'black-theme'
+        seat.theme = isNaN((participant.place)) ? 'metalic-theme' : (this.places.get(participant.place) || 'black-theme')
     })
     this.findSeat(this.potPlace).label = "POT: " + this.pot;
   }
@@ -91,6 +92,7 @@ export class PokerTableComponent implements OnInit {
 
   private clearSeats() {
     this.seats.forEach(seat => seat.label = '');
+    this.seats.forEach(seat => seat.shortLabel = '');
     this.seats.forEach(seat => seat.score = null);
     this.seats.forEach(seat => seat.theme = 'metalic-theme');
   }

@@ -3,8 +3,9 @@
   <mat-grid-tile *ngFor="let seat of seats" [colspan]="1" [rowspan]="1">
     <div class="{{seat.theme}}">
     <button mat-raised-button color="primary"
-          matBadge="{{seat.score}}" matBadgePosition="before" matBadgeColor="accent">
-      {{seat.label}}
+            matTooltip="{{seat.label}}"
+            matBadge="{{seat.score}}" matBadgePosition="before" matBadgeColor="accent">
+      {{seat.shortLabel}}
     </button>
   </div>
   </mat-grid-tile>
