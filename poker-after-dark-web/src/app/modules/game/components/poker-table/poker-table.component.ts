@@ -79,7 +79,7 @@ export class PokerTableComponent implements OnInit {
         seat.score = participant.earnings
         seat.theme = isNaN((participant.place)) ? 'metalic-theme' : (this.places.get(participant.place) || 'black-theme')
     })
-    this.findSeat(this.potPlace).label = "POT: " + this.pot;
+    this.findSeat(this.potPlace).shortLabel = "POT: " + this.pot;
   }
 
   getPlayerName(playerId: string) {
