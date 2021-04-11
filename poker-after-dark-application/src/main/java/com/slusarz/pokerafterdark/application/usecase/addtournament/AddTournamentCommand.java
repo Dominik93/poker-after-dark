@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.usecase.addtournament;
 
-import com.slusarz.pokerafterdark.application.cqrs.command.Command;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.Command;
 import com.slusarz.pokerafterdark.domain.player.PlayerId;
 import com.slusarz.pokerafterdark.domain.pot.Pot;
 import com.slusarz.pokerafterdark.domain.tournament.TournamentParticipant;

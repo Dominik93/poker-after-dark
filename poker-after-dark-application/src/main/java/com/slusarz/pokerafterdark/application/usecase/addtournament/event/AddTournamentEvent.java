@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.usecase.addtournament.event;
 
-import com.slusarz.pokerafterdark.application.events.Event;
+import com.slusarz.pokerafterdark.application.common.events.Event;
 import com.slusarz.pokerafterdark.domain.tournament.Tournament;
 import lombok.Value;
 

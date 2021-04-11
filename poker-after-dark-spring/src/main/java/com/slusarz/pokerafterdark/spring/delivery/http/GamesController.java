@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.spring.delivery.http;
 
-import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.common.cqrs.ServiceExecutor;
 import com.slusarz.pokerafterdark.application.game.GamesQueryResult;
 import com.slusarz.pokerafterdark.application.usecase.addcashgame.AddCashGameCommandResult;
 import com.slusarz.pokerafterdark.application.usecase.addtournament.AddTournamentCommandResult;

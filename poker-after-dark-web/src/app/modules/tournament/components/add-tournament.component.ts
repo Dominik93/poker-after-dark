@@ -81,7 +81,6 @@ export class AddTournamentComponent implements OnInit {
     request.tournament.participants = this.playersInGame.map(player => new TournamentParticipant(player));
 
     this.tournamentService.addTournament(request).subscribe(data => {
-      console.log(data.success);
       //window.location.href = '#';
     });
   }
@@ -98,7 +97,6 @@ export class AddTournamentComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(results => {
-      console.log('The dialog was closed');
       if (results !== undefined) {
         results.forEach(result => {
           this.playersInGame.push(new PlayerInTournament(this.getPlayer(result)));

@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.slusarz.pokerafterdark</groupId>
     <artifactId>poker-after-dark</artifactId>
-    <version>1.0.12</version>
+    <version>1.0.13-SNAPSHOT</version>
 
     <name>Poker After Dark</name>
     <description>Project poker after dark</description>
@@ -20,6 +20,8 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
+        <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
     </properties>
 
     <profiles>
@@ -89,6 +91,39 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                    <configuration>
+                        <argLine>${argLine}</argLine>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>report</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
     <repositories>
         <repository>

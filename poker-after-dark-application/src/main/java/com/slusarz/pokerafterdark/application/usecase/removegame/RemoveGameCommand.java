@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.usecase.removegame;
 
-import com.slusarz.pokerafterdark.application.cqrs.command.Command;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.Command;
 import com.slusarz.pokerafterdark.domain.game.GameId;
 import lombok.Value;
 

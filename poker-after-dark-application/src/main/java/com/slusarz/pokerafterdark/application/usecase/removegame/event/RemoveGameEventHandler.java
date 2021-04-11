@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.usecase.removegame.event;
 
-import com.slusarz.pokerafterdark.application.events.EventHandler;
+import com.slusarz.pokerafterdark.application.common.events.EventHandler;
 import com.slusarz.pokerafterdark.application.livewinnings.PlayerProjectionRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

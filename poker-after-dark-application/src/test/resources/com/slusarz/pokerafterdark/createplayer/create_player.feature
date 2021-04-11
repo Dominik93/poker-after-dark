@@ -1,15 +1,14 @@
 Feature: Create player
-  Create player with unique name
+  Administrator try create new player
 
-  Scenario: Should create new player
-    Given Create player command with unique name
-    When Invoke create player handler
-    Then New player was created
-    And Player created event was emitted
+  Scenario Outline: Create new player with unique name
+    Given Administrator type player name
+    And Player name "<is_unique>"
+    When Administrator save player
+    Then Player "<was_saved>"
 
+    Examples:
+      | is_unique     | was_saved     |
+      | is unique     | was saved     |
+      | is not unique | was not saved |
 
-  Scenario: Should not create new player because player name exist
-    Given Create player command with existing name
-    When Invoke create player handler
-    Then New player was not created
-    And Player created event was not emitted

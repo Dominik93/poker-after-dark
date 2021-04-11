@@ -1,11 +1,11 @@
 package com.slusarz.pokerafterdark.spring.delivery.request;
 
-import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
-import com.slusarz.pokerafterdark.application.cqrs.command.Command;
-import com.slusarz.pokerafterdark.application.cqrs.command.CommandResult;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.command.CommandMapper;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.command.RequestMapper;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.command.ResultMapper;
+import com.slusarz.pokerafterdark.application.common.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.Command;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.CommandResult;
+import com.slusarz.pokerafterdark.spring.common.delivery.command.CommandMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.command.RequestMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.command.ResultMapper;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

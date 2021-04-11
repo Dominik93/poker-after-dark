@@ -1,8 +1,8 @@
 package com.slusarz.pokerafterdark.spring.configuration.application;
 
+import com.slusarz.pokerafterdark.application.common.events.EventBus;
 import com.slusarz.pokerafterdark.application.config.ConfigProvider;
 import com.slusarz.pokerafterdark.application.config.ConfigQueryHandler;
-import com.slusarz.pokerafterdark.application.events.EventBus;
 import com.slusarz.pokerafterdark.application.game.GameQueryRepository;
 import com.slusarz.pokerafterdark.application.game.GamesQueryHandler;
 import com.slusarz.pokerafterdark.application.player.PlayerQueryHandler;

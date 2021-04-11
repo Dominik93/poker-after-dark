@@ -25,8 +25,6 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
-      console.log(params)
-      console.log(params['id'])
       this.playerService.getPlayer(params['id']).subscribe(data => {
         this.player = data.player;
         this.title = 'Live winninngs of ' + this.player.name;

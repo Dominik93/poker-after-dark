@@ -1,20 +1,20 @@
 package com.slusarz.pokerafterdark.spring.configuration.application;
 
-import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
-import com.slusarz.pokerafterdark.application.cqrs.command.Command;
-import com.slusarz.pokerafterdark.application.cqrs.command.CommandExecutor;
-import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
-import com.slusarz.pokerafterdark.application.cqrs.command.CommandResult;
-import com.slusarz.pokerafterdark.application.cqrs.handler.HandlerProvider;
-import com.slusarz.pokerafterdark.application.cqrs.query.Query;
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryExecutor;
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryHandler;
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryResult;
-import com.slusarz.pokerafterdark.spring.cqrs.CommandHandlerProvider;
-import com.slusarz.pokerafterdark.spring.cqrs.QueryHandlerProvider;
-import com.slusarz.pokerafterdark.spring.cqrs.SimpleCommandExecutor;
-import com.slusarz.pokerafterdark.spring.cqrs.SimpleQueryExecutor;
-import com.slusarz.pokerafterdark.spring.moduleexecutor.TransactionalServiceExecutor;
+import com.slusarz.pokerafterdark.application.common.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.Command;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.CommandExecutor;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.CommandHandler;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.CommandResult;
+import com.slusarz.pokerafterdark.application.common.cqrs.handler.HandlerProvider;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.Query;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryExecutor;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryHandler;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryResult;
+import com.slusarz.pokerafterdark.spring.common.cqrs.CommandHandlerProvider;
+import com.slusarz.pokerafterdark.spring.common.cqrs.QueryHandlerProvider;
+import com.slusarz.pokerafterdark.spring.common.cqrs.SimpleCommandExecutor;
+import com.slusarz.pokerafterdark.spring.common.cqrs.SimpleQueryExecutor;
+import com.slusarz.pokerafterdark.spring.common.moduleexecutor.TransactionalServiceExecutor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

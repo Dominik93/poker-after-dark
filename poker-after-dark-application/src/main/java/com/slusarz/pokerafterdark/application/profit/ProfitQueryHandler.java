@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.application.profit;
 
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryHandler;
 import com.slusarz.pokerafterdark.application.config.ConfigProvider;
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryHandler;
 import com.slusarz.pokerafterdark.domain.profit.Profit;
 import lombok.AllArgsConstructor;
 

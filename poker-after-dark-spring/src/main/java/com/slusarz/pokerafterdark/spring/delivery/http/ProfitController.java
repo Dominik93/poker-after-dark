@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.spring.delivery.http;
 
-import com.slusarz.pokerafterdark.application.cqrs.ServiceExecutor;
+import com.slusarz.pokerafterdark.application.common.cqrs.ServiceExecutor;
 import com.slusarz.pokerafterdark.application.profit.ProfitQueryResult;
 import com.slusarz.pokerafterdark.specification.api.GetProfitRequest;
 import com.slusarz.pokerafterdark.specification.api.GetProfitResponse;

@@ -2,7 +2,7 @@ package com.slusarz.pokerafterdark.spring.delivery.mapper;
 
 import com.slusarz.pokerafterdark.application.player.PlayerQueryResult;
 import com.slusarz.pokerafterdark.specification.api.GetPlayerResponse;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.query.ResultMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.query.ResultMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

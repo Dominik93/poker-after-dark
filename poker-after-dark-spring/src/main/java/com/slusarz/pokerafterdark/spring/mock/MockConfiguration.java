@@ -1,7 +1,7 @@
 package com.slusarz.pokerafterdark.spring.mock;
 
 import com.slusarz.pokerafterdark.spring.authentication.PasswordMatcher;
-import com.slusarz.pokerafterdark.spring.permission.PermissionChecker;
+import com.slusarz.pokerafterdark.spring.common.permission.PermissionChecker;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

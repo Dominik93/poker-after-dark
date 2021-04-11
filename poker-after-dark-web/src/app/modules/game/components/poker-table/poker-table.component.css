@@ -1,0 +1,9 @@
+.mat-badge-content {
+    width: 50px !important;
+}
+
+.poker-table {
+    background-image: url('/assets/table.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+}

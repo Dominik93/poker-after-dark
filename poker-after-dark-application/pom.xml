@@ -5,7 +5,7 @@
     <parent>
         <artifactId>poker-after-dark</artifactId>
         <groupId>com.slusarz.pokerafterdark</groupId>
-        <version>1.0.12</version>
+        <version>1.0.13-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -56,5 +56,18 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

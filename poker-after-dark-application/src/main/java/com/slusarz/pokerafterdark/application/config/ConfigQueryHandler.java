@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.config;
 
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryHandler;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryHandler;
 import com.slusarz.pokerafterdark.domain.config.Config;
 import com.slusarz.pokerafterdark.domain.config.EntryFee;
 import com.slusarz.pokerafterdark.domain.config.ListFilter;

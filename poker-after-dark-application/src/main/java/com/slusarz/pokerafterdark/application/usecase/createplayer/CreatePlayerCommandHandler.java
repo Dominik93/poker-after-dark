@@ -1,8 +1,8 @@
 package com.slusarz.pokerafterdark.application.usecase.createplayer;
 
-import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
-import com.slusarz.pokerafterdark.application.events.EventBus;
-import com.slusarz.pokerafterdark.application.permission.RequiredAdministrationPermission;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.CommandHandler;
+import com.slusarz.pokerafterdark.application.common.events.EventBus;
+import com.slusarz.pokerafterdark.application.common.permission.RequiredAdministrationPermission;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.event.PlayerCreatedEvent;
 import com.slusarz.pokerafterdark.application.usecase.createplayer.validator.CreatePlayerValidator;
 import com.slusarz.pokerafterdark.domain.player.Player;

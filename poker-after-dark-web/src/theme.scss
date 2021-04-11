@@ -13,11 +13,52 @@ $default-menu-app-accent:  mat-palette($mat-grey, 900, 900, A100);
 $default-menu-app-warn:    mat-palette($mat-red);
 $default-menu-app-theme:   mat-light-theme($default-menu-app-primary, $default-menu-app-accent, $default-menu-app-warn);
 
+$default-metalic-app-primary: mat-palette($mat-grey, 50, 900, A100);
+$default-metalic-app-accent:  mat-palette($mat-grey, 900, 900, A100);
+$default-metalic-app-warn:    mat-palette($mat-red);
+$default-metalic-app-theme:   mat-light-theme($default-metalic-app-primary, $default-metalic-app-accent, $default-metalic-app-warn);
+
+$default-gold-app-primary: mat-palette($mat-amber, 50, 900, A100);
+$default-gold-app-accent:  mat-palette($mat-amber, 900, 900, A100);
+$default-gold-app-warn:    mat-palette($mat-red);
+$default-gold-app-theme:   mat-light-theme($default-gold-app-primary, $default-gold-app-accent, $default-gold-app-warn);
+
+$default-silver-app-primary: mat-palette($mat-grey, 50, 900, A100);
+$default-silver-app-accent:  mat-palette($mat-grey, 500, 900, A100);
+$default-silver-app-warn:    mat-palette($mat-red);
+$default-silver-app-theme:   mat-light-theme($default-silver-app-primary, $default-silver-app-accent, $default-silver-app-warn);
+
+$default-bronze-app-primary: mat-palette($mat-brown, 50, 900, A100);
+$default-bronze-app-accent:  mat-palette($mat-brown, 500, 900, A100);
+$default-bronze-app-warn:    mat-palette($mat-red);
+$default-bronze-app-theme:   mat-light-theme($default-bronze-app-primary, $default-bronze-app-accent, $default-bronze-app-warn);
+
+$default-black-app-primary: mat-palette($mat-grey, 50, 900, A100);
+$default-black-app-accent:  mat-palette($mat-grey, 900, 900, A100);
+$default-black-app-warn:    mat-palette($mat-red);
+$default-black-app-theme:   mat-light-theme($default-black-app-primary, $default-black-app-accent, $default-black-app-warn);
+
+
 
 @include angular-material-theme($default-app-theme);
 .menu-theme {
   @include angular-material-theme($default-menu-app-theme);
 }  
+.metalic-theme {
+  @include angular-material-theme($default-metalic-app-theme);
+}  
+.gold-theme {
+  @include angular-material-theme($default-gold-app-theme);
+}  
+.silver-theme {
+  @include angular-material-theme($default-silver-app-theme);
+}  
+.bronze-theme {
+  @include angular-material-theme($default-bronze-app-theme);
+}  
+.black-theme {
+  @include angular-material-theme($default-black-app-theme);
+}
 .light-theme {
   @include angular-material-theme($default-app-theme);
 }

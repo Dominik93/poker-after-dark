@@ -5,7 +5,7 @@ import com.slusarz.pokerafterdark.application.usecase.createplayer.CreatePlayerC
 import com.slusarz.pokerafterdark.domain.player.PlayerName;
 import com.slusarz.pokerafterdark.specification.api.AddPlayerRequest;
 import com.slusarz.pokerafterdark.specification.api.AddPlayerResponse;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.command.CommandMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.command.CommandMapper;
 import org.springframework.stereotype.Component;
 
 @Component

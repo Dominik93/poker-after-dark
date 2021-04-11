@@ -1,6 +1,6 @@
 package com.slusarz.pokerafterdark.application.profit;
 
-import com.slusarz.pokerafterdark.application.cqrs.query.QueryResult;
+import com.slusarz.pokerafterdark.application.common.cqrs.query.QueryResult;
 import com.slusarz.pokerafterdark.domain.profit.Profit;
 import lombok.Value;
 

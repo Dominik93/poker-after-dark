@@ -9,7 +9,7 @@ import com.slusarz.pokerafterdark.domain.pot.Pot;
 import com.slusarz.pokerafterdark.specification.api.AddCachGameRequest;
 import com.slusarz.pokerafterdark.specification.api.AddGameResponse;
 import com.slusarz.pokerafterdark.specification.api.CashGame;
-import com.slusarz.pokerafterdark.spring.delivery.mapper.command.CommandMapper;
+import com.slusarz.pokerafterdark.spring.common.delivery.command.CommandMapper;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

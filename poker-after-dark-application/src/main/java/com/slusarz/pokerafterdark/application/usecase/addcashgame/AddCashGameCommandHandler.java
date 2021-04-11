@@ -1,8 +1,8 @@
 package com.slusarz.pokerafterdark.application.usecase.addcashgame;
 
-import com.slusarz.pokerafterdark.application.cqrs.command.CommandHandler;
-import com.slusarz.pokerafterdark.application.events.EventBus;
-import com.slusarz.pokerafterdark.application.permission.RequiredAdministrationPermission;
+import com.slusarz.pokerafterdark.application.common.cqrs.command.CommandHandler;
+import com.slusarz.pokerafterdark.application.common.events.EventBus;
+import com.slusarz.pokerafterdark.application.common.permission.RequiredAdministrationPermission;
 import com.slusarz.pokerafterdark.application.usecase.addcashgame.event.AddCashGameEvent;
 import com.slusarz.pokerafterdark.application.usecase.addgame.validator.AddGameValidator;
 import com.slusarz.pokerafterdark.domain.cashgame.CashGame;
