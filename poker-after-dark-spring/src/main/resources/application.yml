@@ -29,7 +29,7 @@ poker-after-dark:
   administration:
     token:
       timeout: 30
-    password: $2a$10$G67.C/dfGh2RBzqnKbt.yuK221PUFXvKKBvzKR0me36jbDxUdBX0.
+    password: $2a$10$bHP1cRxqSymgJQoNLH9kWesH2vcsTQA7OLWRiQVGec7MDuZN4H1i2
 logging:
   level:
     org:
