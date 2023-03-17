@@ -1,0 +1,609 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.18 (Ubuntu 11.18-1.pgdg20.04+1)
+-- Dumped by pg_dump version 14.4
+
+-- Started on 2022-11-23 17:49:23
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+--
+-- TOC entry 198 (class 1259 OID 147107)
+-- Name: participation; Type: TABLE; Schema: public; Owner: jrefxvveykuwmw
+--
+
+CREATE TABLE public.participation (
+    id character varying(255) NOT NULL,
+    earnings double precision,
+    game_id character varying(255),
+    player_id character varying(255)
+);
+
+
+ALTER TABLE public.participation OWNER TO jrefxvveykuwmw;
+
+--
+-- TOC entry 3949 (class 0 OID 147107)
+-- Dependencies: 198
+-- Data for Name: participation; Type: TABLE DATA; Schema: public; Owner: jrefxvveykuwmw
+--
+
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.10.2012 r.Danon-2', -2, 'Wtorek 16.10.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.10.2012 r.Zając-2', -2, 'Wtorek 16.10.2012 r.', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.10.2012 r.Woś6', 6, 'Wtorek 16.10.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.10.2012 r.Michał-2', -2, 'Wtorek 16.10.2012 r.', 'Michał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 23.10.2012 r.Danon10', 10, 'Wtorek 23.10.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 23.10.2012 r.Rybek-2', -2, 'Wtorek 23.10.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 23.10.2012 r.Woś-4', -4, 'Wtorek 23.10.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 23.10.2012 r.Michał-4', -4, 'Wtorek 23.10.2012 r.', 'Michał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 30.10.2012 r.Danon8', 8, 'Wtorek 30.10.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 30.10.2012 r.Rybek-6', -6, 'Wtorek 30.10.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 30.10.2012 r.Woś-4', -4, 'Wtorek 30.10.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 30.10.2012 r.Michał2', 2, 'Wtorek 30.10.2012 r.', 'Michał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.11.2012 r.Danon-2', -2, 'Wtorek 06.11.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.11.2012 r.Rybek0', 0, 'Wtorek 06.11.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.11.2012 r.Woś6', 6, 'Wtorek 06.11.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.11.2012 r.Michał-4', -4, 'Wtorek 06.11.2012 r.', 'Michał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 13.11.2012 r.Danon11,5', 11.5, 'Wtorek 13.11.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 13.11.2012 r.Zając-2', -2, 'Wtorek 13.11.2012 r.', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 13.11.2012 r.Rybek-2', -2, 'Wtorek 13.11.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 13.11.2012 r.Woś-4', -4, 'Wtorek 13.11.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 13.11.2012 r.Mariusz-2', -2, 'Wtorek 13.11.2012 r.', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 13.11.2012 r.Ziomek0,5', 0.5, 'Wtorek 13.11.2012 r.', 'Ziomek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 13.11.2012 r.Michał-2', -2, 'Wtorek 13.11.2012 r.', 'Michał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 20.11.2012 r.Danon-1,5', -1.5, 'Wtorek 20.11.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 20.11.2012 r.Zając-2', -2, 'Wtorek 20.11.2012 r.', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 20.11.2012 r.Rybek-2', -2, 'Wtorek 20.11.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 20.11.2012 r.Woś5,5', 5.5, 'Wtorek 20.11.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.11.2012 r.Danon2,9', 2.89999999999999991, 'Środa 28.11.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.11.2012 r.Serek-1,2', -1.19999999999999996, 'Środa 28.11.2012 r.', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.11.2012 r.Mariusz2,24', 2.24000000000000021, 'Środa 28.11.2012 r.', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.11.2012 r.Owca-3,57', -3.56999999999999984, 'Środa 28.11.2012 r.', 'Owca');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.11.2012 r.Kolega serka-0,37', -0.369999999999999996, 'Środa 28.11.2012 r.', 'Kolega serka');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.12.2012 r.Danon4,42', 4.41999999999999993, 'Wtorek 04.12.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.12.2012 r.Zając-3', -3, 'Wtorek 04.12.2012 r.', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.12.2012 r.Rybek1,91', 1.90999999999999992, 'Wtorek 04.12.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.12.2012 r.Woś-3', -3, 'Wtorek 04.12.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.12.2012 r.Mariusz2,67', 2.66999999999999993, 'Wtorek 04.12.2012 r.', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.12.2012 r.Michał-3', -3, 'Wtorek 04.12.2012 r.', 'Michał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 11.12.2012 r.Danon2,8', 2.79999999999999982, 'Wtorek 11.12.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 11.12.2012 r.Rybek-1,7', -1.69999999999999996, 'Wtorek 11.12.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 11.12.2012 r.Woś6,75', 6.75, 'Wtorek 11.12.2012 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 11.12.2012 r.Radek-1,8', -1.80000000000000004, 'Wtorek 11.12.2012 r.', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 11.12.2012 r.Michał-6,05', -6.04999999999999982, 'Wtorek 11.12.2012 r.', 'Michał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 14.12.2012 r.Danon4', 4, 'Piątek 14.12.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 14.12.2012 r.Dominik-2', -2, 'Piątek 14.12.2012 r.', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 14.12.2012 r.Rybek-2', -2, 'Piątek 14.12.2012 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 17.12.2012 r.Danon-11,75', -11.75, 'Poniedziałek 17.12.2012 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 17.12.2012 r.Marcin-10', -10, 'Poniedziałek 17.12.2012 r.', 'Marcin');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 17.12.2012 r.Wojtek7', 7, 'Poniedziałek 17.12.2012 r.', 'Wojtek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 17.12.2012 r.Serek11,25', 11.25, 'Poniedziałek 17.12.2012 r.', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 17.12.2012 r.Bartek, Agh3,5', 3.5, 'Poniedziałek 17.12.2012 r.', 'Bartek, Agh');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('SylwesterDanon-0,15', -0.149999999999999994, 'Sylwester', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('SylwesterRybek7,15', 7.15000000000000036, 'Sylwester', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('SylwesterWoś-2', -2, 'Sylwester', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('SylwesterRadek-5', -5, 'Sylwester', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.02.2013 r.Danon10', 10, 'Środa 06.02.2013 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.02.2013 r.Dominik-3', -3, 'Środa 06.02.2013 r.', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.02.2013 r.Rybek-2,5', -2.5, 'Środa 06.02.2013 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.02.2013 r.Woś2,5', 2.5, 'Środa 06.02.2013 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.02.2013 r.Mariusz-2', -2, 'Środa 06.02.2013 r.', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.02.2013 r.Mikołaj-5', -5, 'Środa 06.02.2013 r.', 'Mikołaj');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Sobota 09.02 2013 r,Danon4', 4, 'Sobota 09.02 2013 r,', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Sobota 09.02 2013 r,Rybek-3', -3, 'Sobota 09.02 2013 r,', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Sobota 09.02 2013 r,Radek4', 4, 'Sobota 09.02 2013 r,', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Sobota 09.02 2013 r,Kolega Starosty-5', -5, 'Sobota 09.02 2013 r,', 'Kolega Starosty');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('1Danon0', 0, '1', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('1Dominik0', 0, '1', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('1Rybek1', 1, '1', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('1Mariusz-1', -1, '1', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 13.03.2013 r.Danon15', 15, 'Środa 13.03.2013 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 13.03.2013 r.Zając-5', -5, 'Środa 13.03.2013 r.', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 13.03.2013 r.Rybek-15', -15, 'Środa 13.03.2013 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 13.03.2013 r.Woś-10', -10, 'Środa 13.03.2013 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 13.03.2013 r.Mariusz-10', -10, 'Środa 13.03.2013 r.', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 13.03.2013 r.Radek40', 40, 'Środa 13.03.2013 r.', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 13.03.2013 r.Pawłowski-15', -15, 'Środa 13.03.2013 r.', 'Pawłowski');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 17.03.2013 r.Danon8', 8, 'Niedziela 17.03.2013 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 17.03.2013 r.Serek-2,5', -2.5, 'Niedziela 17.03.2013 r.', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 17.03.2013 r.Andzia1', 1, 'Niedziela 17.03.2013 r.', 'Andzia');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 17.03.2013 r.Koleżanka Andzi-4', -4, 'Niedziela 17.03.2013 r.', 'Koleżanka Andzi');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 17.03.2013 r.Swoboda-2,5', -2.5, 'Niedziela 17.03.2013 r.', 'Swoboda');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 21.03.2013 r.Danon8,9', 8.90000000000000036, 'Czwartek 21.03.2013 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 21.03.2013 r.Dominik2', 2, 'Czwartek 21.03.2013 r.', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 21.03.2013 r.Rybek-5', -5, 'Czwartek 21.03.2013 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 21.03.2013 r.Woś-2,2', -2.20000000000000018, 'Czwartek 21.03.2013 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 21.03.2013 r.Serek-2,5', -2.5, 'Czwartek 21.03.2013 r.', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 21.03.2013 r.Mariusz-1,2', -1.19999999999999996, 'Czwartek 21.03.2013 r.', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('2Danon1,5', 1.5, '2', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('2Swoboda-1,5', -1.5, '2', 'Swoboda');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('3Danon-3,4', -3.39999999999999991, '3', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('3Dominik2,5', 2.5, '3', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('3Rybek-2,8', -2.79999999999999982, '3', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('3Mariusz3,7', 3.70000000000000018, '3', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 05.04.2013 r.Danon6', 6, 'Piątek 05.04.2013 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 05.04.2013 r.Dominik-5', -5, 'Piątek 05.04.2013 r.', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 05.04.2013 r.Rybek2', 2, 'Piątek 05.04.2013 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 05.04.2013 r.Woś3', 3, 'Piątek 05.04.2013 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 05.04.2013 r.Mariusz-1', -1, 'Piątek 05.04.2013 r.', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 05.04.2013 r.Mikołaj-5', -5, 'Piątek 05.04.2013 r.', 'Mikołaj');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('4Danon-5', -5, '4', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('4Rybek-5', -5, '4', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('4Mariusz10', 10, '4', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('5Danon3', 3, '5', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('5Dominik-1,45', -1.44999999999999996, '5', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('5Rybek1', 1, '5', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('5Mariusz-2,55', -2.54999999999999982, '5', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.06.2013 r.Danon-18', -18, 'Czwartek 06.06.2013 r.', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.06.2013 r.Dominik-15', -15, 'Czwartek 06.06.2013 r.', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.06.2013 r.Rybek-10', -10, 'Czwartek 06.06.2013 r.', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.06.2013 r.Woś-17', -17, 'Czwartek 06.06.2013 r.', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.06.2013 r.Rafał50', 50, 'Czwartek 06.06.2013 r.', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.06.2013 r.Radek10', 10, 'Czwartek 06.06.2013 r.', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejDanon23', 23, 'Środa 23.10.2013 r.turniej', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejDominik-5', -5, 'Środa 23.10.2013 r.turniej', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejRybek7', 7, 'Środa 23.10.2013 r.turniej', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejBartek-5', -5, 'Środa 23.10.2013 r.turniej', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejWoś-10', -10, 'Środa 23.10.2013 r.turniej', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejRafał-5', -5, 'Środa 23.10.2013 r.turniej', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejMariusz-5', -5, 'Środa 23.10.2013 r.turniej', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 23.10.2013 r.turniejKamil, znajomy Radka0', 0, 'Środa 23.10.2013 r.turniej', 'Kamil, znajomy Radka');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 04.11.2013 r. radekDanon0', 0, 'Poniedziałek 04.11.2013 r. radek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 04.11.2013 r. radekDominik7', 7, 'Poniedziałek 04.11.2013 r. radek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 04.11.2013 r. radekRadek10', 10, 'Poniedziałek 04.11.2013 r. radek', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 04.11.2013 r. radekKrzysiek inf jasło-17', -17, 'Poniedziałek 04.11.2013 r. radek', 'Krzysiek inf jasło');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.11.2013r. WośDanon3,5', 3.5, 'Środa 06.11.2013r. Woś', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.11.2013r. WośDominik3', 3, 'Środa 06.11.2013r. Woś', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.11.2013r. WośZając-5', -5, 'Środa 06.11.2013r. Woś', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.11.2013r. WośRybek-5', -5, 'Środa 06.11.2013r. Woś', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.11.2013r. WośWoś18,5', 18.5, 'Środa 06.11.2013r. Woś', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.11.2013r. WośRafał-10', -10, 'Środa 06.11.2013r. Woś', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 06.11.2013r. WośMariusz-5', -5, 'Środa 06.11.2013r. Woś', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 08.11.2013r. DanonDanon-5', -5, 'Piątek 08.11.2013r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 08.11.2013r. DanonDominik8', 8, 'Piątek 08.11.2013r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 08.11.2013r. DanonWoś-15', -15, 'Piątek 08.11.2013r. Danon', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 08.11.2013r. DanonRadek12', 12, 'Piątek 08.11.2013r. Danon', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.11.2013r. PieczarkaDanon-5', -5, 'Piątek 22.11.2013r. Pieczarka', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.11.2013r. PieczarkaDominik5', 5, 'Piątek 22.11.2013r. Pieczarka', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.11.2013r. PieczarkaZając0,7', 0.699999999999999956, 'Piątek 22.11.2013r. Pieczarka', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.11.2013r. PieczarkaBartek-0,7', -0.699999999999999956, 'Piątek 22.11.2013r. Pieczarka', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.11.2013r. PieczarkaWoś0', 0, 'Piątek 22.11.2013r. Pieczarka', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 04.12.2013r. DanonDanon10,5', 10.5, 'Środa 04.12.2013r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 04.12.2013r. DanonDominik-2,4', -2.39999999999999991, 'Środa 04.12.2013r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 04.12.2013r. DanonZając-3', -3, 'Środa 04.12.2013r. Danon', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 04.12.2013r. DanonRybek2,9', 2.89999999999999991, 'Środa 04.12.2013r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 04.12.2013r. DanonWoś-8', -8, 'Środa 04.12.2013r. Danon', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('6Danon-25', -25, '6', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('6Dominik12', 12, '6', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('6Radek13', 13, '6', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszDanon-15', -15, 'Środa 26.02.2014r. Mariusz', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszDominik-5', -5, 'Środa 26.02.2014r. Mariusz', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszZając8', 8, 'Środa 26.02.2014r. Mariusz', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszRybek10', 10, 'Środa 26.02.2014r. Mariusz', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszBartek-5', -5, 'Środa 26.02.2014r. Mariusz', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszWoś-15', -15, 'Środa 26.02.2014r. Mariusz', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszRafał14', 14, 'Środa 26.02.2014r. Mariusz', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszMariusz5', 5, 'Środa 26.02.2014r. Mariusz', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszZiomek8', 8, 'Środa 26.02.2014r. Mariusz', 'Ziomek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.02.2014r. MariuszStarosta-5', -5, 'Środa 26.02.2014r. Mariusz', 'Starosta');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.03.2014r. DanonDanon14,25', 14.25, 'Czwartek 06.03.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.03.2014r. DanonDominik-11,75', -11.75, 'Czwartek 06.03.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.03.2014r. DanonRybek7,5', 7.5, 'Czwartek 06.03.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.11.2014r. DanonSerek2', 2, 'Wtorek 04.11.2014r. Danon', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 06.03.2014r. DanonBartek-10', -10, 'Czwartek 06.03.2014r. Danon', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 09.03.2014r. DanonDanon-3,2', -3.20000000000000018, 'Niedziela 09.03.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 09.03.2014r. DanonDominik0,6', 0.599999999999999978, 'Niedziela 09.03.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 09.03.2014r. DanonSerek8,15', 8.15000000000000036, 'Niedziela 09.03.2014r. Danon', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 09.03.2014r. DanonPaulina, Agh-2,7', -2.70000000000000018, 'Niedziela 09.03.2014r. Danon', 'Paulina, Agh');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 09.03.2014r. DanonSylwia, Agh0,15', 0.149999999999999994, 'Niedziela 09.03.2014r. Danon', 'Sylwia, Agh');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 09.03.2014r. DanonSwoboda-3', -3, 'Niedziela 09.03.2014r. Danon', 'Swoboda');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 13.03.2014r. RybekDanon-4', -4, 'Czwartek 13.03.2014r. Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 13.03.2014r. RybekDominik0', 0, 'Czwartek 13.03.2014r. Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 13.03.2014r. RybekZając-5', -5, 'Czwartek 13.03.2014r. Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 13.03.2014r. RybekRybek21', 21, 'Czwartek 13.03.2014r. Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 13.03.2014r. RybekWoś-10', -10, 'Czwartek 13.03.2014r. Rybek', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 13.03.2014r. RybekRafał-2', -2, 'Czwartek 13.03.2014r. Rybek', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 18.03.2014r. DanonDanon10', 10, 'Wtorek 18.03.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 18.03.2014r. DanonDominik-5', -5, 'Wtorek 18.03.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 18.03.2014r. DanonKrzysiek-5', -5, 'Wtorek 18.03.2014r. Danon', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 19.03.2014r. WośDanon5,67', 5.66999999999999993, 'Środa 19.03.2014r. Woś', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 19.03.2014r. WośDominik1,19', 1.18999999999999995, 'Środa 19.03.2014r. Woś', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 19.03.2014r. WośZając-4', -4, 'Środa 19.03.2014r. Woś', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 19.03.2014r. WośWoś-2,86', -2.85999999999999988, 'Środa 19.03.2014r. Woś', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 25.03.2014r. DanonDanon-4', -4, 'Wtorek 25.03.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 25.03.2014r. DanonDominik6', 6, 'Wtorek 25.03.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 25.03.2014r. DanonKrzysiek-2', -2, 'Wtorek 25.03.2014r. Danon', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.03.2014r. DanonDanon3,2', 3.20000000000000018, 'Środa 26.03.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.03.2014r. DanonDominik5', 5, 'Środa 26.03.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.03.2014r. DanonRybek1,8', 1.80000000000000004, 'Środa 26.03.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.03.2014r. DanonRafał-10', -10, 'Środa 26.03.2014r. Danon', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 30.03.2014r. GenrealDanon4', 4, 'Niedziela 30.03.2014r. Genreal', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 30.03.2014r. GenrealMarcin6', 6, 'Niedziela 30.03.2014r. Genreal', 'Marcin');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 30.03.2014r. GenrealSerek-5', -5, 'Niedziela 30.03.2014r. Genreal', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 30.03.2014r. GenrealAndzia-5', -5, 'Niedziela 30.03.2014r. Genreal', 'Andzia');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 03.04.2014r. RybekDanon5', 5, 'Czwartek 03.04.2014r. Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 03.04.2014r. RybekDominik-5', -5, 'Czwartek 03.04.2014r. Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 03.04.2014r. RybekZając-5', -5, 'Czwartek 03.04.2014r. Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 03.04.2014r. RybekRybek-5', -5, 'Czwartek 03.04.2014r. Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 03.04.2014r. RybekBartek15', 15, 'Czwartek 03.04.2014r. Rybek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 03.04.2014r. RybekWoś-5', -5, 'Czwartek 03.04.2014r. Rybek', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 09.04.2014r. DanonDanon15', 15, 'Środa 09.04.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 09.04.2014r. DanonDominik6,5', 6.5, 'Środa 09.04.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 09.04.2014r. DanonZając-10', -10, 'Środa 09.04.2014r. Danon', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 09.04.2014r. DanonRybek-15', -15, 'Środa 09.04.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 09.04.2014r. DanonWoś13,5', 13.5, 'Środa 09.04.2014r. Danon', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 09.04.2014r. DanonZiomek-10', -10, 'Środa 09.04.2014r. Danon', 'Ziomek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 14.04.2014r. ZającDanon12,5', 12.5, 'Poniedziałek 14.04.2014r. Zając', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 14.04.2014r. ZającDominik-5', -5, 'Poniedziałek 14.04.2014r. Zając', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 14.04.2014r. ZającZając-5', -5, 'Poniedziałek 14.04.2014r. Zając', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 14.04.2014r. ZającRybek2,5', 2.5, 'Poniedziałek 14.04.2014r. Zając', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 14.04.2014r. ZającWoś-5', -5, 'Poniedziałek 14.04.2014r. Zając', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 24.04.2014r. DominikDanon5', 5, 'Czwartek 24.04.2014r. Dominik', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 24.04.2014r. DominikDominik5', 5, 'Czwartek 24.04.2014r. Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 24.04.2014r. DominikRybek-10', -10, 'Czwartek 24.04.2014r. Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.05.2014r. DanonDanon-5', -5, 'Wtorek 06.05.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.05.2014r. DanonDominik-15', -15, 'Wtorek 06.05.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.05.2014r. DanonMarcin20', 20, 'Wtorek 06.05.2014r. Danon', 'Marcin');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 06.05.2014r. DanonWojtek0', 0, 'Wtorek 06.05.2014r. Danon', 'Wojtek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 07.05.2014r. RybekDanon7,9', 7.90000000000000036, 'Środa 07.05.2014r. Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 07.05.2014r. RybekDominik4', 4, 'Środa 07.05.2014r. Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 07.05.2014r. RybekZając-10', -10, 'Środa 07.05.2014r. Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 07.05.2014r. RybekRybek-10', -10, 'Środa 07.05.2014r. Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 07.05.2014r. RybekWoś-10', -10, 'Środa 07.05.2014r. Rybek', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 07.05.2014r. RybekKrzysiek4,4', 4.40000000000000036, 'Środa 07.05.2014r. Rybek', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 07.05.2014r. RybekRafał13,7', 13.6999999999999993, 'Środa 07.05.2014r. Rybek', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 15.05.2014r. PieczaraDanon-8,7', -8.69999999999999929, 'Czwartek 15.05.2014r. Pieczara', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 15.05.2014r. PieczaraDominik-3', -3, 'Czwartek 15.05.2014r. Pieczara', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 15.05.2014r. PieczaraZając-10', -10, 'Czwartek 15.05.2014r. Pieczara', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 15.05.2014r. PieczaraBartek31,7', 31.6999999999999993, 'Czwartek 15.05.2014r. Pieczara', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 15.05.2014r. PieczaraWoś-10', -10, 'Czwartek 15.05.2014r. Pieczara', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 20.05.2014r. DanonDanon0', 0, 'Wtorek 20.05.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 20.05.2014r. DanonDominik5', 5, 'Wtorek 20.05.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 20.05.2014r. DanonKrzysiek-5', -5, 'Wtorek 20.05.2014r. Danon', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 22.05.2014r. DanonDanon9,5', 9.5, 'Czwartek 22.05.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 22.05.2014r. DanonDominik0,5', 0.5, 'Czwartek 22.05.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 22.05.2014r. DanonRafał-10', -10, 'Czwartek 22.05.2014r. Danon', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.05.2014r. WośDanon6,3', 6.29999999999999982, 'Środa 28.05.2014r. Woś', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.05.2014r. WośDominik-4,5', -4.5, 'Środa 28.05.2014r. Woś', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.05.2014r. WośZając13,2', 13.1999999999999993, 'Środa 28.05.2014r. Woś', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.05.2014r. WośRybek-7', -7, 'Środa 28.05.2014r. Woś', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 28.05.2014r. WośWoś-8', -8, 'Środa 28.05.2014r. Woś', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 29.05.2014r. DanonDanon-5', -5, 'Czwartek 29.05.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 29.05.2014r. DanonDominik-5', -5, 'Czwartek 29.05.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 29.05.2014r. DanonBartek10', 10, 'Czwartek 29.05.2014r. Danon', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.06.2014r. PieczaraDanon17,5', 17.5, 'Czwartek 05.06.2014r. Pieczara', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.06.2014r. PieczaraDominik-11,5', -11.5, 'Czwartek 05.06.2014r. Pieczara', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.06.2014r. PieczaraZając10', 10, 'Czwartek 05.06.2014r. Pieczara', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.06.2014r. PieczaraRybek4', 4, 'Czwartek 05.06.2014r. Pieczara', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.06.2014r. PieczaraBartek-10', -10, 'Czwartek 05.06.2014r. Pieczara', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.06.2014r. PieczaraWoś-10', -10, 'Czwartek 05.06.2014r. Pieczara', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 12.06.2014r. ZającDanon-6,7', -6.70000000000000018, 'Czwartek 12.06.2014r. Zając', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 12.06.2014r. ZającDominik-3,3', -3.29999999999999982, 'Czwartek 12.06.2014r. Zając', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 12.06.2014r. ZającZając3,3', 3.29999999999999982, 'Czwartek 12.06.2014r. Zając', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 12.06.2014r. ZającBartek13', 13, 'Czwartek 12.06.2014r. Zając', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 12.06.2014r. ZającWoś-2,3', -2.29999999999999982, 'Czwartek 12.06.2014r. Zając', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 12.06.2014r. ZającOla Zająca-2', -2, 'Czwartek 12.06.2014r. Zając', 'Ola Zająca');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 12.06.2014r. ZającStarosta-2', -2, 'Czwartek 12.06.2014r. Zając', 'Starosta');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.06.2014r. DanonDanon-7', -7, 'Środa 26.06.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.06.2014r. DanonDominik14', 14, 'Środa 26.06.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.06.2014r. DanonZając-5', -5, 'Środa 26.06.2014r. Danon', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.06.2014r. DanonRybek-5', -5, 'Środa 26.06.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 26.06.2014r. DanonWoś3', 3, 'Środa 26.06.2014r. Danon', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Sobota 6.09.2014r. DanonDanon3', 3, 'Sobota 6.09.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Sobota 6.09.2014r. DanonDominik7', 7, 'Sobota 6.09.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Sobota 6.09.2014r. DanonRybek-10', -10, 'Sobota 6.09.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 02.10.2014r. DanonDanon9,6', 9.59999999999999964, 'Czwartek 02.10.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 02.10.2014r. DanonDominik4,3', 4.29999999999999982, 'Czwartek 02.10.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 02.10.2014r. DanonZając-1,8', -1.80000000000000004, 'Czwartek 02.10.2014r. Danon', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 02.10.2014r. DanonRybek-10', -10, 'Czwartek 02.10.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 02.10.2014r. DanonBartek-10', -10, 'Czwartek 02.10.2014r. Danon', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 02.10.2014r. DanonWoś-5', -5, 'Czwartek 02.10.2014r. Danon', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 02.10.2014r. DanonMateusz12,9', 12.9000000000000004, 'Czwartek 02.10.2014r. Danon', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 09.10.2014r. DanonDanon-4,25', -4.25, 'Czwartek 09.10.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 09.10.2014r. DanonDominik-10,35', -10.3499999999999996, 'Czwartek 09.10.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 09.10.2014r. DanonRybek1,2', 1.19999999999999996, 'Czwartek 09.10.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 09.10.2014r. DanonBartek0,9', 0.900000000000000022, 'Czwartek 09.10.2014r. Danon', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 09.10.2014r. DanonWoś3,75', 3.75, 'Czwartek 09.10.2014r. Danon', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 09.10.2014r. DanonMateusz8,75', 8.75, 'Czwartek 09.10.2014r. Danon', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 16.10.2014r. DanonDanon11,25', 11.25, 'Czwartek 16.10.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 16.10.2014r. DanonDominik-5', -5, 'Czwartek 16.10.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 16.10.2014r. DanonZając15,85', 15.8499999999999996, 'Czwartek 16.10.2014r. Danon', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 16.10.2014r. DanonMarcin6,35', 6.34999999999999964, 'Czwartek 16.10.2014r. Danon', 'Marcin');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 16.10.2014r. DanonKasia-8,45', -8.44999999999999929, 'Czwartek 16.10.2014r. Danon', 'Kasia');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 16.10.2014r. DanonKrzysiek-10', -10, 'Czwartek 16.10.2014r. Danon', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 16.10.2014r. DanonWojtek-10', -10, 'Czwartek 16.10.2014r. Danon', 'Wojtek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 21.10.2014r. RybekDanon5', 5, 'Wtorek 21.10.2014r. Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 21.10.2014r. RybekDominik7,4', 7.40000000000000036, 'Wtorek 21.10.2014r. Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 21.10.2014r. RybekZając-10', -10, 'Wtorek 21.10.2014r. Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 21.10.2014r. RybekRybek12,6', 12.5999999999999996, 'Wtorek 21.10.2014r. Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 21.10.2014r. RybekBartek-5', -5, 'Wtorek 21.10.2014r. Rybek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 21.10.2014r. RybekMateusz-5', -5, 'Wtorek 21.10.2014r. Rybek', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 21.10.2014r. RybekKonrad, znajomy Rybki-5', -5, 'Wtorek 21.10.2014r. Rybek', 'Konrad, znajomy Rybki');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 27.10.2014r. ZającDanon-30', -30, 'Poniedziałek 27.10.2014r. Zając', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 27.10.2014r. ZającDominik32,5', 32.5, 'Poniedziałek 27.10.2014r. Zając', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 27.10.2014r. ZającZając10', 10, 'Poniedziałek 27.10.2014r. Zając', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 27.10.2014r. ZającRybek-10', -10, 'Poniedziałek 27.10.2014r. Zając', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 27.10.2014r. ZającBartek8,35', 8.34999999999999964, 'Poniedziałek 27.10.2014r. Zając', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 27.10.2014r. ZającRafał-10,85', -10.8499999999999996, 'Poniedziałek 27.10.2014r. Zając', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.11.2014r. DanonDanon-5', -5, 'Wtorek 04.11.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.11.2014r. DanonDominik3,6', 3.60000000000000009, 'Wtorek 04.11.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.11.2014r. DanonRybek4,7', 4.70000000000000018, 'Wtorek 04.11.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.11.2014r. DanonBartek4,7', 4.70000000000000018, 'Wtorek 04.11.2014r. Danon', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 04.11.2014r. DanonMateusz-10', -10, 'Wtorek 04.11.2014r. Danon', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 14.11.2014r. RybekDominik3,5', 3.5, 'Piątek 14.11.2014r. Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 14.11.2014r. RybekZając0', 0, 'Piątek 14.11.2014r. Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 14.11.2014r. RybekBartek2,5', 2.5, 'Piątek 14.11.2014r. Rybek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 14.11.2014r. RybekŁukasz skooby-6', -6, 'Piątek 14.11.2014r. Rybek', 'Łukasz skooby');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 20.11.2014r. DanonDanon-1,5', -1.5, 'Czwartek 20.11.2014r. Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 20.11.2014r. DanonDominik-4', -4, 'Czwartek 20.11.2014r. Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 20.11.2014r. DanonZając10', 10, 'Czwartek 20.11.2014r. Danon', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 20.11.2014r. DanonRybek11', 11, 'Czwartek 20.11.2014r. Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 20.11.2014r. DanonBartek-10', -10, 'Czwartek 20.11.2014r. Danon', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 20.11.2014r. DanonMateusz-5,5', -5.5, 'Czwartek 20.11.2014r. Danon', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 23.11.2014r. RybekDanon11,7', 11.6999999999999993, 'Niedziela 23.11.2014r. Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 23.11.2014r. RybekDominik10,4', 10.4000000000000004, 'Niedziela 23.11.2014r. Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 23.11.2014r. RybekZając-5', -5, 'Niedziela 23.11.2014r. Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 23.11.2014r. RybekRybek-12,1', -12.0999999999999996, 'Niedziela 23.11.2014r. Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 23.11.2014r. RybekBartek-5', -5, 'Niedziela 23.11.2014r. Rybek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2014r. DominikDominik-10,7', -10.6999999999999993, 'Czwartek 26.11.2014r. Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2014r. DominikZając1,2', 1.19999999999999996, 'Czwartek 26.11.2014r. Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2014r. DominikRybek11,25', 11.25, 'Czwartek 26.11.2014r. Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2014r. DominikBartek0,75', 0.75, 'Czwartek 26.11.2014r. Dominik', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2014r. DominikWoś2,1', 2.10000000000000009, 'Czwartek 26.11.2014r. Dominik', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2014r. DominikMateusz-5,35', -5.34999999999999964, 'Czwartek 26.11.2014r. Dominik', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2014r. DominikŁukasz skooby0,75', 0.75, 'Czwartek 26.11.2014r. Dominik', 'Łukasz skooby');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.12.2014 ZającDanon-15', -15, 'Czwartek 5.12.2014 Zając', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.12.2014 ZającDominik-1,45', -1.44999999999999996, 'Czwartek 5.12.2014 Zając', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.12.2014 ZającZając-7', -7, 'Czwartek 5.12.2014 Zając', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.12.2014 ZającRybek5,3', 5.29999999999999982, 'Czwartek 5.12.2014 Zając', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.12.2014 ZającBartek5', 5, 'Czwartek 5.12.2014 Zając', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.12.2014 ZającMateusz-0,35', -0.349999999999999978, 'Czwartek 5.12.2014 Zając', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.12.2014 ZającKrzysiek13,5', 13.5, 'Czwartek 5.12.2014 Zając', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.12.2014 DanonDanon2,5', 2.5, 'Niedziela 7.12.2014 Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.12.2014 DanonDominik7,5', 7.5, 'Niedziela 7.12.2014 Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.12.2014 DanonZając-10', -10, 'Niedziela 7.12.2014 Danon', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.12.2014 DanonRybek5', 5, 'Niedziela 7.12.2014 Danon', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.12.2014 DanonBartek-5', -5, 'Niedziela 7.12.2014 Danon', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 11.12.2014 RybekDanon10,5', 10.5, 'Czwartek 11.12.2014 Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 11.12.2014 RybekDominik-4', -4, 'Czwartek 11.12.2014 Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 11.12.2014 RybekZając2,5', 2.5, 'Czwartek 11.12.2014 Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 11.12.2014 RybekRybek-9', -9, 'Czwartek 11.12.2014 Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 11.12.2014 RybekMateusz5', 5, 'Czwartek 11.12.2014 Rybek', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 11.12.2014 RybekNatalia Ef-5', -5, 'Czwartek 11.12.2014 Rybek', 'Natalia Ef');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.12.2014 DominikDanon0', 0, 'Wtorek 16.12.2014 Dominik', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.12.2014 DominikDominik-2,25', -2.25, 'Wtorek 16.12.2014 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.12.2014 DominikZając1', 1, 'Wtorek 16.12.2014 Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.12.2014 DominikRybek13,5', 13.5, 'Wtorek 16.12.2014 Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.12.2014 DominikBartek-7,25', -7.25, 'Wtorek 16.12.2014 Dominik', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 16.12.2014 DominikMateusz-5', -5, 'Wtorek 16.12.2014 Dominik', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 1.01.2015 DanonDanon2', 2, 'Czwartek 1.01.2015 Danon', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 1.01.2015 DanonDominik0', 0, 'Czwartek 1.01.2015 Danon', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 1.01.2015 DanonSłoń2', 2, 'Czwartek 1.01.2015 Danon', 'Słoń');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 1.01.2015 DanonKostek-4', -4, 'Czwartek 1.01.2015 Danon', 'Kostek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekDanon0', 0, 'Czwartek 08.01.2015 Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekDominik-6', -6, 'Czwartek 08.01.2015 Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekZając7,7', 7.70000000000000018, 'Czwartek 08.01.2015 Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekRybek-10', -10, 'Czwartek 08.01.2015 Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekBartek-20', -20, 'Czwartek 08.01.2015 Rybek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekWoś-10', -10, 'Czwartek 08.01.2015 Rybek', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekMateusz-5', -5, 'Czwartek 08.01.2015 Rybek', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 08.01.2015 RybekKrzysiek43,3', 43.2999999999999972, 'Czwartek 08.01.2015 Rybek', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 11.01.2015 DominikDanon-5', -5, 'Niedziela 11.01.2015 Dominik', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 11.01.2015 DominikDominik5', 5, 'Niedziela 11.01.2015 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 23.01.2015 Dominik Turniej I:Dominik II:ZającDanon-5', -5, 'Piątek 23.01.2015 Dominik Turniej I:Dominik II:Zając', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 23.01.2015 Dominik Turniej I:Dominik II:ZającDominik10', 10, 'Piątek 23.01.2015 Dominik Turniej I:Dominik II:Zając', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 23.01.2015 Dominik Turniej I:Dominik II:ZającZając5', 5, 'Piątek 23.01.2015 Dominik Turniej I:Dominik II:Zając', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 23.01.2015 Dominik Turniej I:Dominik II:ZającBartek-5', -5, 'Piątek 23.01.2015 Dominik Turniej I:Dominik II:Zając', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 23.01.2015 Dominik Turniej I:Dominik II:ZającKasia-5', -5, 'Piątek 23.01.2015 Dominik Turniej I:Dominik II:Zając', 'Kasia');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 01.02.2015 RybekDanon-11,5', -11.5, 'Niedziela 01.02.2015 Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 01.02.2015 RybekDominik27,5', 27.5, 'Niedziela 01.02.2015 Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 01.02.2015 RybekZając4', 4, 'Niedziela 01.02.2015 Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 01.02.2015 RybekRybek-20', -20, 'Niedziela 01.02.2015 Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.02.2015 KrzysiekDanon-12', -12, 'Czwartek 05.02.2015 Krzysiek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.02.2015 KrzysiekDominik0', 0, 'Czwartek 05.02.2015 Krzysiek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 05.02.2015 KrzysiekKrzysiek12', 12, 'Czwartek 05.02.2015 Krzysiek', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 6.02.2015 DominikDominik9,5', 9.5, 'Piątek 6.02.2015 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 6.02.2015 DominikZając10,5', 10.5, 'Piątek 6.02.2015 Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 6.02.2015 DominikRybek-10', -10, 'Piątek 6.02.2015 Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 6.02.2015 DominikBartek-10', -10, 'Piątek 6.02.2015 Dominik', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 6.02.2015 DominikWoś0', 0, 'Piątek 6.02.2015 Dominik', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.03.2015 BartekDanon30,5', 30.5, 'Czwartek 5.03.2015 Bartek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.03.2015 BartekDominik10,5', 10.5, 'Czwartek 5.03.2015 Bartek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.03.2015 BartekZając-7', -7, 'Czwartek 5.03.2015 Bartek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.03.2015 BartekRybek-17,5', -17.5, 'Czwartek 5.03.2015 Bartek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.03.2015 BartekBartek-5', -5, 'Czwartek 5.03.2015 Bartek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.03.2015 BartekKrzysiek13,5', 13.5, 'Czwartek 5.03.2015 Bartek', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 5.03.2015 BartekRadek-25', -25, 'Czwartek 5.03.2015 Bartek', 'Radek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekDanon0', 0, 'Czwartek 23.04.2015 Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekZając-10', -10, 'Czwartek 23.04.2015 Rybek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekRybek5', 5, 'Czwartek 23.04.2015 Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekBartek-5', -5, 'Czwartek 23.04.2015 Rybek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekMarcin20', 20, 'Czwartek 23.04.2015 Rybek', 'Marcin');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekSerek-5', -5, 'Czwartek 23.04.2015 Rybek', 'Serek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekBartek, Agh-5', -5, 'Czwartek 23.04.2015 Rybek', 'Bartek, Agh');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 23.04.2015 RybekAndzia0', 0, 'Czwartek 23.04.2015 Rybek', 'Andzia');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.06.2015 PiotrekDanon10', 10, 'Piątek 22.06.2015 Piotrek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.06.2015 PiotrekDominik3,75', 3.75, 'Piątek 22.06.2015 Piotrek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Piątek 22.06.2015 PiotrekRybek-13,75', -13.75, 'Piątek 22.06.2015 Piotrek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 22.06.2015 Bartek nowe MieszkanieDominik6,2', 6.20000000000000018, 'Środa 22.06.2015 Bartek nowe Mieszkanie', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 22.06.2015 Bartek nowe MieszkanieZając-2,45', -2.45000000000000018, 'Środa 22.06.2015 Bartek nowe Mieszkanie', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 22.06.2015 Bartek nowe MieszkanieBartek8,9', 8.90000000000000036, 'Środa 22.06.2015 Bartek nowe Mieszkanie', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 22.06.2015 Bartek nowe MieszkanieŁukasz skooby-6,2', -6.20000000000000018, 'Środa 22.06.2015 Bartek nowe Mieszkanie', 'Łukasz skooby');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 22.06.2015 Bartek nowe MieszkanieKuzyn bartka Pitu-5', -5, 'Środa 22.06.2015 Bartek nowe Mieszkanie', 'Kuzyn bartka Pitu');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 22.06.2015 Bartek nowe MieszkanieZnajomy bartka-1,45', -1.44999999999999996, 'Środa 22.06.2015 Bartek nowe Mieszkanie', 'Znajomy bartka');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 29.07.2015 DominikDominik-6,5', -6.5, 'Środa 29.07.2015 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 29.07.2015 DominikZając-0,5', -0.5, 'Środa 29.07.2015 Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 29.07.2015 DominikRybek-8,2', -8.19999999999999929, 'Środa 29.07.2015 Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 29.07.2015 DominikBartek15,2', 15.1999999999999993, 'Środa 29.07.2015 Dominik', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 10.11.2015 DominikDanon-20', -20, 'Wtorek 10.11.2015 Dominik', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 10.11.2015 DominikDominik9', 9, 'Wtorek 10.11.2015 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 10.11.2015 DominikZając0', 0, 'Wtorek 10.11.2015 Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 10.11.2015 DominikRybek9,5', 9.5, 'Wtorek 10.11.2015 Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 10.11.2015 DominikKrzysiek1,5', 1.5, 'Wtorek 10.11.2015 Dominik', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2015 BartekDominik3', 3, 'Czwartek 26.11.2015 Bartek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2015 BartekZając10', 10, 'Czwartek 26.11.2015 Bartek', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2015 BartekRybek-9,5', -9.5, 'Czwartek 26.11.2015 Bartek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2015 BartekBartek1', 1, 'Czwartek 26.11.2015 Bartek', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Czwartek 26.11.2015 BartekKuzyn bartka Pitu-4,5', -4.5, 'Czwartek 26.11.2015 Bartek', 'Kuzyn bartka Pitu');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 9.12.2015 DominkDanon7,8', 7.79999999999999982, 'Wtorek 9.12.2015 Domink', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 9.12.2015 DominkDominik-1', -1, 'Wtorek 9.12.2015 Domink', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 9.12.2015 DominkZając11,5', 11.5, 'Wtorek 9.12.2015 Domink', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 9.12.2015 DominkRybek-13,3', -13.3000000000000007, 'Wtorek 9.12.2015 Domink', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 9.12.2015 DominkBartek-5', -5, 'Wtorek 9.12.2015 Domink', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 9.12.2015 DominkMateusz5', 5, 'Wtorek 9.12.2015 Domink', 'Mateusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Wtorek 9.12.2015 DominkKrzysiek-5', -5, 'Wtorek 9.12.2015 Domink', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.11.2016 RybekDanon-10,25', -10.25, 'Niedziela 7.11.2016 Rybek', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.11.2016 RybekDominik23', 23, 'Niedziela 7.11.2016 Rybek', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.11.2016 RybekRybek2,25', 2.25, 'Niedziela 7.11.2016 Rybek', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Niedziela 7.11.2016 RybekArek od Danona Anety-15', -15, 'Niedziela 7.11.2016 Rybek', 'Arek od Danona Anety');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 3.09.2018 DominikDanon-69,9', -69.9000000000000057, 'Poniedziałek 3.09.2018 Dominik', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 3.09.2018 DominikDominik37,6', 37.6000000000000014, 'Poniedziałek 3.09.2018 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 3.09.2018 DominikZając31,5', 31.5, 'Poniedziałek 3.09.2018 Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 3.09.2018 DominikRybek-0,4', -0.400000000000000022, 'Poniedziałek 3.09.2018 Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 3.09.2018 DominikKrzysiek11,8', 11.8000000000000007, 'Poniedziałek 3.09.2018 Dominik', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 3.09.2018 DominikRafał9,4', 9.40000000000000036, 'Poniedziałek 3.09.2018 Dominik', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 3.09.2018 DominikMariusz-20', -20, 'Poniedziałek 3.09.2018 Dominik', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 10.09.2018 DominikDanon-14,5', -14.5, 'Poniedziałek 10.09.2018 Dominik', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 10.09.2018 DominikDominik11,8', 11.8000000000000007, 'Poniedziałek 10.09.2018 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 10.09.2018 DominikZając32,7', 32.7000000000000028, 'Poniedziałek 10.09.2018 Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 10.09.2018 DominikRybek-20', -20, 'Poniedziałek 10.09.2018 Dominik', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Poniedziałek 10.09.2018 DominikBartek-10', -10, 'Poniedziałek 10.09.2018 Dominik', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 7.11.2018 DominikDanon-10', -10, 'Środa 7.11.2018 Dominik', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 7.11.2018 DominikDominik14,3', 14.3000000000000007, 'Środa 7.11.2018 Dominik', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 7.11.2018 DominikZając5,7', 5.70000000000000018, 'Środa 7.11.2018 Dominik', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 7.11.2018 DominikBartek0', 0, 'Środa 7.11.2018 Dominik', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('Środa 7.11.2018 DominikMariusz-10', -10, 'Środa 7.11.2018 Dominik', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43440Danon-3,8', -3.79999999999999982, '43440', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43440Dominik-2,7', -2.70000000000000018, '43440', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43440Zając2,4', 2.39999999999999991, '43440', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43440Bartek11,3', 11.3000000000000007, '43440', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43440Rafał16,4', 16.3999999999999986, '43440', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43440Mariusz-23,6', -23.6000000000000014, '43440', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43454Danon32', 32, '43454', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43454Dominik-6,5', -6.5, '43454', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43454Zając2', 2, '43454', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43454Bartek-20', -20, '43454', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43454Krzysiek-7,5', -7.5, '43454', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('sroda 29.05.2019Danon43,5', 43.5, 'sroda 29.05.2019', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('sroda 29.05.2019Dominik-11,2', -11.1999999999999993, 'sroda 29.05.2019', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('sroda 29.05.2019Zając-20', -20, 'sroda 29.05.2019', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('sroda 29.05.2019Rybek20,3', 20.3000000000000007, 'sroda 29.05.2019', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('sroda 29.05.2019Krzysiek-20', -20, 'sroda 29.05.2019', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('sroda 29.05.2019Rafał7,4', 7.40000000000000036, 'sroda 29.05.2019', 'Rafał');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('sroda 29.05.2019Mariusz-20', -20, 'sroda 29.05.2019', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43628Danon42,4', 42.3999999999999986, '43628', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43628Dominik-5,5', -5.5, '43628', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43628Zając38,1', 38.1000000000000014, '43628', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43628Szymon4', 4, '43628', 'Szymon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43628Fire-50', -50, '43628', 'Fire');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43628Kuba Pyru-30', -30, '43628', 'Kuba Pyru');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43686Danon73', 73, '43686', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43686Dominik-20', -20, '43686', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43686Zając-7', -7, '43686', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43686Rybek4', 4, '43686', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('43686Patryk kuzyn Danona-50', -50, '43686', 'Patryk kuzyn Danona');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('poniedziąłek 19.08.2019Danon-10', -10, 'poniedziąłek 19.08.2019', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('poniedziąłek 19.08.2019Dominik26', 26, 'poniedziąłek 19.08.2019', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('poniedziąłek 19.08.2019Zając7', 7, 'poniedziąłek 19.08.2019', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('poniedziąłek 19.08.2019Krzysiek-3', -3, 'poniedziąłek 19.08.2019', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('poniedziąłek 19.08.2019Kuba 2-20', -20, 'poniedziąłek 19.08.2019', 'Kuba 2');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('6b08df73-88c1-402d-943d-56469dc5d530', -20, 'f16de74d-24ac-4aed-967b-c2e5e842c841', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('89ed9643-05d8-4ca0-adb5-dc99e994c920', 48.2999999999999972, 'f16de74d-24ac-4aed-967b-c2e5e842c841', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('e3fceef8-95f6-4893-8456-0ad8c702e81d', -1, 'f16de74d-24ac-4aed-967b-c2e5e842c841', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('a2440f79-ed61-4d85-b311-d815c8aa869e', 96.7999999999999972, 'f16de74d-24ac-4aed-967b-c2e5e842c841', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('a9e2bcca-9479-4d3c-812f-fd88c0c55852', 80, 'c1aa98b8-3127-489a-bf10-d1d1681b257d', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('3d8f9f88-63b7-4705-9e33-14505ca82031', -20, 'c1aa98b8-3127-489a-bf10-d1d1681b257d', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('db69eec4-38cb-431f-8400-1ea66d0f3790', -20, 'c1aa98b8-3127-489a-bf10-d1d1681b257d', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('a6a54635-9c29-4fd5-8bfc-4a70c95ac0dd', 10, 'c1aa98b8-3127-489a-bf10-d1d1681b257d', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('94bc4306-6350-44c1-a5d1-a5c112676cfc', 0, 'c1aa98b8-3127-489a-bf10-d1d1681b257d', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('4f3db9c3-a580-495c-b678-3bee62ed3943', -20, 'c1aa98b8-3127-489a-bf10-d1d1681b257d', '14282425-9959-40cd-ae93-8c886c9bc05c');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('62f02544-31c5-44d9-9623-268c9bd7874d', -30, 'c1aa98b8-3127-489a-bf10-d1d1681b257d', '2b1c223d-f758-425f-bcb7-61c7e81dae59');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('c6d319a9-938d-4569-9190-9657e0d5f7c8', -6, '37622d39-8072-4800-887f-965b24c2e2fb', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('b3574c61-0e24-4370-9974-cb6e4cebd1a6', 0, '37622d39-8072-4800-887f-965b24c2e2fb', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('40159627-cd12-447c-936d-3e12dc32caa0', 19.5, '37622d39-8072-4800-887f-965b24c2e2fb', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('b43cb317-405f-4375-a124-30e5dbdfb89e', 3, '37622d39-8072-4800-887f-965b24c2e2fb', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('2509cfc6-0e6b-4be6-9612-8e5f367d4828', -16.5, '37622d39-8072-4800-887f-965b24c2e2fb', 'f0cca667-a859-484b-9455-37fe273516de');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('56f8448f-1625-4148-91c0-4f2e847cc565', -8.09999999999999964, '3030ecb4-2b51-432f-ab32-fc8bb5c9d24a', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('4749f243-06ac-426e-9d67-327df844e499', 26.2000000000000028, '3030ecb4-2b51-432f-ab32-fc8bb5c9d24a', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('bf7ed9ec-56f3-4fe0-a714-3207d395fd2b', 10.1000000000000014, '3030ecb4-2b51-432f-ab32-fc8bb5c9d24a', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('e422900c-e47b-4e39-bf6d-4dd2ac88e82e', 7.19999999999999929, '3030ecb4-2b51-432f-ab32-fc8bb5c9d24a', 'Bartek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('561339b4-f49a-4a4b-bbd8-1d30cabcc065', -10, '3030ecb4-2b51-432f-ab32-fc8bb5c9d24a', 'f0cca667-a859-484b-9455-37fe273516de');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('1f1cbe57-eaaf-4291-a765-bb3f254e6c43', -20, '3030ecb4-2b51-432f-ab32-fc8bb5c9d24a', 'Kuba Pyru');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('d479588b-9937-43ce-925a-6e91cda56df2', -5.40000000000000036, '3030ecb4-2b51-432f-ab32-fc8bb5c9d24a', 'c244f63a-0c31-4837-b576-9540d0b90f47');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('f9abd73b-af87-4792-b51c-2b60eeaf727c', -18.3999999999999986, 'b7b07c4a-96dc-4c98-91a1-89d96e0425ad', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('1feb9feb-6944-4eb1-b044-1b9f1c7eaa3d', 60.2999999999999972, 'b7b07c4a-96dc-4c98-91a1-89d96e0425ad', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('6321f384-3c88-475b-bb81-ff82e8239f69', -20, 'b7b07c4a-96dc-4c98-91a1-89d96e0425ad', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('242fcd04-6aa1-499c-b2c4-741ff6089f77', -3.5, 'b7b07c4a-96dc-4c98-91a1-89d96e0425ad', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('114227e4-9a89-4886-a1f7-b845fe832c49', -20, 'b7b07c4a-96dc-4c98-91a1-89d96e0425ad', 'Krzysiek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('b67d029e-1545-4fb1-9a5a-0940cf277ec0', 1.5, 'b7b07c4a-96dc-4c98-91a1-89d96e0425ad', '14282425-9959-40cd-ae93-8c886c9bc05c');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('365edb05-9952-42ac-a9d7-4de7cc7f41a9', -49.2999999999999972, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('57b6acf2-2b35-4ef9-bacf-18354e80ce3d', 26.75, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('f5bed699-b151-4117-aa5d-6f51a0a30546', -30, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'Rybek');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('308e76d3-5bb4-47cf-8f8a-d808e1da5829', -20, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('c317fda1-c549-4a00-b271-795e647a2079', 61.5499999999999972, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'Woś');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('47f06827-6746-4b62-b408-6e0ce6defc3a', 21.1999999999999993, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'Mariusz');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('a47c13cc-56d0-4559-b29d-89926d8bc415', -1.80000000000000071, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'Starosta');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('a3311617-f66e-4561-9296-0b9c8f512722', -8, '4dcbb7dd-e738-47c9-91dc-65293dd689f2', 'ddde4dbe-2ab1-4991-b3f3-463cd68e427f');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('d28226a7-68c1-4167-8b89-d199c467ee97', -30, 'f16de74d-24ac-4aed-967b-c2e5e842c841', '14282425-9959-40cd-ae93-8c886c9bc05c');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('5badddbf-2781-446b-927b-4b4d47ba0302', -54, 'f16de74d-24ac-4aed-967b-c2e5e842c841', '4fd90357-e07d-4728-ac87-1a6d8498a44d');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('f32acd54-3239-4212-bf72-94b393a77c3e', -15.5, '20d16c8e-033d-4b23-ac4c-1bf3bfd2d6ec', 'Danon');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('0b4362d0-cd62-40d9-af99-ff467b289f8f', 15.5, '20d16c8e-033d-4b23-ac4c-1bf3bfd2d6ec', 'Dominik');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('92d94ac7-530e-4588-b75f-15da40503465', 10, '20d16c8e-033d-4b23-ac4c-1bf3bfd2d6ec', 'Zając');
+INSERT INTO public.participation (id, earnings, game_id, player_id) VALUES ('2a2c0ceb-e399-41fc-b9be-1242dff9311e', -10, '20d16c8e-033d-4b23-ac4c-1bf3bfd2d6ec', 'Krzysiek');
+
+
+--
+-- TOC entry 3825 (class 2606 OID 147178)
+-- Name: participation participation_pkey; Type: CONSTRAINT; Schema: public; Owner: jrefxvveykuwmw
+--
+
+ALTER TABLE ONLY public.participation
+    ADD CONSTRAINT participation_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3826 (class 2606 OID 147192)
+-- Name: participation fk_participation_game; Type: FK CONSTRAINT; Schema: public; Owner: jrefxvveykuwmw
+--
+
+ALTER TABLE ONLY public.participation
+    ADD CONSTRAINT fk_participation_game FOREIGN KEY (game_id) REFERENCES public.game(id);
+
+
+--
+-- TOC entry 3827 (class 2606 OID 147197)
+-- Name: participation fk_participation_player; Type: FK CONSTRAINT; Schema: public; Owner: jrefxvveykuwmw
+--
+
+ALTER TABLE ONLY public.participation
+    ADD CONSTRAINT fk_participation_player FOREIGN KEY (player_id) REFERENCES public.player(id);
+
+
+--
+-- TOC entry 3955 (class 0 OID 0)
+-- Dependencies: 609
+-- Name: LANGUAGE plpgsql; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT ALL ON LANGUAGE plpgsql TO jrefxvveykuwmw;
+
+
+-- Completed on 2022-11-23 17:49:27
+
+--
+-- PostgreSQL database dump complete
+--
+

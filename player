@@ -1,0 +1,136 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.18 (Ubuntu 11.18-1.pgdg20.04+1)
+-- Dumped by pg_dump version 14.4
+
+-- Started on 2022-11-23 17:49:51
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+--
+-- TOC entry 200 (class 1259 OID 147124)
+-- Name: player; Type: TABLE; Schema: public; Owner: jrefxvveykuwmw
+--
+
+CREATE TABLE public.player (
+    id character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    number_of_plays numeric,
+    live_winnings double precision,
+    max_earnings integer DEFAULT 0,
+    min_earnings integer DEFAULT 0
+);
+
+
+ALTER TABLE public.player OWNER TO jrefxvveykuwmw;
+
+--
+-- TOC entry 3951 (class 0 OID 147124)
+-- Dependencies: 200
+-- Data for Name: player; Type: TABLE DATA; Schema: public; Owner: jrefxvveykuwmw
+--
+
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Znajomy bartka', 'Znajomy bartka', 1, -1.44999999999999996, -1, -1);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Arek od Danona Anety', 'Arek od Danona Anety', 1, -15, -15, -15);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Szymon', 'Szymon', 1, 4, 4, 4);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Krzysiek znajomy starosty', 'Krzysiek znajomy starosty', 0, 0, 0, 0);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Mikołaj znajomy rybki', 'Mikołaj znajomy rybki', 0, 0, 0, 0);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Bartek', 'Bartek', 35, -17.4499999999999993, 32, -20);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Mateusz', 'Mateusz', 11, -4.55000000000000071, 13, -10);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('f0cca667-a859-484b-9455-37fe273516de', 'Brovar', 2, -26.5, -10, -16);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Marcin', 'Marcin', 5, 42.3500000000000014, 20, -10);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kasia', 'Kasia', 2, -13.4499999999999993, -5, -8);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Wojtek', 'Wojtek', 3, -3, 7, -10);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('33d4953a-5cb6-4cdd-bbaa-6e3946e1fe8c', 'Testowy 1', 0, 0, 0, 0);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Woś', 'Woś', 37, -40.210000000000008, 62, -17);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('aca4a9af-432f-488b-bad9-fbfaf8a984bb', 'Testowy 2', 0, 0, 0, 0);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kuba 2', 'Kuba 2', 1, -20, -20, -20);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Danon', 'Danon', 95, 145.189999999999998, 80, -70);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Dominik', 'Dominik', 83, 312.640000000000043, 60, -20);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Krzysiek', 'Krzysiek', 19, 15.4999999999999858, 43, -20);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Zając', 'Zając', 59, 112.200000000000017, 38, -20);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('4fd90357-e07d-4728-ac87-1a6d8498a44d', 'Daga', 1, -54, -54, -54);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Patryk kuzyn Danona', 'Patryk kuzyn Danona', 1, -50, -50, -50);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('2b1c223d-f758-425f-bcb7-61c7e81dae59', 'Wiktor znajomy Danona', 1, -30, -30, -30);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Andzia', 'Andzia', 3, -4, 1, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Ola Zająca', 'Ola Zająca', 1, -2, -2, -2);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Koleżanka Andzi', 'Koleżanka Andzi', 1, -4, -4, -4);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kolega serka', 'Kolega serka', 1, -0.369999999999999996, 0, 0);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Pawłowski', 'Pawłowski', 1, -15, -15, -15);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Krzysiek inf jasło', 'Krzysiek inf jasło', 1, -17, -17, -17);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kamil, znajomy Radka', 'Kamil, znajomy Radka', 1, 0, 0, 0);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Paulina, Agh', 'Paulina, Agh', 1, -2.70000000000000018, -3, -3);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Sylwia, Agh', 'Sylwia, Agh', 1, 0.149999999999999994, 0, 0);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kuba Pyru', 'Kuba Pyrlu', 2, -50, -20, -30);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kolega Starosty', 'Kolega Starosty', 1, -5, -5, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Swoboda', 'Swoboda', 3, -7, -2, -3);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('c244f63a-0c31-4837-b576-9540d0b90f47', 'Adam znajomy Danona', 1, -5.40000000000000036, -5, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Rybek', 'Rybek', 65, -184.389999999999986, 21, -30);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Owca', 'Owca', 1, -3.56999999999999984, -4, -4);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Starosta', 'Starosta', 3, -8.80000000000000071, -2, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('ddde4dbe-2ab1-4991-b3f3-463cd68e427f', 'Zażyć znajomy Starosty', 1, -8, -8, -8);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Konrad, znajomy Rybki', 'Konrad, znajomy Rybki', 1, -5, -5, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Rafał', 'Rafał', 12, 63.0499999999999972, 50, -11);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Serek', 'Serek', 8, 5.20000000000000107, 11, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Fire', 'Fire', 1, -50, -50, -50);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Łukasz skooby', 'Łukasz skooby', 3, -11.4499999999999993, 1, -6);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Ziomek', 'Ziomek', 3, -1.5, 8, -10);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('14282425-9959-40cd-ae93-8c886c9bc05c', 'Bogdan znajomy Danona', 3, -48.5, 2, -30);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Mariusz', 'Mariusz', 20, 38.2599999999999909, 97, -24);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Mikołaj', 'Mikołaj', 2, -10, -5, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Bartek, Agh', 'Bartek, Agh', 2, -1.5, 4, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Radek', 'Radek', 9, 57.2000000000000028, 40, -25);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Michał', 'Michał', 7, -19.0500000000000007, 2, -6);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Natalia Ef', 'Natalia Ef', 1, -5, -5, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Słoń', 'Słoń', 1, 2, 2, 2);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kostek', 'Kostek', 1, -4, -4, -4);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Kuzyn bartka Pitu', 'Kuzyn bartka Pitu', 2, -9.5, -4, -5);
+INSERT INTO public.player (id, name, number_of_plays, live_winnings, max_earnings, min_earnings) VALUES ('Arystian', 'Arystian', 0, 0, 0, 0);
+
+
+--
+-- TOC entry 3827 (class 2606 OID 147182)
+-- Name: player player_pkey; Type: CONSTRAINT; Schema: public; Owner: jrefxvveykuwmw
+--
+
+ALTER TABLE ONLY public.player
+    ADD CONSTRAINT player_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3829 (class 2606 OID 147186)
+-- Name: player uk_name; Type: CONSTRAINT; Schema: public; Owner: jrefxvveykuwmw
+--
+
+ALTER TABLE ONLY public.player
+    ADD CONSTRAINT uk_name UNIQUE (name);
+
+
+--
+-- TOC entry 3957 (class 0 OID 0)
+-- Dependencies: 609
+-- Name: LANGUAGE plpgsql; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT ALL ON LANGUAGE plpgsql TO jrefxvveykuwmw;
+
+
+-- Completed on 2022-11-23 17:49:55
+
+--
+-- PostgreSQL database dump complete
+--
+
