@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import * as CanvasJS from 'canvasjs-2.3.2/canvasjs.min';
+import * as CanvasJS from 'canvasjs-3.7.32/canvasjs-chart-3.7.32/canvasjs.min';
 import { ProfitService } from '../../../core/services/profit.service';
 import { GetProfitRequest } from '../../models/profit/get-profit-request';
 
