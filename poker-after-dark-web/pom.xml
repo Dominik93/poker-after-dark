@@ -51,7 +51,7 @@
                             <tasks>
                                 <echo message="unzipping file"/>
                                 <unzip src="target/canvasjs.zip"
-                                       dest="../poker-after-dark-web/node_modules/canvasjs-2.3.2"/>
+                                       dest="../poker-after-dark-web/node_modules/canvasjs-3.7.32"/>
                             </tasks>
                         </configuration>
                         <goals>
